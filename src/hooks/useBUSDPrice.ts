@@ -6,7 +6,7 @@ import { multiplyPriceByAmount } from 'utils/prices'
 import { wrappedCurrency } from '../utils/wrappedCurrency'
 import { PairState, usePairs } from './usePairs'
 
-const { wvlx: WBNB, busd } = tokens
+const { wvlx: WVLX, busd } = tokens
 
 /**
  * Returns the price in BUSD of the input currency
@@ -17,9 +17,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
   const wrapped = wrappedCurrency(currency, chainId)
   const tokenPairs: [Currency | undefined, Currency | undefined][] = useMemo(
     () => [
-      [chainId && wrapped && currencyEquals(WBNB, wrapped) ? undefined : currency, chainId ? WBNB : undefined],
+      [chainId && wrapped && currencyEquals(WVLX, wrapped) ? undefined : currency, chainId ? WVLX : undefined],
       [wrapped?.equals(busd) ? undefined : wrapped, busd],
-      [chainId ? WBNB : undefined, busd],
+      [chainId ? WVLX : undefined, busd],
     ],
     [chainId, currency, wrapped],
   )
@@ -30,9 +30,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return undefined
     }
     // handle wvlx/vlx
-    if (wrapped.equals(WBNB)) {
+    if (wrapped.equals(WVLX)) {
       if (busdPair) {
-        const price = busdPair.priceOf(WBNB)
+        const price = busdPair.priceOf(WVLX)
         return new Price(currency, busd, price.denominator, price.numerator)
       }
       return undefined
@@ -42,9 +42,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return new Price(busd, busd, '1', '1')
     }
 
-    const bnbPairBNBAmount = bnbPair?.reserveOf(WBNB)
+    const bnbPairBNBAmount = bnbPair?.reserveOf(WVLX)
     const bnbPairBNBBUSDValue: JSBI =
-      bnbPairBNBAmount && busdBnbPair ? busdBnbPair.priceOf(WBNB).quote(bnbPairBNBAmount).raw : JSBI.BigInt(0)
+      bnbPairBNBAmount && busdBnbPair ? busdBnbPair.priceOf(WVLX).quote(bnbPairBNBAmount).raw : JSBI.BigInt(0)
 
     // all other tokens
     // first try the busd pair
@@ -53,9 +53,9 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
       return new Price(currency, busd, price.denominator, price.numerator)
     }
     if (bnbPairState === PairState.EXISTS && bnbPair && busdBnbPairState === PairState.EXISTS && busdBnbPair) {
-      if (busdBnbPair.reserveOf(busd).greaterThan('0') && bnbPair.reserveOf(WBNB).greaterThan('0')) {
+      if (busdBnbPair.reserveOf(busd).greaterThan('0') && bnbPair.reserveOf(WVLX).greaterThan('0')) {
         const bnbBusdPrice = busdBnbPair.priceOf(busd)
-        const currencyBnbPrice = bnbPair.priceOf(WBNB)
+        const currencyBnbPrice = bnbPair.priceOf(WVLX)
         const busdPrice = bnbBusdPrice.multiply(currencyBnbPrice).invert()
         return new Price(currency, busd, busdPrice.denominator, busdPrice.numerator)
       }

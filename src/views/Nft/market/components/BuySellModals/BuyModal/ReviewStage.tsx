@@ -71,14 +71,14 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
             variant="subtle"
           >
             <ButtonMenuItem>VLX</ButtonMenuItem>
-            <ButtonMenuItem>WBNB</ButtonMenuItem>
+            <ButtonMenuItem>WVLX</ButtonMenuItem>
           </ButtonMenu>
           <Text small color="textSubtle">
             {t('Total payment')}
           </Text>
           <BnbAmountCell bnbAmount={nftPrice} />
           <Text small color="textSubtle">
-            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WBNB' })}
+            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WVLX' })}
           </Text>
           {!account ? (
             <Flex justifySelf="flex-end">
@@ -96,14 +96,14 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
           <Message p="8px" variant="danger">
             <Text>
               {t('Not enough %symbol% to purchase this NFT', {
-                symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WBNB',
+                symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WVLX',
               })}
             </Text>
           </Message>
         )}
         <Flex alignItems="center">
           <Text my="16px" mr="4px">
-            {t('Convert between VLX and WBNB for free')}:
+            {t('Convert between VLX and WVLX for free')}:
           </Text>
           <Button
             as={Link}
@@ -127,7 +127,7 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
           {t('Checkout')}
         </Button>
         <Button as={Link} external style={{ width: '100%' }} href="/swap?outputCurrency=VLX" variant="secondary">
-          {t('Get %symbol1% or %symbol2%', { symbol1: 'VLX', symbol2: 'WBNB' })}
+          {t('Get %symbol1% or %symbol2%', { symbol1: 'VLX', symbol2: 'WVLX' })}
         </Button>
       </Flex>
     </>

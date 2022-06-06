@@ -88,7 +88,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
         <Flex>
           <Flex flex="1" alignItems="center">
             <BinanceIcon width={24} height={24} mr="4px" />
-            <Text bold>WBNB</Text>
+            <Text bold>WVLX</Text>
           </Flex>
           <Flex flex="2">
             <RightAlignedInput
@@ -111,7 +111,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
         </Flex>
         {priceIsOutOfRange && (
           <Text fontSize="12px" color="failure">
-            {t('Allowed price range is between %minPrice% and %maxPrice% WBNB', {
+            {t('Allowed price range is between %minPrice% and %maxPrice% WVLX', {
               minPrice: MIN_PRICE,
               maxPrice: MAX_PRICE,
             })}
@@ -162,7 +162,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
             {t('The NFT will be removed from your wallet and put on sale at this price.')}
           </Text>
           <Text small color="textSubtle">
-            {t('Sales are in WBNB. You can swap WBNB to VLX 1:1 for free with WagyuSwap.')}
+            {t('Sales are in WVLX. You can swap WVLX to VLX 1:1 for free with WagyuSwap.')}
           </Text>
         </Box>
       </Grid>

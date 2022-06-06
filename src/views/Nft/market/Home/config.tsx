@@ -7,9 +7,9 @@ const config = (t: ContextApi['t']) => {
       title: t('I sold an NFT, where’s my VLX?'),
       description: [
         t(
-          'Trades are settled in WBNB, which is a wrapped version of VLX used on VLX Smart Chain. That means that when you sell an item, WBNB is sent to your wallet instead of VLX.',
+          'Trades are settled in WVLX, which is a wrapped version of VLX used on VLX Smart Chain. That means that when you sell an item, WVLX is sent to your wallet instead of VLX.',
         ),
-        t('You can instantly swap your WBNB for VLX with no trading fees on WagyuSwap.'),
+        t('You can instantly swap your WVLX for VLX with no trading fees on WagyuSwap.'),
       ],
     },
     {

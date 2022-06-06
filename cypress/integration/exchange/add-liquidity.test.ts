@@ -11,9 +11,9 @@ describe('Add Liquidity', () => {
     cy.get('#add-liquidity-input-tokenb #pair').should('contain.text', 'WAG')
   })
 
-  it('loads the WBNB and tokens', () => {
+  it('loads the WVLX and tokens', () => {
     cy.visit('/add/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82')
-    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'WBNB')
+    cy.get('#add-liquidity-input-tokena #pair').should('contain.text', 'WVLX')
     cy.get('#add-liquidity-input-tokenb #pair').should('contain.text', 'WAG')
   })
 
@@ -62,7 +62,7 @@ describe('Add Liquidity', () => {
     cy.url().should('contain', '/add/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/VLX')
   })
 
-  it('redirects /add/WBNB to /add/WBNB/token', () => {
+  it('redirects /add/WVLX to /add/WVLX/token', () => {
     cy.visit('/add/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c-0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82')
     cy.url().should(
       'contain',
@@ -70,7 +70,7 @@ describe('Add Liquidity', () => {
     )
   })
 
-  it('redirects /add/token-WBNB to /add/token/WBNB', () => {
+  it('redirects /add/token-WVLX to /add/token/WVLX', () => {
     cy.visit('/add/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82-0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c')
     cy.url().should(
       'contain',

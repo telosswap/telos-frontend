@@ -66,8 +66,8 @@ export default {
     111: '0x24ec6962dbe874F6B67B5C50857565667fA0854F',
   },
   cakeVault: {
-    106: addresses[106].WagyuVault,
-    111: addresses[111].WagyuVault,
+    106: addresses[106].WagyuLockVault,
+    111: addresses[111].WagyuLockVault,
   },
   predictions: {
     106: '0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA',

@@ -54,9 +54,9 @@ class CustomizedBridge extends Eip1193Bridge {
     }
     if (method === 'eth_chainId') {
       if (isCallbackForm) {
-        return callback(null, { result: '0x38' })
+        return callback(null, { result: '0x6a' })
       }
-      return Promise.resolve('0x38')
+      return Promise.resolve('0x6a')
     }
     try {
       const result = await super.send(method, params)

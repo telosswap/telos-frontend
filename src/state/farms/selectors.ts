@@ -7,6 +7,7 @@ import { State, SerializedFarm, DeserializedFarm, DeserializedFarmUserData } fro
 import { deserializeToken } from '../user/hooks/helpers'
 import isUndefinedOrNull from '../../utils/isUndefinedOrNull'
 import { FARM_AUCTION_HOSTING_IN_SECONDS } from '../../config/constants'
+import { VLX_WAG_FARM_PID } from 'config/constants/farms'
 
 const deserializeFarmUserData = (farm: SerializedFarm): DeserializedFarmUserData => {
   return {
@@ -68,7 +69,7 @@ const deserializeFarm = (farm: SerializedFarm): DeserializedFarm => {
   }
 }
 
-const selectCakeFarm = (state: State) => state.farms.data.find((f) => f.pid === 2)
+const selectCakeFarm = (state: State) => state.farms.data.find((f) => f.pid === VLX_WAG_FARM_PID)
 const selectFarmByKey = (key: string, value: string | number) => (state: State) =>
   state.farms.data.find((f) => f[key] === value)
 

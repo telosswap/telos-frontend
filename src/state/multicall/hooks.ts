@@ -55,7 +55,6 @@ function useCallsData(calls: (Call | undefined)[], options?: ListenerOptions): C
     (state) => state.multicall.callResults,
   )
   const dispatch = useDispatch<AppDispatch>()
-
   const serializedCallKeys: string = useMemo(
     () =>
       JSON.stringify(
@@ -182,7 +181,6 @@ export function useSingleContractMultipleData(
         : [],
     [callInputs, contract, fragment],
   )
-
   const results = useCallsData(calls, options)
 
   const { cache } = useSWRConfig()

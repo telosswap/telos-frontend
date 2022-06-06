@@ -90,7 +90,7 @@ const ProfileHeader: React.FC<HeaderProps> = ({
               }}
               href={getBscScanLink(accountPath, 'address') || ''}
               // @ts-ignore
-              alt={t('View BscScan for user address')}
+              alt={t('View Velas Explorer for user address')}
             >
               <BscScanIcon width="20px" color="primary" />
             </IconButton>

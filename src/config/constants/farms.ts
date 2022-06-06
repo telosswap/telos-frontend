@@ -8,8 +8,8 @@ const serializedTokens = serializeTokens()
 const chainId = parseInt(CHAIN_ID, 10)
 const { MAINNET } = ChainId
 
-export const VLX_WAG_LP_PID = chainId === MAINNET ? 1 : 9 // WAG-VLX (2)
-export const VLX_USDT_LP_PID = chainId === MAINNET ? 5 : 6 // BUSD-VLX (3)
+export const VLX_WAG_FARM_PID = chainId === MAINNET ? 1 : 9 // WAG-VLX (2)
+export const VLX_USDT_FARM_PID = chainId === MAINNET ? 5 : 6 // BUSD-VLX (3)
 
 const farms: SerializedFarmConfig[] =
   chainId === MAINNET
