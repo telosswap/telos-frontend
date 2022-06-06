@@ -515,7 +515,7 @@ export default function RemoveLiquidity() {
                             currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'VLX' : currencyIdA
                           }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'VLX' : currencyIdB}`}
                         >
-                          {t('Receive BNB')}
+                          {t('Receive VLX')}
                         </StyledInternalLink>
                       ) : null}
                     </RowBetween>

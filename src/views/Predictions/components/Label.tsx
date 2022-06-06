@@ -11,8 +11,8 @@ import usePollOraclePrice from '../hooks/usePollOraclePrice'
 import { useConfig } from '../context/ConfigProvider'
 
 const TOKEN_LOGOS = {
-  BNB: <BnbUsdtPairTokenIcon />,
-  CAKE: <LogoRoundIcon />,
+  VLX: <BnbUsdtPairTokenIcon />,
+  WAG: <LogoRoundIcon />,
 }
 
 const Token = styled(Box)`

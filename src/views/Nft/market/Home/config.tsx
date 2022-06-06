@@ -4,12 +4,12 @@ import { ContextApi } from 'contexts/Localization/types'
 const config = (t: ContextApi['t']) => {
   return [
     {
-      title: t('I sold an NFT, where’s my BNB?'),
+      title: t('I sold an NFT, where’s my VLX?'),
       description: [
         t(
-          'Trades are settled in WBNB, which is a wrapped version of BNB used on BNB Smart Chain. That means that when you sell an item, WBNB is sent to your wallet instead of BNB.',
+          'Trades are settled in WBNB, which is a wrapped version of VLX used on VLX Smart Chain. That means that when you sell an item, WBNB is sent to your wallet instead of VLX.',
         ),
-        t('You can instantly swap your WBNB for BNB with no trading fees on WagyuSwap.'),
+        t('You can instantly swap your WBNB for VLX with no trading fees on WagyuSwap.'),
       ],
     },
     {
@@ -26,10 +26,10 @@ const config = (t: ContextApi['t']) => {
       title: t('What are the fees?'),
       description: [
         t(
-          '100% of all platform fees taken by WagyuSwap from sales are used to buy back and BURN CAKE tokens in our weekly CAKE burns.',
+          '100% of all platform fees taken by WagyuSwap from sales are used to buy back and BURN WAG tokens in our weekly WAG burns.',
         ),
         t(
-          'Platform fees: 2% is subtracted from NFT sales on the market. Subject to change.Collection fees: Additional fees may be taken by collection creators, once those collections are live. These will not contribute to the CAKE burns.',
+          'Platform fees: 2% is subtracted from NFT sales on the market. Subject to change.Collection fees: Additional fees may be taken by collection creators, once those collections are live. These will not contribute to the WAG burns.',
         ),
       ],
     },

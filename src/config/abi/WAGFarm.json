@@ -341,7 +341,7 @@
   },
   {
     "inputs": [],
-    "name": "CAKE",
+    "name": "WAG",
     "outputs": [
       {
         "internalType": "contract IBEP20",

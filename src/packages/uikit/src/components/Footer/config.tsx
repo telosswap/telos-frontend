@@ -19,7 +19,7 @@ export const footerLinks: FooterLinkType[] = [
         href: 'https://docs.wagyuswap.app/contact-us/telegram',
       },
       {
-        label: 'CAKE',
+        label: 'WAG',
         href: 'https://docs.wagyuswap.app/tokenomics/cake',
       },
       {

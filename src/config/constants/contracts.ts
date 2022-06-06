@@ -2,8 +2,8 @@ import addresses from './addresses.json'
 
 export default {
   masterChef: {
-    111: '0xF666b0875ca85f8E3D13607c666487534d2C9FE8',
-    106: '',
+    111: addresses[111].WAGFarm,
+    106: addresses[106].WAGFarm,
   },
   masterChefV1: {
     111: addresses[111].WAGFarm,

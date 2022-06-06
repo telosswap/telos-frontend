@@ -10,7 +10,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         // Those farms changed their project wallet address.
         {
           account: '0xA6D19C2A2EA13e9eF02d795155F6c335af764955', // Auction #19
-          farmName: 'HAPPY-BNB',
+          farmName: 'HAPPY-VLX',
           tokenAddress: '0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d',
           quoteToken: tokens.wvlx,
           tokenName: 'HappyFans',
@@ -27,7 +27,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         // Below farms was the latest.
         {
           account: '0x9Ed5a62535A5Dd2dB2d9bB21bAc42035Af47F630',
-          farmName: 'NAV-BNB',
+          farmName: 'NAV-VLX',
           tokenAddress: '0xBFEf6cCFC830D3BaCA4F6766a0d4AaA242Ca9F3D',
           quoteToken: tokens.wvlx,
           tokenName: 'Navcoin',
@@ -35,7 +35,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x33723811B0FCa2a751f3912B80603Fe11499D894',
-          farmName: 'WSG-BNB',
+          farmName: 'WSG-VLX',
           tokenAddress: '0xA58950F05FeA2277d2608748412bf9F802eA4901',
           quoteToken: tokens.wvlx,
           tokenName: 'Wall Street Games',
@@ -43,7 +43,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xD1C35C3F5D9d373A3F7c0668Fbe75801886e060f',
-          farmName: 'SWIRGE-BNB',
+          farmName: 'SWIRGE-VLX',
           tokenAddress: '0xe792f64C582698b8572AAF765bDC426AC3aEfb6B',
           quoteToken: tokens.wvlx,
           tokenName: 'Swirge Network',
@@ -59,7 +59,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xfAd3B5FeAC1aAF86B3f66D105F2fa9607164D86b',
-          farmName: 'FEED-BNB',
+          farmName: 'FEED-VLX',
           tokenAddress: '0x67d66e8Ec1Fd25d98B3Ccd3B19B7dc4b4b7fC493',
           quoteToken: tokens.wvlx,
           tokenName: 'Feeder Finance',
@@ -67,7 +67,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x6a2d41c87c3F28C2C0b466424DE8e08FC2E23eDc',
-          farmName: 'BBT-BNB',
+          farmName: 'BBT-VLX',
           tokenAddress: '0xD48474E7444727bF500a32D5AbE01943f3A59A64',
           quoteToken: tokens.wvlx,
           tokenName: 'BitBook',
@@ -83,7 +83,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x88F0A6cb89909838d69E4E6e76eC21e2a7bdcA66',
-          farmName: 'BREW-BNB',
+          farmName: 'BREW-VLX',
           tokenAddress: '0x790Be81C3cA0e53974bE2688cDb954732C9862e1',
           quoteToken: tokens.wvlx,
           tokenName: 'CafeSwap Finance',
@@ -91,7 +91,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x0Cf86283ad1a1B7D04669696eD13BAE3d5925a0a',
-          farmName: 'SAKE-BNB',
+          farmName: 'SAKE-VLX',
           tokenAddress: '0x8BD778B12b15416359A227F0533Ce2D91844e1eD',
           quoteToken: tokens.wvlx,
           tokenName: 'SakeSwap',
@@ -99,7 +99,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xCe059E8af96a654d4afe630Fa325FBF70043Ab11',
-          farmName: 'XBLZD-BNB',
+          farmName: 'XBLZD-VLX',
           tokenAddress: '0x9a946c3Cb16c08334b69aE249690C236Ebd5583E',
           quoteToken: tokens.wvlx,
           tokenName: 'Blizzard',
@@ -107,7 +107,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x3069270fE50c6dc9c5D1B38Ec7b767B2FE7B981D',
-          farmName: 'HERO-BNB',
+          farmName: 'HERO-VLX',
           tokenAddress: '0xD40bEDb44C081D2935eebA6eF5a3c8A31A1bBE13',
           quoteToken: tokens.wvlx,
           tokenName: 'Metahero',
@@ -115,7 +115,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x46D8e47b9A6487FDAB0a700b269A452cFeED49Aa',
-          farmName: 'MCRN-BNB',
+          farmName: 'MCRN-VLX',
           tokenAddress: '0xacb2d47827C9813AE26De80965845D80935afd0B',
           quoteToken: tokens.wvlx,
           tokenName: 'MacaronSwap',
@@ -123,7 +123,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x1bA962acab22Be9e49C4cEBE7710c9201A72dFcc',
-          farmName: 'BABYCAKE-BNB',
+          farmName: 'BABYCAKE-VLX',
           tokenAddress: '0xdB8D30b74bf098aF214e862C90E647bbB1fcC58c',
           quoteToken: tokens.wvlx,
           tokenName: 'Babycake',
@@ -131,7 +131,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xCCcC0b22799E82A79007814Dbc6A194410DCcEA5',
-          farmName: 'BMON-BNB',
+          farmName: 'BMON-VLX',
           tokenAddress: '0x08ba0619b1e7A582E0BCe5BBE9843322C954C340',
           quoteToken: tokens.wvlx,
           tokenName: 'Binamon',
@@ -147,7 +147,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x6cfA3ff4e96abe93a290dc3d7A911A483C194758',
-          farmName: 'ANY-BNB',
+          farmName: 'ANY-VLX',
           tokenAddress: '0xF68C9Df95a18B2A5a5fa1124d79EEEffBaD0B6Fa',
           quoteToken: tokens.wvlx,
           tokenName: 'Anyswap',
@@ -155,7 +155,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xe596470D291Cb2D32ec111afC314B07006690c72',
-          farmName: 'PHX-BNB',
+          farmName: 'PHX-VLX',
           tokenAddress: '0xac86e5f9bA48d680516df50C72928c2ec50F3025',
           quoteToken: tokens.wvlx,
           tokenName: 'Phoenix Finance',
@@ -163,7 +163,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x8f8c77987C0ea9dd2400383b623d9cbcBbAf98CF',
-          farmName: 'GMR-BNB',
+          farmName: 'GMR-VLX',
           tokenAddress: '0x0523215DCafbF4E4aA92117d13C6985a3BeF27D7',
           quoteToken: tokens.wvlx,
           tokenName: 'GMR Finance',
@@ -171,7 +171,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x786B313b01A25eddbF7f7461b48D60AF680d758C',
-          farmName: 'BP-BNB',
+          farmName: 'BP-VLX',
           tokenAddress: '0xACB8f52DC63BB752a51186D1c55868ADbFfEe9C1',
           quoteToken: tokens.wvlx,
           tokenName: 'BunnyPark',
@@ -179,7 +179,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x70d7eCEE276Ad5fDFc91B3C30d2c1cDb9dD442Fb',
-          farmName: 'DPET-BNB',
+          farmName: 'DPET-VLX',
           tokenAddress: '0xfb62AE373acA027177D1c18Ee0862817f9080d08',
           quoteToken: tokens.wvlx,
           tokenName: 'MyDefiPet',
@@ -195,7 +195,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xd27E57Ff5dD3d78B03c85e2A2bB8dc37E67c5140',
-          farmName: 'POOLZ-BNB',
+          farmName: 'POOLZ-VLX',
           tokenAddress: '0x77018282fD033DAF370337A5367E62d8811Bc885',
           quoteToken: tokens.wvlx,
           tokenName: 'Poolz Finance',
@@ -203,7 +203,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x0767a2f9c644b364Bc88Eea5a535afE506Ba6802',
-          farmName: 'ODDZ-BNB',
+          farmName: 'ODDZ-VLX',
           tokenAddress: '0xCD40F2670CF58720b694968698A5514e924F742d',
           quoteToken: tokens.wvlx,
           tokenName: 'Oddz Finance',
@@ -227,7 +227,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xb7d303BbaE2573513801C5F94aE0B61Fa5b3426F',
-          farmName: 'ZOON-BNB',
+          farmName: 'ZOON-VLX',
           tokenAddress: '0x9D173E6c594f479B4d47001F8E6A95A7aDDa42bC',
           quoteToken: tokens.wvlx,
           tokenName: 'CryptoZoon',
@@ -243,7 +243,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x027D50F36fe3b64630170B3ba82FC64BfC9bc088',
-          farmName: 'FAN-BNB',
+          farmName: 'FAN-VLX',
           tokenAddress: '0xFAc3A1ED2480Da8F5c34576C0Da13F245239717d',
           quoteToken: tokens.wvlx,
           tokenName: 'Fanadise',
@@ -259,7 +259,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x88Dba2cF8911A80cc50A1B392b5fF6b47B930330',
-          farmName: 'SFUND-BNB',
+          farmName: 'SFUND-VLX',
           tokenAddress: '0x477bC8d23c634C154061869478bce96BE6045D12',
           quoteToken: tokens.wvlx,
           tokenName: 'Seedify',
@@ -267,7 +267,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xf1dD352EF3a94F60b3047B607C2Bd976401F538c',
-          farmName: 'GNT-BNB',
+          farmName: 'GNT-VLX',
           tokenAddress: '0xF750A26EB0aCf95556e8529E72eD530f3b60f348',
           quoteToken: tokens.wvlx,
           tokenName: 'GreenTrust',
@@ -283,7 +283,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x2Ef317299888DD4a4F57FFf99FF2685D544fEAf1',
-          farmName: 'TT-BNB',
+          farmName: 'TT-VLX',
           tokenAddress: '0x990E7154bB999FAa9b2fa5Ed29E822703311eA85',
           quoteToken: tokens.wvlx,
           tokenName: 'ThunderCore',
@@ -291,7 +291,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xB9a32da7F33731FfDa8e7ecCB91325eee8A524AC',
-          farmName: 'SMG-BNB',
+          farmName: 'SMG-VLX',
           tokenAddress: '0x6bfd576220e8444CA4Cc5f89Efbd7f02a4C94C16',
           quoteToken: tokens.wvlx,
           tokenName: 'Smaugs NFT',
@@ -299,7 +299,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x5ed6B80F0e8b1c7fdB783202d4a926BbED2d49ee',
-          farmName: 'TENFI-BNB',
+          farmName: 'TENFI-VLX',
           tokenAddress: '0xd15C444F1199Ae72795eba15E8C1db44E47abF62',
           quoteToken: tokens.wvlx,
           tokenName: 'TEN Finance',
@@ -315,7 +315,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xCbD932aC66f645a3764733aACD30Ce50e522Fac1',
-          farmName: 'DVI-BNB',
+          farmName: 'DVI-VLX',
           tokenAddress: '0x758FB037A375F17c7e195CC634D77dA4F554255B',
           quoteToken: tokens.wvlx,
           tokenName: 'Dvision',
@@ -323,7 +323,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xeA96c1970b9E3d4258620F68Af95ddDEB5fbD68F',
-          farmName: 'SALE-BNB',
+          farmName: 'SALE-VLX',
           tokenAddress: '0x97bb08ba41f033beaac315169fc566ac9e0daf52',
           quoteToken: tokens.wvlx,
           tokenName: 'DxSale Network',
@@ -331,7 +331,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xaDB2d11817Cd16595E4454aD03F95575c3B388f2',
-          farmName: 'MONI-BNB',
+          farmName: 'MONI-VLX',
           tokenAddress: '0x9573c88ae3e37508f87649f87c4dd5373c9f31e0',
           quoteToken: tokens.wvlx,
           tokenName: 'Monsta Infinite',
@@ -339,7 +339,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xDa6e741A7f7d4d88d4210340069348704FDf21bf',
-          farmName: 'PROS-BNB',
+          farmName: 'PROS-VLX',
           tokenAddress: '0xed8c8aa8299c10f067496bb66f8cc7fb338a3405',
           quoteToken: tokens.wvlx,
           tokenName: 'Prosper',
@@ -347,7 +347,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xB651A851819638Cb120A46Db0E01Fa89006eE290',
-          farmName: 'CART-BNB',
+          farmName: 'CART-VLX',
           tokenAddress: '0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e',
           quoteToken: tokens.wvlx,
           tokenName: 'Cryptoart.ai',
@@ -355,7 +355,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x73a4C2d21282dd9f9f2DF2aD3e06fd25aB487C9c',
-          farmName: 'XWIN-BNB',
+          farmName: 'XWIN-VLX',
           tokenAddress: '0xd88ca08d8eec1E9E09562213Ae83A7853ebB5d28',
           quoteToken: tokens.wvlx,
           tokenName: 'xWIN Finance',
@@ -363,7 +363,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x7Db4456a73a9C94a381d244E9dfC76E83C05913E',
-          farmName: 'SWAPP-BNB',
+          farmName: 'SWAPP-VLX',
           tokenAddress: '0x0efe961c733ff46ce34c56a73eba0c6a0e18e0f5',
           quoteToken: tokens.wvlx,
           tokenName: 'Swapp Protocol',
@@ -371,7 +371,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xB93A33f4cA46c1E1D65387313706cB8728B75703',
-          farmName: 'AIRT-BNB',
+          farmName: 'AIRT-VLX',
           tokenAddress: '0x016cf83732f1468150d87dcc5bdf67730b3934d3',
           quoteToken: tokens.wvlx,
           tokenName: 'AirNFTs',
@@ -379,7 +379,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x377056416332d017D2c2d140A097Ba8c2872bb60',
-          farmName: 'XMS-BNB',
+          farmName: 'XMS-VLX',
           tokenAddress: '0x7859b01bbf675d67da8cd128a50d155cd881b576',
           quoteToken: tokens.wvlx,
           tokenName: 'Mars Ecosystem',
@@ -387,7 +387,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x6ff9B88eb94A976b0e1Db7713d8D765B8bE437a7',
-          farmName: 'LIGHT-BNB',
+          farmName: 'LIGHT-VLX',
           tokenAddress: '0x037838b556d9c9d654148a284682C55bB5f56eF4',
           quoteToken: tokens.wvlx,
           tokenName: 'Lightning',
@@ -403,7 +403,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xc55A7183F6D060271010A4441c106f6a81D46E34',
-          farmName: 'WSPP-BNB',
+          farmName: 'WSPP-VLX',
           tokenAddress: '0x46d502fac9aea7c5bc7b13c8ec9d02378c33d36f',
           quoteToken: tokens.wvlx,
           tokenName: 'WolfSafePoorPeople',
@@ -411,7 +411,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xC1d204015268CD808B765f024e04CE01d5Bff58D',
-          farmName: 'SHEESHA-BNB',
+          farmName: 'SHEESHA-VLX',
           tokenAddress: '0x232fb065d9d24c34708eedbf03724f2e95abe768',
           quoteToken: tokens.wvlx,
           tokenName: 'Sheesha Finance',
@@ -419,7 +419,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xb2bef43cb487bFc89770e2e88C23f6a2163133EE',
-          farmName: 'BSCS-BNB',
+          farmName: 'BSCS-VLX',
           tokenAddress: '0xbcb24afb019be7e93ea9c43b7e22bb55d5b7f45d',
           quoteToken: tokens.wvlx,
           tokenName: 'BSCStation',
@@ -427,7 +427,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x47e947F01A17F8004D486fC7E37222B205a4c20b',
-          farmName: 'ARV-BNB',
+          farmName: 'ARV-VLX',
           tokenAddress: '0x6679eB24F59dFe111864AEc72B443d1Da666B360',
           quoteToken: tokens.wvlx,
           tokenName: 'Ariva',
@@ -435,7 +435,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x8595c4Ad15D51c5Bf920c249869Ec5b3250c2D4d',
-          farmName: 'ULTI-BNB',
+          farmName: 'ULTI-VLX',
           tokenAddress: '0x42BFE4A3E023f2C90aEBFfbd9B667599Fa38514F',
           quoteToken: tokens.wvlx,
           tokenName: 'ULTI Arena',
@@ -451,7 +451,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x8b519cD36b6a3179a4C560FcE987203E33df0366',
-          farmName: 'HERA-BNB',
+          farmName: 'HERA-VLX',
           tokenAddress: '0x49c7295ff86eabf5bf58c6ebc858db4805738c01',
           quoteToken: tokens.wvlx,
           tokenName: 'Hero Arena',
@@ -459,7 +459,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xaCc34268f5D7Cb9B11BfB1ba4D8bD2bc2B49EE4E',
-          farmName: 'DPS-BNB',
+          farmName: 'DPS-VLX',
           tokenAddress: '0xf275e1AC303a4C9D987a2c48b8E555A77FeC3F1C',
           quoteToken: tokens.wvlx,
           tokenName: 'DEEPSPACE',
@@ -483,7 +483,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x1Aa800bE7e9829DDF97C54EF750F5E42C2a6a884',
-          farmName: 'SHARPEI-BNB',
+          farmName: 'SHARPEI-VLX',
           tokenAddress: '0xfE3AF7376e412a377358d5894C790bB3e00D0dc1',
           quoteToken: tokens.wvlx,
           tokenName: 'Shar Pei',
@@ -507,7 +507,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xFfD8457466bAa1f11Bb585c7fD772Ad1A8b82b64',
-          farmName: 'GMEE-BNB',
+          farmName: 'GMEE-VLX',
           tokenAddress: '0x84e9a6F9D240FdD33801f7135908BfA16866939A',
           quoteToken: tokens.wvlx,
           tokenName: 'GAMEE',
@@ -531,7 +531,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x20C99830967a18563D2D3eD51094aDD9FBE06e2A',
-          farmName: 'SDAO-BNB',
+          farmName: 'SDAO-VLX',
           tokenAddress: '0x90ed8f1dc86388f14b64ba8fb4bbd23099f18240',
           quoteToken: tokens.wvlx,
           tokenName: 'SingularityDAO',
@@ -555,7 +555,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x3591b656D753226dE239d2b9A48221daf0751Fca',
-          farmName: 'HE-BNB',
+          farmName: 'HE-VLX',
           tokenAddress: '0x20d39a5130f799b95b55a930e5b7ebc589ea9ed8',
           quoteToken: tokens.wvlx,
           tokenName: 'Heroes & Empires',
@@ -587,7 +587,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x05Adabb0f3bff63F5f7712f05F04F509494A18F3',
-          farmName: 'HOTCROSS-BNB',
+          farmName: 'HOTCROSS-VLX',
           tokenAddress: '0x4fa7163e153419e0e1064e418dd7a99314ed27b6',
           quoteToken: tokens.wvlx,
           tokenName: 'Hot Cross',
@@ -611,7 +611,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x5Be8ed8EbCF5215A45E84B864526EfdF6F584152',
-          farmName: 'BABY-BNB',
+          farmName: 'BABY-VLX',
           tokenAddress: '0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657',
           quoteToken: tokens.wvlx,
           tokenName: 'BabySwap',
@@ -619,7 +619,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x73e60b46908319B17f1De07C5d38437BFf684E50',
-          farmName: 'GEAR-BNB',
+          farmName: 'GEAR-VLX',
           tokenAddress: '0xb4404DaB7C0eC48b428Cf37DeC7fb628bcC41B36',
           quoteToken: tokens.wvlx,
           tokenName: 'MetaGear',
@@ -643,7 +643,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xadF88A1eDC8F15CeA27F2674ED2BA1382F46A8A5',
-          farmName: 'DOME-BNB',
+          farmName: 'DOME-VLX',
           tokenAddress: '0x475bfaa1848591ae0e6ab69600f48d828f61a80e',
           quoteToken: tokens.wvlx,
           tokenName: 'Everdome',
@@ -651,7 +651,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0xdE78F42bff7EDF1e70450e7BCFd8aBCF94e3a65e',
-          farmName: 'TINC-BNB',
+          farmName: 'TINC-VLX',
           tokenAddress: '0x05ad6e30a855be07afa57e08a4f30d00810a402e',
           quoteToken: tokens.wvlx,
           tokenName: 'Tiny World',
@@ -667,7 +667,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x5735BB4e439474828235a5F4048eDf0240dcA7F2',
-          farmName: 'YEL-BNB',
+          farmName: 'YEL-VLX',
           tokenAddress: '0xd3b71117e6c1558c1553305b44988cd944e97300',
           quoteToken: tokens.wvlx,
           tokenName: 'YEL Token',
@@ -691,7 +691,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x4eeD6e51544Ef967A24A86F318A6779ed85cF0e6',
-          farmName: 'HAPPY-BNB',
+          farmName: 'HAPPY-VLX',
           tokenAddress: '0xF5d8A096CcCb31b9D7bcE5afE812BE23e3D4690d',
           quoteToken: tokens.wvlx,
           tokenName: 'HappyFans',
@@ -707,7 +707,7 @@ export const whitelistedBidders: FarmAuctionBidderConfig[] =
         },
         {
           account: '0x83e0dE1c6dD34e07D5b1BAF36b367e22C8b6fDdF',
-          farmName: 'XCN-BNB',
+          farmName: 'XCN-VLX',
           tokenAddress: '0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b',
           quoteToken: tokens.wvlx,
           tokenName: 'Chain',

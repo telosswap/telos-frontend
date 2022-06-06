@@ -8,7 +8,7 @@ import BigNumber from 'bignumber.js'
 import uniq from 'lodash/uniq'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
-// BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
+// VLX pools use the native VLX token (wrapping ? unwrapping is done at the contract level)
 const nonBnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol !== 'VLX')
 const bnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol === 'VLX')
 const nonMasterPools = poolsConfig.filter((pool) => pool.sousId !== 0)
@@ -28,7 +28,7 @@ export const fetchPoolsAllowance = async (account) => {
 }
 
 export const fetchUserBalances = async (account) => {
-  // Non BNB pools
+  // Non VLX pools
   const tokens = uniq(nonBnbPools.map((pool) => pool.stakingToken.address))
   const calls = tokens.map((token) => ({
     address: token,
@@ -47,7 +47,7 @@ export const fetchUserBalances = async (account) => {
     {},
   )
 
-  // BNB pools
+  // VLX pools
   const bnbBalance = await simpleRpcProvider.getBalance(account)
   const bnbBalances = bnbPools.reduce(
     (acc, pool) => ({ ...acc, [pool.sousId]: new BigNumber(bnbBalance.toString()).toJSON() }),

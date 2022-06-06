@@ -10,11 +10,11 @@ import { queryParametersToSwapState, useDerivedSwapInfo, useSwapState } from './
 
 describe('hooks', () => {
   describe('#queryParametersToSwapState', () => {
-    test('BNB to DAI', () => {
+    test('VLX to DAI', () => {
       expect(
         queryParametersToSwapState(
           parse(
-            'inputCurrency=BNB&outputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&exactAmount=20.5&exactField=outPUT',
+            'inputCurrency=VLX&outputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&exactAmount=20.5&exactField=outPUT',
           ),
         ),
       ).toEqual({
@@ -28,7 +28,7 @@ describe('hooks', () => {
       })
     })
 
-    test('should return BNB BUSD pair by default', () => {
+    test('should return VLX BUSD pair by default', () => {
       expect(queryParametersToSwapState(parse(''))).toEqual({
         [Field.OUTPUT]: { currencyId: DEFAULT_OUTPUT_CURRENCY },
         [Field.INPUT]: { currencyId: 'VLX' },
@@ -40,7 +40,7 @@ describe('hooks', () => {
       })
     })
 
-    test('does not duplicate BNB for invalid output token', () => {
+    test('does not duplicate VLX for invalid output token', () => {
       expect(queryParametersToSwapState(parse('outputCurrency=invalid'))).toEqual({
         [Field.INPUT]: { currencyId: '' },
         [Field.OUTPUT]: { currencyId: 'VLX' },
@@ -52,7 +52,7 @@ describe('hooks', () => {
       })
     })
 
-    test('output BNB only', () => {
+    test('output VLX only', () => {
       expect(queryParametersToSwapState(parse('outputCurrency=vlx&exactAmount=20.5'))).toEqual({
         [Field.OUTPUT]: { currencyId: 'VLX' },
         [Field.INPUT]: { currencyId: '' },
@@ -65,7 +65,7 @@ describe('hooks', () => {
     })
 
     test('invalid recipient', () => {
-      expect(queryParametersToSwapState(parse('outputCurrency=BNB&exactAmount=20.5&recipient=abc'))).toEqual({
+      expect(queryParametersToSwapState(parse('outputCurrency=VLX&exactAmount=20.5&recipient=abc'))).toEqual({
         [Field.OUTPUT]: { currencyId: 'VLX' },
         [Field.INPUT]: { currencyId: '' },
         typedValue: '20.5',
@@ -79,7 +79,7 @@ describe('hooks', () => {
     test('valid recipient', () => {
       expect(
         queryParametersToSwapState(
-          parse('outputCurrency=BNB&exactAmount=20.5&recipient=0x0fF2D1eFd7A57B7562b2bf27F3f37899dB27F4a5'),
+          parse('outputCurrency=VLX&exactAmount=20.5&recipient=0x0fF2D1eFd7A57B7562b2bf27F3f37899dB27F4a5'),
         ),
       ).toEqual({
         [Field.OUTPUT]: { currencyId: 'VLX' },

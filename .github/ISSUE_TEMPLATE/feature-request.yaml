@@ -28,7 +28,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: How does this feature benefit WagyuSwap users and CAKE holders?
+      label: How does this feature benefit WagyuSwap users and WAG holders?
       description: Explain how this feature will be beneficial for the WagyuSwap community and ecosystem.
     validations:
       required: true

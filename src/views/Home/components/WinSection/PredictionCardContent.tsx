@@ -37,7 +37,7 @@ const PredictionCardContent = () => {
     refreshInterval: SLOW_INTERVAL,
   })
 
-  const bnbWonText = t('$%bnbWonInUsd% in BNB won so far', { bnbWonInUsd: '#placeholder#' })
+  const bnbWonText = t('$%bnbWonInUsd% in VLX won so far', { bnbWonInUsd: '#placeholder#' })
   const [pretext, wonSoFar] = bnbWonText.split('#placeholder#')
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const PredictionCardContent = () => {
           {wonSoFar}
         </Text>
         <Text color="#280D5F" mb="40px">
-          {t('Will BNB price rise or fall? guess correctly to win!')}
+          {t('Will VLX price rise or fall? guess correctly to win!')}
         </Text>
       </Flex>
       <Flex alignItems="center" justifyContent="center">

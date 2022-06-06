@@ -14,7 +14,7 @@ const defineTokens = <T extends TokenList>(t: T) => t
 
 export const mainnetTokens = {
   wvlx: new Token(MAINNET, addresses[106].WVLX, 18, 'WVLX', 'Wrapped VLX', 'https://wagyuswap.app/'),
-  // bnb here points to the wbnb contract. Wherever the currency BNB is required, conditional checks for the symbol 'VLX' can be used
+  // bnb here points to the wbnb contract. Wherever the currency VLX is required, conditional checks for the symbol 'VLX' can be used
   vlx: new Token(MAINNET, addresses[106].WVLX, 18, 'VLX', 'VLX', 'https://wagyuswap.app/'),
   cake: new Token(MAINNET, addresses[106].WAGToken, 18, 'WAG', 'WAGToken', 'https://wagyuswap.app/'),
   usdt: new Token(

@@ -100,16 +100,16 @@ const IfoPoolVaultCardMobile: React.FC<IfoPoolVaultCardMobileProps> = ({ account
             <TokenPairImage width={24} height={24} primaryToken={tokens.cake} secondaryToken={tokens.cake} />
             <Box ml="8px">
               <Text small bold>
-                {t('IFO CAKE')}
+                {t('IFO WAG')}
               </Text>
               <Text color="textSubtle" fontSize="12px">
-                {t('Stake')} CAKE
+                {t('Stake')} WAG
               </Text>
             </Box>
           </StyledTokenContent>
           <StyledTokenContent flexDirection="column" flex={1}>
             <Text color="textSubtle" fontSize="12px">
-              {t('%asset% Staked', { asset: 'CAKE' })}
+              {t('%asset% Staked', { asset: 'WAG' })}
             </Text>
             <Balance small bold decimals={3} value={stakedBalance} />
           </StyledTokenContent>
@@ -123,12 +123,12 @@ const IfoPoolVaultCardMobile: React.FC<IfoPoolVaultCardMobileProps> = ({ account
               <Flex flexDirection="column">
                 <Text mb="16px">
                   {t(
-                    'This is the old IFO CAKE pool. Check out the brand new CAKE pool to learn how to earn CAKE rewards with higher APY while enjoying other benefits.',
+                    'This is the old IFO WAG pool. Check out the brand new WAG pool to learn how to earn WAG rewards with higher APY while enjoying other benefits.',
                   )}
                 </Text>
                 <Flex ml="-34px">
                   <Button onClick={handleOnClick} width="100%">
-                    {isShowMigrationButton ? t('Migrate') : t('Go to new CAKE pool')}
+                    {isShowMigrationButton ? t('Migrate') : t('Go to new WAG pool')}
                   </Button>
                 </Flex>
               </Flex>
@@ -137,7 +137,7 @@ const IfoPoolVaultCardMobile: React.FC<IfoPoolVaultCardMobileProps> = ({ account
               <Box>
                 <Flex mb="4px">
                   <Text fontSize="12px" color="secondary" bold mr="2px">
-                    CAKE
+                    WAG
                   </Text>
                   <Text fontSize="12px" color="textSubtle" bold textTransform="uppercase">
                     {t('Staked')}
@@ -153,7 +153,7 @@ const IfoPoolVaultCardMobile: React.FC<IfoPoolVaultCardMobileProps> = ({ account
               </Box>
               <Box mt="24px">
                 <Flex alignItems="center" justifyContent="space-between">
-                  <Text fontSize="14px">{`${t('Recent CAKE profit')}:`}</Text>
+                  <Text fontSize="14px">{`${t('Recent WAG profit')}:`}</Text>
                   <Balance
                     bold
                     fontSize="14px"

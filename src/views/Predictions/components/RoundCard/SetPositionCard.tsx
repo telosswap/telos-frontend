@@ -34,8 +34,8 @@ import PositionTag from '../PositionTag'
 import FlexRow from '../FlexRow'
 
 const LOGOS = {
-  BNB: BinanceIcon,
-  CAKE: LogoIcon,
+  VLX: BinanceIcon,
+  WAG: LogoIcon,
 }
 
 interface SetPositionCardProps {
@@ -58,7 +58,7 @@ const getButtonProps = (value: BigNumber, bnbBalance: BigNumber, minBetAmountBal
   }
 
   if (!hasSufficientBalance()) {
-    return { key: 'Insufficient BNB balance', disabled: true }
+    return { key: 'Insufficient VLX balance', disabled: true }
   }
 
   if (value.eq(0)) {
