@@ -1,4 +1,4 @@
-import { Heading, Text } from '@pancakeswap/uikit'
+import { Heading, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 

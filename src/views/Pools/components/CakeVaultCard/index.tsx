@@ -1,4 +1,4 @@
-import { Box, CardBody, CardProps, Flex, Text, TokenPairImage } from '@pancakeswap/uikit'
+import { Box, CardBody, CardProps, Flex, Text, TokenPairImage } from 'packages/uikit'
 import { useWeb3React } from '@web3-react/core'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { FlexGap } from 'components/Layout/Flex'

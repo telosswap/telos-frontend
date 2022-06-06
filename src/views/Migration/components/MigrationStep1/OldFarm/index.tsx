@@ -2,9 +2,9 @@ import React, { useMemo, useCallback } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
 import { getFarmApr } from 'utils/apr'
-import { RowType } from '@pancakeswap/uikit'
-import { ChainId } from '@pancakeswap/sdk'
-import { CAKE_PER_YEAR } from 'config'
+import { RowType } from 'packages/uikit'
+import { ChainId } from '@wagyu-swap/sdk'
+import { WAG_PER_YEAR } from 'config'
 import { useFarmsV1, usePriceCakeBusd } from 'state/farmsV1/hooks'
 import { DeserializedFarm } from 'state/types'
 import { getBalanceNumber } from 'utils/formatBalance'
@@ -42,7 +42,7 @@ const OldFarmStep1: React.FC = () => {
           cakePrice,
           totalLiquidity,
           farm.lpAddresses[ChainId.MAINNET],
-          CAKE_PER_YEAR,
+          WAG_PER_YEAR,
         )
         return { ...farm, apr: cakeRewardsApr, lpRewardsApr, liquidity: totalLiquidity }
       })

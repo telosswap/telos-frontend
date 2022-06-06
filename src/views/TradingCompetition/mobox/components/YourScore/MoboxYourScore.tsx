@@ -1,4 +1,4 @@
-import { Skeleton, Heading, Text } from '@pancakeswap/uikit'
+import { Skeleton, Heading, Text } from 'packages/uikit'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
 import ScoreHeader from '../../../components/YourScore/ScoreHeader'

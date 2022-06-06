@@ -1,19 +1,19 @@
 // Set of helper functions to facilitate wallet setup
 
 import { ExternalProvider } from '@ethersproject/providers'
-import { ChainId } from '@pancakeswap/sdk'
+import { ChainId } from '@wagyu-swap/sdk'
 import { BAD_SRCS } from 'components/Logo/Logo'
-import { BASE_BSC_SCAN_URLS } from 'config'
+import { BASE_VELAS_SCAN_URLS } from 'config'
 import { nodes } from './getRpcUrl'
 
 const NETWORK_CONFIG = {
   [ChainId.MAINNET]: {
-    name: 'BNB Smart Chain Mainnet',
-    scanURL: BASE_BSC_SCAN_URLS[ChainId.MAINNET],
+    name: 'Velas Mainnet',
+    scanURL: BASE_VELAS_SCAN_URLS[ChainId.MAINNET],
   },
   [ChainId.TESTNET]: {
-    name: 'BNB Smart Chain Testnet',
-    scanURL: BASE_BSC_SCAN_URLS[ChainId.TESTNET],
+    name: 'Velas Testnet',
+    scanURL: BASE_VELAS_SCAN_URLS[ChainId.TESTNET],
   },
 }
 

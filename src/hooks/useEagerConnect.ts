@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { connectorLocalStorageKey, ConnectorNames } from '@pancakeswap/uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'packages/uikit'
 import useAuth from 'hooks/useAuth'
 import { isMobile } from 'react-device-detect'
 import { injected } from 'utils/web3React'

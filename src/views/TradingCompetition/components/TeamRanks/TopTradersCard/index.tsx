@@ -1,16 +1,5 @@
 import { useState, useEffect } from 'react'
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  Heading,
-  Text,
-  TabMenu,
-  Tab,
-  Box,
-  Flex,
-  ExpandableLabel,
-} from '@pancakeswap/uikit'
+import { Card, CardFooter, CardHeader, Heading, Text, TabMenu, Tab, Box, Flex, ExpandableLabel } from 'packages/uikit'
 import { SubgraphHealthIndicator } from 'components/SubgraphHealthIndicator'
 import { useTranslation } from 'contexts/Localization'
 import { TeamRanksProps } from '../../../types'

@@ -15,7 +15,7 @@ import {
   useTooltip,
   TooltipText,
   Link,
-} from '@pancakeswap/uikit'
+} from 'packages/uikit'
 import { NextLinkFromReactRouter as RouterLink } from 'components/NextLink'
 import { useWeb3React } from '@web3-react/core'
 

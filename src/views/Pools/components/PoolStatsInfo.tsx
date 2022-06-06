@@ -1,6 +1,6 @@
-import { Button, Flex, Link, LinkExternal, MetamaskIcon, Skeleton, Text, TimerIcon } from '@pancakeswap/uikit'
+import { Button, Flex, Link, LinkExternal, MetamaskIcon, Skeleton, Text, TimerIcon } from 'packages/uikit'
 import Balance from 'components/Balance'
-import { BASE_BSC_SCAN_URL } from 'config'
+import { BASE_VELAS_SCAN_URL } from 'config'
 import { useTranslation } from 'contexts/Localization'
 import { memo } from 'react'
 import { useCurrentBlock } from 'state/block/hooks'
@@ -134,7 +134,7 @@ const PoolStatsInfo: React.FC<ExpandedFooterProps> = ({
       {poolContractAddress && (
         <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
           <LinkExternal
-            href={`${BASE_BSC_SCAN_URL}/address/${vaultKey ? cakeVaultContractAddress : poolContractAddress}`}
+            href={`${BASE_VELAS_SCAN_URL}/address/${vaultKey ? cakeVaultContractAddress : poolContractAddress}`}
             bold={false}
             small
           >

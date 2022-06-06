@@ -1,5 +1,5 @@
 import { toDate, add, differenceInHours } from 'date-fns'
-import { BSC_BLOCK_TIME, DEFAULT_TOKEN_DECIMAL } from 'config'
+import { VELAS_BLOCK_TIME, DEFAULT_TOKEN_DECIMAL } from 'config'
 import { getBidderInfo } from 'config/constants/farmAuctions'
 import { simpleRpcProvider } from 'utils/providers'
 import { AuctionsResponse, FarmAuctionContractStatus, BidsPerAuction } from 'utils/types'
@@ -81,7 +81,7 @@ const getAuctionStatus = (
 
 const getDateForBlock = async (currentBlock: number, block: number) => {
   const blocksUntilBlock = block - currentBlock
-  const secondsUntilStart = blocksUntilBlock * BSC_BLOCK_TIME
+  const secondsUntilStart = blocksUntilBlock * VELAS_BLOCK_TIME
   // if block already happened we can get timestamp via .getBlock(block)
   if (currentBlock > block) {
     try {

@@ -1,8 +1,8 @@
-import { BSC_BLOCK_TIME } from 'config'
+import { VELAS_BLOCK_TIME } from 'config'
 import { useTranslation } from 'contexts/Localization'
 import { TranslateFunction } from 'contexts/Localization/types'
 import styled from 'styled-components'
-import { Card, Flex, Box, InfoIcon, Text, useTooltip } from '@pancakeswap/uikit'
+import { Card, Flex, Box, InfoIcon, Text, useTooltip } from 'packages/uikit'
 import { useSubgraphHealthIndicatorManager } from 'state/user/hooks'
 import useSubgraphHealth, { SubgraphStatus } from 'hooks/useSubgraphHealth'
 import { useRouter } from 'next/router'
@@ -99,7 +99,7 @@ export const SubgraphHealthIndicator: React.FC<{
 
   const indicatorProps = indicator(t, customDescriptions)
 
-  const secondRemainingBlockSync = blockDifference * BSC_BLOCK_TIME
+  const secondRemainingBlockSync = blockDifference * VELAS_BLOCK_TIME
 
   const indicatorValue = getIndicator(status)
 

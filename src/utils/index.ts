@@ -8,10 +8,10 @@ import { BigNumber } from '@ethersproject/bignumber'
 import IPancakeRouter02ABI from 'config/abi/IPancakeRouter02.json'
 import { IPancakeRouter02 } from 'config/abi/types/IPancakeRouter02'
 import { CHAIN_ID } from 'config/constants/networks'
-import { JSBI, Percent, Token, CurrencyAmount, Currency, ETHER } from '@pancakeswap/sdk'
+import { JSBI, Percent, Token, CurrencyAmount, Currency, ETHER } from '@wagyu-swap/sdk'
 import { TokenAddressMap } from 'state/types'
 import { ROUTER_ADDRESS } from '../config/constants'
-import { BASE_BSC_SCAN_URLS } from '../config'
+import { BASE_VELAS_SCAN_URLS } from '../config'
 import { simpleRpcProvider } from './providers'
 
 // returns the checksummed address if the address is valid, otherwise returns false
@@ -31,26 +31,26 @@ export function getBscScanLink(
   const chainId = chainIdOverride || CHAIN_ID
   switch (type) {
     case 'transaction': {
-      return `${BASE_BSC_SCAN_URLS[chainId]}/tx/${data}`
+      return `${BASE_VELAS_SCAN_URLS[chainId]}/tx/${data}`
     }
     case 'token': {
-      return `${BASE_BSC_SCAN_URLS[chainId]}/token/${data}`
+      return `${BASE_VELAS_SCAN_URLS[chainId]}/token/${data}`
     }
     case 'block': {
-      return `${BASE_BSC_SCAN_URLS[chainId]}/block/${data}`
+      return `${BASE_VELAS_SCAN_URLS[chainId]}/block/${data}`
     }
     case 'countdown': {
-      return `${BASE_BSC_SCAN_URLS[chainId]}/block/countdown/${data}`
+      return `${BASE_VELAS_SCAN_URLS[chainId]}/block/countdown/${data}`
     }
     default: {
-      return `${BASE_BSC_SCAN_URLS[chainId]}/address/${data}`
+      return `${BASE_VELAS_SCAN_URLS[chainId]}/address/${data}`
     }
   }
 }
 
 export function getBscScanLinkForNft(collectionAddress: string, tokenId: string): string {
   const chainId = CHAIN_ID
-  return `${BASE_BSC_SCAN_URLS[chainId]}/token/${collectionAddress}?a=${tokenId}`
+  return `${BASE_VELAS_SCAN_URLS[chainId]}/token/${collectionAddress}?a=${tokenId}`
 }
 
 // add 10%

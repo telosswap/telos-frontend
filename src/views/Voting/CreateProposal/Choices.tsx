@@ -1,4 +1,4 @@
-import { Button, Card, CardBody, CardHeader, Heading } from '@pancakeswap/uikit'
+import { Button, Card, CardBody, CardHeader, Heading } from 'packages/uikit'
 import uniqueId from 'lodash/uniqueId'
 import { useTranslation } from 'contexts/Localization'
 import Choice from './Choice'

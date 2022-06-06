@@ -1,15 +1,5 @@
 import { useWeb3React } from '@web3-react/core'
-import {
-  ArrowForwardIcon,
-  Box,
-  Button,
-  Radio,
-  Flex,
-  Heading,
-  Text,
-  ButtonMenu,
-  ButtonMenuItem,
-} from '@pancakeswap/uikit'
+import { ArrowForwardIcon, Box, Button, Radio, Flex, Heading, Text, ButtonMenu, ButtonMenuItem } from 'packages/uikit'
 import useLocalDispatch from 'contexts/LocalRedux/useLocalDispatch'
 import { HistoryFilter } from 'state/types'
 import { setHistoryFilter, setHistoryPaneState } from 'state/predictions'

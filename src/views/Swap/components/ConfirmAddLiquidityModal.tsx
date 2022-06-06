@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
-import { Currency, CurrencyAmount, Fraction, Percent, Token, TokenAmount } from '@pancakeswap/sdk'
-import { Flex, InjectedModalProps, Text } from '@pancakeswap/uikit'
+import { Currency, CurrencyAmount, Fraction, Percent, Token, TokenAmount } from '@wagyu-swap/sdk'
+import { Flex, InjectedModalProps, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import TransactionConfirmationModal, {
   ConfirmationModalContent,

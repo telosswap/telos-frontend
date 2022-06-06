@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { Flex, FlexProps, Text } from '@pancakeswap/uikit'
+import { Token } from '@wagyu-swap/sdk'
+import { Flex, FlexProps, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import useBUSDPrice from 'hooks/useBUSDPrice'
 import { multiplyPriceByAmount } from 'utils/prices'

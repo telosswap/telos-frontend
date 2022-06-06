@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Flex, Box } from '@pancakeswap/uikit'
+import { Flex, Box } from 'packages/uikit'
 import BigNumber from 'bignumber.js'
 import { getVaultPosition, VaultPosition } from 'utils/cakePool'
 import { BIG_ZERO } from 'utils/bigNumber'

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, useMemo } from 'react'
 import { useRouter } from 'next/router'
-import { CurrencyAmount, Token, Trade } from '@pancakeswap/sdk'
-import { Button, Box, Flex, useModal, useMatchBreakpoints, BottomDrawer, Link } from '@pancakeswap/uikit'
+import { CurrencyAmount, Token, Trade } from '@wagyu-swap/sdk'
+import { Button, Box, Flex, useModal, useMatchBreakpoints, BottomDrawer, Link } from 'packages/uikit'
 
 import { useTranslation } from 'contexts/Localization'
 import { AutoColumn } from 'components/Layout/Column'

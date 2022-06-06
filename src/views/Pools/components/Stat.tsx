@@ -1,6 +1,6 @@
-import { Token } from '@pancakeswap/sdk'
+import { Token } from '@wagyu-swap/sdk'
 import Balance from 'components/Balance'
-import { Flex, Skeleton, Text, TooltipText, useTooltip } from '@pancakeswap/uikit'
+import { Flex, Skeleton, Text, TooltipText, useTooltip } from 'packages/uikit'
 import BigNumber from 'bignumber.js'
 import { useTranslation } from 'contexts/Localization'
 import { FC, ReactNode } from 'react'

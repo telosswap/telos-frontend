@@ -1,6 +1,6 @@
 import BigNumber from 'bignumber.js'
 import { useState, useCallback } from 'react'
-import { BSC_BLOCK_TIME } from 'config'
+import { VELAS_BLOCK_TIME } from 'config'
 import ifoV2Abi from 'config/abi/ifoV2.json'
 import ifoV3Abi from 'config/abi/ifoV3.json'
 import tokens from 'config/constants/tokens'
@@ -145,8 +145,8 @@ const useGetPublicIfoData = (ifo: Ifo): PublicIfoData => {
       setState((prev) => ({
         ...prev,
         isInitialized: true,
-        secondsUntilEnd: blocksRemaining * BSC_BLOCK_TIME,
-        secondsUntilStart: (startBlockNum - currentBlock) * BSC_BLOCK_TIME,
+        secondsUntilEnd: blocksRemaining * VELAS_BLOCK_TIME,
+        secondsUntilStart: (startBlockNum - currentBlock) * VELAS_BLOCK_TIME,
         poolBasic: {
           ...poolBasicFormatted,
           taxRate: 0,

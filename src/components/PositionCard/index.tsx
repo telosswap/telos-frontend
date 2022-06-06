@@ -1,16 +1,6 @@
 import { useState } from 'react'
-import { JSBI, Pair, Percent } from '@pancakeswap/sdk'
-import {
-  Button,
-  Text,
-  ChevronUpIcon,
-  ChevronDownIcon,
-  Card,
-  CardBody,
-  Flex,
-  CardProps,
-  AddIcon,
-} from '@pancakeswap/uikit'
+import { JSBI, Pair, Percent } from '@wagyu-swap/sdk'
+import { Button, Text, ChevronUpIcon, ChevronDownIcon, Card, CardBody, Flex, CardProps, AddIcon } from 'packages/uikit'
 import styled from 'styled-components'
 import { NextLinkFromReactRouter } from 'components/NextLink'
 import { useTranslation } from 'contexts/Localization'

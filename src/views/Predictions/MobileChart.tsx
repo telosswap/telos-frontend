@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex } from '@pancakeswap/uikit'
+import { Flex } from 'packages/uikit'
 import { useChartView } from 'state/predictions/hooks'
 import { setChartView } from 'state/predictions'
 import useLocalDispatch from 'contexts/LocalRedux/useLocalDispatch'

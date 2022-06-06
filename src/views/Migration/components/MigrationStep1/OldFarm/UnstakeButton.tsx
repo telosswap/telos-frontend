@@ -1,7 +1,7 @@
 import React from 'react'
 import { useWeb3React } from '@web3-react/core'
 import { useTranslation } from 'contexts/Localization'
-import { Button, AutoRenewIcon } from '@pancakeswap/uikit'
+import { Button, AutoRenewIcon } from 'packages/uikit'
 import useCatchTxError from 'hooks/useCatchTxError'
 import { useFarmUser } from 'state/farmsV1/hooks'
 import useToast from 'hooks/useToast'

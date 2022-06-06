@@ -1,4 +1,4 @@
-import { Skeleton, Text, Flex, Button, CalculateIcon, useModal, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Skeleton, Text, Flex, Button, CalculateIcon, useModal, useMatchBreakpoints } from 'packages/uikit'
 import styled from 'styled-components'
 import Balance from 'components/Balance'
 import { FlexGap } from 'components/Layout/Flex'

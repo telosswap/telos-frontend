@@ -1,4 +1,4 @@
-import { ArrowForwardIcon, Button, Text, useMatchBreakpoints, Link } from '@pancakeswap/uikit'
+import { ArrowForwardIcon, Button, Text, useMatchBreakpoints, Link } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import Image from 'next/image'
 import { memo, useMemo } from 'react'

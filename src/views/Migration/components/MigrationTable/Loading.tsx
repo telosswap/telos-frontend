@@ -1,4 +1,4 @@
-import { Flex } from '@pancakeswap/uikit'
+import { Flex } from 'packages/uikit'
 import Loading from 'components/Loading'
 
 const TableLoading = () => {

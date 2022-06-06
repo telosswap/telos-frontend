@@ -1,5 +1,5 @@
-import { Price } from '@pancakeswap/sdk'
-import { Text, AutoRenewIcon } from '@pancakeswap/uikit'
+import { Price } from '@wagyu-swap/sdk'
+import { Text, AutoRenewIcon } from 'packages/uikit'
 import { StyledBalanceMaxMini } from './styleds'
 
 interface TradePriceProps {

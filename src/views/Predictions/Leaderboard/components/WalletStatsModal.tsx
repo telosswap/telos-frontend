@@ -13,13 +13,13 @@ import {
   useMatchBreakpoints,
   Skeleton,
   Heading,
-} from '@pancakeswap/uikit'
+} from 'packages/uikit'
 import { useProfileForAddress } from 'state/profile/hooks'
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'
 import { getBscScanLink } from 'utils'
 import truncateHash from 'utils/truncateHash'
-import { Token } from '@pancakeswap/sdk'
+import { Token } from '@wagyu-swap/sdk'
 
 import { useTranslation } from 'contexts/Localization'
 import { FetchStatus } from 'config/constants/types'

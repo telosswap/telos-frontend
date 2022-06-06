@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Flex, Heading, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Text, Flex, Heading, useMatchBreakpoints } from 'packages/uikit'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { getBalanceNumber } from 'utils/formatBalance'

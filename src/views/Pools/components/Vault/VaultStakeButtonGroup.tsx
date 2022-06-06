@@ -1,4 +1,4 @@
-import { Box, Button, TooltipText, useTooltip } from '@pancakeswap/uikit'
+import { Box, Button, TooltipText, useTooltip } from 'packages/uikit'
 import { FlexGap } from 'components/Layout/Flex'
 import { useTranslation } from 'contexts/Localization'
 

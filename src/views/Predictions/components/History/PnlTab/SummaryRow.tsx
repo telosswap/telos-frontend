@@ -1,5 +1,5 @@
-import { Price } from '@pancakeswap/sdk'
-import { Flex, Text } from '@pancakeswap/uikit'
+import { Price } from '@wagyu-swap/sdk'
+import { Flex, Text } from 'packages/uikit'
 import { multiplyPriceByAmount } from 'utils/prices'
 import { useTranslation } from 'contexts/Localization'
 import { useConfig } from 'views/Predictions/context/ConfigProvider'

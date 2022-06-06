@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Box, Text, Flex, MessageText, Message } from '@pancakeswap/uikit'
+import { Box, Text, Flex, MessageText, Message } from 'packages/uikit'
 
 import { LightGreyCard } from 'components/Card'
 import { addSeconds } from 'date-fns'

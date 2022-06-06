@@ -1,4 +1,4 @@
-import { Button, Text } from '@pancakeswap/uikit'
+import { Button, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import useLocalDispatch from 'contexts/LocalRedux/useLocalDispatch'
 import { setHistoryPaneState } from 'state/predictions'

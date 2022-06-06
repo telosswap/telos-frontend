@@ -1,4 +1,4 @@
-import { AutoRenewIcon, Button, Flex, Heading, Modal, Text } from '@pancakeswap/uikit'
+import { AutoRenewIcon, Button, Flex, Heading, Modal, Text } from 'packages/uikit'
 import { ToastDescriptionWithTx } from 'components/Toast'
 import { useTranslation } from 'contexts/Localization'
 import { useCallWithGasPrice } from 'hooks/useCallWithGasPrice'

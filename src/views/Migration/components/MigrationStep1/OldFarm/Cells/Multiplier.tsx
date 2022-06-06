@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'contexts/Localization'
-import { Flex, Text, HelpIcon, useTooltip } from '@pancakeswap/uikit'
+import { Flex, Text, HelpIcon, useTooltip } from 'packages/uikit'
 import BaseCell, { CellContent } from 'views/Pools/components/PoolsTable/Cells/BaseCell'
 
 const StyledCell = styled(BaseCell)`

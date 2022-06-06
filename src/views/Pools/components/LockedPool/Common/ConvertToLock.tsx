@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { Flex, Message, MessageText, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Token } from '@wagyu-swap/sdk'
+import { Flex, Message, MessageText, useMatchBreakpoints } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { memo } from 'react'
 import { useVaultApy } from 'hooks/useVaultApy'

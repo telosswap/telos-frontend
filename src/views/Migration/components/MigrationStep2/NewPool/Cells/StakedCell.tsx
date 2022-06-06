@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import { Box, Flex, Text, useMatchBreakpoints } from 'packages/uikit'
 import BigNumber from 'bignumber.js'
 import Balance from 'components/Balance'
 import { useTranslation } from 'contexts/Localization'

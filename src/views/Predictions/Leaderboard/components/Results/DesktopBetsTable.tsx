@@ -1,5 +1,5 @@
-import { Token } from '@pancakeswap/sdk'
-import { Box, Card, Text } from '@pancakeswap/uikit'
+import { Token } from '@wagyu-swap/sdk'
+import { Box, Card, Text } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import PreviousBetsTable from '../PreviousBetsTable'
 

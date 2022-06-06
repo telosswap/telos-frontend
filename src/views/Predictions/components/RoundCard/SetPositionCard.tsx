@@ -15,7 +15,7 @@ import {
   Slider,
   Box,
   AutoRenewIcon,
-} from '@pancakeswap/uikit'
+} from 'packages/uikit'
 import { BigNumber, FixedNumber } from '@ethersproject/bignumber'
 import { Zero } from '@ethersproject/constants'
 import { parseUnits } from '@ethersproject/units'

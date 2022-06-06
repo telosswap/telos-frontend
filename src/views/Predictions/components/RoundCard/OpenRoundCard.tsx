@@ -1,14 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import {
-  Card,
-  CardBody,
-  PlayCircleOutlineIcon,
-  Button,
-  useTooltip,
-  ArrowUpIcon,
-  ArrowDownIcon,
-} from '@pancakeswap/uikit'
+import { Card, CardBody, PlayCircleOutlineIcon, Button, useTooltip, ArrowUpIcon, ArrowDownIcon } from 'packages/uikit'
 import { getNow } from 'utils/getNow'
 import { useTranslation } from 'contexts/Localization'
 import useLocalDispatch from 'contexts/LocalRedux/useLocalDispatch'

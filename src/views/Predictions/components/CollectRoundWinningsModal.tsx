@@ -15,9 +15,9 @@ import {
   Box,
   ModalCloseButton,
   Skeleton,
-} from '@pancakeswap/uikit'
+} from 'packages/uikit'
 import { AnyAction, AsyncThunkAction } from '@reduxjs/toolkit'
-import { Token } from '@pancakeswap/sdk'
+import { Token } from '@wagyu-swap/sdk'
 
 import { useWeb3React } from '@web3-react/core'
 import { REWARD_RATE } from 'state/predictions/config'

@@ -1,5 +1,5 @@
-import { Modal, ModalBody, Text, Image, Button, Link, OpenNewIcon } from '@pancakeswap/uikit'
-import { Token } from '@pancakeswap/sdk'
+import { Modal, ModalBody, Text, Image, Button, Link, OpenNewIcon } from 'packages/uikit'
+import { Token } from '@wagyu-swap/sdk'
 import { useTranslation } from 'contexts/Localization'
 
 interface Props {

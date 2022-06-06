@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/uikit",
+  "name": "packages/uikit",
   "version": "0.63.1",
   "description": "Set of UI components for pancake projects",
   "main": "src/index.ts",

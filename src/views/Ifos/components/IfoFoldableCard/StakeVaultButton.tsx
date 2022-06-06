@@ -1,4 +1,4 @@
-import { Button } from '@pancakeswap/uikit'
+import { Button } from 'packages/uikit'
 
 import { useTranslation } from 'contexts/Localization'
 

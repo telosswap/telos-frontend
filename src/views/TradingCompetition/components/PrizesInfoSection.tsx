@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Box } from '@pancakeswap/uikit'
+import { Box } from 'packages/uikit'
 import useTheme from 'hooks/useTheme'
 import PageSection from 'components/PageSection'
 import RibbonWithImage from './RibbonWithImage'

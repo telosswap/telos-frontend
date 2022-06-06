@@ -4,7 +4,7 @@ import { BigNumber as EthersBigNumber } from '@ethersproject/bignumber'
 import { formatUnits } from '@ethersproject/units'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Flex, Image, Text, Link } from '@pancakeswap/uikit'
+import { Heading, Flex, Image, Text, Link } from 'packages/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import { useTranslation } from 'contexts/Localization'
@@ -22,7 +22,7 @@ import { ViewMode } from 'state/user/actions'
 import { useRouter } from 'next/router'
 import Loading from 'components/Loading'
 import { useInitialBlock } from 'state/block/hooks'
-import { BSC_BLOCK_TIME } from 'config'
+import { VELAS_BLOCK_TIME } from 'config'
 import PoolCard from './components/PoolCard'
 import CakeVaultCard from './components/CakeVaultCard'
 import PoolTabButtons from './components/PoolTabButtons'
@@ -151,7 +151,7 @@ const sortPools = (account: string, sortOption: string, pools: DeserializedPool[
   }
 }
 
-const POOL_START_BLOCK_THRESHOLD = (60 / BSC_BLOCK_TIME) * 4
+const POOL_START_BLOCK_THRESHOLD = (60 / VELAS_BLOCK_TIME) * 4
 
 const Pools: React.FC = () => {
   const router = useRouter()
