@@ -3,7 +3,7 @@ const { withSentryConfig } = require('@sentry/nextjs')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-const withTM = require('next-transpile-modules')(['packages/uikit'])
+const withTM = require('next-transpile-modules')([])
 
 const sentryWebpackPluginOptions =
   process.env.VERCEL_ENV === 'production'
@@ -127,6 +127,11 @@ const config = {
       {
         source: '/collectibles',
         destination: '/nfts',
+        permanent: true,
+      },
+      {
+        source: '/',
+        destination: '/swap',
         permanent: true,
       },
     ]

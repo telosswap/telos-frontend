@@ -6,7 +6,7 @@ describe('maxAmountSpend', () => {
     expect(maxAmountSpend()).toBeUndefined()
   })
 
-  it('should has value when CurrencyAmount is BNB and CurrencyAmount is higher than min bnb', () => {
+  it('should has value when CurrencyAmount is BNB and CurrencyAmount is higher than min vlx', () => {
     expect(
       JSBI.greaterThan(
         maxAmountSpend(CurrencyAmount.ether(JSBI.exponentiate(JSBI.BigInt(100), JSBI.BigInt(16)))).raw,

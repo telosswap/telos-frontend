@@ -11,14 +11,14 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://docs.wagyuswap.app/',
     text: t('Learn'),
     external: true,
   },
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: 'BNB', alt: t('BNB token') },
+      { src: 'VLX', alt: t('VLX token') },
       { src: 'BTC', alt: t('BTC token') },
       { src: 'CAKE', alt: t('CAKE token') },
     ],
@@ -27,7 +27,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
 
 export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
   headingText: t('Earn passive income with crypto.'),
-  bodyText: t('PancakeSwap makes it easy to make your crypto work for you.'),
+  bodyText: t('WagyuSwap makes it easy to make your crypto work for you.'),
   reverse: true,
   primaryButton: {
     to: '/farms',
@@ -35,7 +35,7 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/products/yield-farming',
+    to: 'https://docs.wagyuswap.app/products/yield-farming',
     text: t('Learn'),
     external: true,
   },
@@ -52,16 +52,16 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
 export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   headingText: t('CAKE makes our world go round.'),
   bodyText: t(
-    'CAKE token is at the heart of the PancakeSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'CAKE token is at the heart of the WagyuSwap ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
   ),
   reverse: false,
   primaryButton: {
     to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    text: t('Buy CAKE'),
+    text: t('Buy WAG'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
+    to: 'https://docs.wagyuswap.app/tokenomics/cake',
     text: t('Learn'),
     external: true,
   },

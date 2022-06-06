@@ -1,29 +1,29 @@
-import React, { useState } from "react";
-import styled, { useTheme } from "styled-components";
-import getExternalLinkProps from "../../util/getExternalLinkProps";
-import Grid from "../../components/Box/Grid";
-import Box from "../../components/Box/Box";
-import getThemeValue from "../../util/getThemeValue";
-import Text from "../../components/Text/Text";
-import Heading from "../../components/Heading/Heading";
-import { Button } from "../../components/Button";
-import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from "../Modal";
-import WalletCard, { MoreWalletCard } from "./WalletCard";
-import config, { walletLocalStorageKey } from "./config";
-import { Config, Login } from "./types";
+import React, { useState } from 'react'
+import styled, { useTheme } from 'styled-components'
+import getExternalLinkProps from '../../util/getExternalLinkProps'
+import Grid from '../../components/Box/Grid'
+import Box from '../../components/Box/Box'
+import getThemeValue from '../../util/getThemeValue'
+import Text from '../../components/Text/Text'
+import Heading from '../../components/Heading/Heading'
+import { Button } from '../../components/Button'
+import { ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalTitle } from '../Modal'
+import WalletCard, { MoreWalletCard } from './WalletCard'
+import config, { walletLocalStorageKey } from './config'
+import { Config, Login } from './types'
 
 interface Props {
-  login: Login;
-  onDismiss?: () => void;
-  displayCount?: number;
-  t: (key: string) => string;
+  login: Login
+  onDismiss?: () => void
+  displayCount?: number
+  t: (key: string) => string
 }
 
 const WalletWrapper = styled(Box)`
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
-`;
+`
 
-const getPriority = (priority: Config["priority"]) => (typeof priority === "function" ? priority() : priority);
+const getPriority = (priority: Config['priority']) => (typeof priority === 'function' ? priority() : priority)
 
 /**
  * Checks local storage if we have saved the last wallet the user connected with
@@ -32,45 +32,45 @@ const getPriority = (priority: Config["priority"]) => (typeof priority === "func
  * @returns sorted config
  */
 const getPreferredConfig = (walletConfig: Config[]) => {
-  const sortedConfig = walletConfig.sort((a: Config, b: Config) => getPriority(a.priority) - getPriority(b.priority));
+  const sortedConfig = walletConfig.sort((a: Config, b: Config) => getPriority(a.priority) - getPriority(b.priority))
 
-  const preferredWalletName = localStorage?.getItem(walletLocalStorageKey);
+  const preferredWalletName = localStorage?.getItem(walletLocalStorageKey)
 
   if (!preferredWalletName) {
-    return sortedConfig;
+    return sortedConfig
   }
 
-  const preferredWallet = sortedConfig.find((sortedWalletConfig) => sortedWalletConfig.title === preferredWalletName);
+  const preferredWallet = sortedConfig.find((sortedWalletConfig) => sortedWalletConfig.title === preferredWalletName)
 
   if (!preferredWallet) {
-    return sortedConfig;
+    return sortedConfig
   }
 
   return [
     preferredWallet,
     ...sortedConfig.filter((sortedWalletConfig) => sortedWalletConfig.title !== preferredWalletName),
-  ];
-};
+  ]
+}
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayCount = 3, t }) => {
-  const [showMore, setShowMore] = useState(false);
-  const theme = useTheme();
-  const sortedConfig = getPreferredConfig(config);
+  const [showMore, setShowMore] = useState(false)
+  const theme = useTheme()
+  const sortedConfig = getPreferredConfig(config)
   // Filter out WalletConnect if user is inside TrustWallet built-in browser
   const walletsToShow = window.ethereum?.isTrust
-    ? sortedConfig.filter((wallet) => wallet.title !== "WalletConnect")
-    : sortedConfig;
-  const displayListConfig = showMore ? walletsToShow : walletsToShow.slice(0, displayCount);
+    ? sortedConfig.filter((wallet) => wallet.title !== 'WalletConnect')
+    : sortedConfig
+  const displayListConfig = showMore ? walletsToShow : walletsToShow.slice(0, displayCount)
 
   return (
     <ModalContainer minWidth="320px">
-      <ModalHeader background={getThemeValue("colors.gradients.bubblegum")(theme)}>
+      <ModalHeader background={getThemeValue('colors.gradients.bubblegum')(theme)}>
         <ModalTitle>
-          <Heading>{t("Connect Wallet")}</Heading>
+          <Heading>{t('Connect Wallet')}</Heading>
         </ModalTitle>
         <ModalCloseButton onDismiss={onDismiss} />
       </ModalHeader>
-      <ModalBody width={["320px", null, "340px"]}>
+      <ModalBody width={['320px', null, '340px']}>
         <WalletWrapper py="24px" maxHeight="453px" overflowY="auto">
           <Grid gridTemplateColumns="1fr 1fr">
             {displayListConfig.map((wallet) => (
@@ -83,21 +83,21 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null, displayC
         </WalletWrapper>
         <Box p="24px">
           <Text textAlign="center" color="textSubtle" as="p" mb="16px">
-            {t("Haven’t got a crypto wallet yet?")}
+            {t('Haven’t got a crypto wallet yet?')}
           </Text>
           <Button
             as="a"
-            href="https://docs.pancakeswap.finance/get-started/connection-guide"
+            href="https://docs.wagyuswap.app/get-started/connection-guide"
             variant="subtle"
             width="100%"
             {...getExternalLinkProps()}
           >
-            {t("Learn How to Connect")}
+            {t('Learn How to Connect')}
           </Button>
         </Box>
       </ModalBody>
     </ModalContainer>
-  );
-};
+  )
+}
 
-export default ConnectModal;
+export default ConnectModal

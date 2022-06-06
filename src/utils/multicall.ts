@@ -15,6 +15,7 @@ export interface MulticallOptions extends CallOverrides {
 const multicall = async <T = any>(abi: any[], calls: Call[]): Promise<T> => {
   const multi = getMulticallContract()
   const itf = new Interface(abi)
+  console.log('===multicall====', calls)
 
   const calldata = calls.map((call) => ({
     target: call.address.toLowerCase(),
@@ -37,6 +38,8 @@ export const multicallv2 = async <T = any>(abi: any[], calls: Call[], options?: 
   const { requireSuccess = true, ...overrides } = options || {}
   const multi = getMulticallContract()
   const itf = new Interface(abi)
+
+  console.log('===multicallv2====', calls)
 
   const calldata = calls.map((call) => ({
     target: call.address.toLowerCase(),

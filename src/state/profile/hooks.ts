@@ -21,7 +21,8 @@ export const useProfileForAddress = (
   refresh: KeyedMutator<GetProfileResponse>
 } => {
   const { data, status, mutate, isValidating } = useSWR(
-    address ? [address, 'profile'] : null,
+    // address ? [address, 'profile'] : null,
+    null,
     () => getProfile(address),
     fetchConfiguration,
   )

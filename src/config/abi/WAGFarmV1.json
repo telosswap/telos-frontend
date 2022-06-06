@@ -2,12 +2,12 @@
   {
     "inputs": [
       {
-        "internalType": "contract CakeToken",
+        "internalType": "contract WAGToken",
         "name": "_cake",
         "type": "address"
       },
       {
-        "internalType": "contract SyrupBar",
+        "internalType": "contract WAGStake",
         "name": "_syrup",
         "type": "address"
       },
@@ -18,12 +18,12 @@
       },
       {
         "internalType": "uint256",
-        "name": "_cakePerBlock",
+        "name": "_cakePerSecond",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "_startBlock",
+        "name": "_startTimestamp",
         "type": "uint256"
       }
     ],
@@ -165,7 +165,7 @@
     "name": "cake",
     "outputs": [
       {
-        "internalType": "contract CakeToken",
+        "internalType": "contract WAGToken",
         "name": "",
         "type": "address"
       }
@@ -175,7 +175,7 @@
   },
   {
     "inputs": [],
-    "name": "cakePerBlock",
+    "name": "cakePerSecond",
     "outputs": [
       {
         "internalType": "uint256",
@@ -385,7 +385,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "lastRewardBlock",
+        "name": "lastRewardTimestamp",
         "type": "uint256"
       },
       {
@@ -455,7 +455,7 @@
   },
   {
     "inputs": [],
-    "name": "startBlock",
+    "name": "startTimestamp",
     "outputs": [
       {
         "internalType": "uint256",
@@ -471,7 +471,7 @@
     "name": "syrup",
     "outputs": [
       {
-        "internalType": "contract SyrupBar",
+        "internalType": "contract WAGStake",
         "name": "",
         "type": "address"
       }

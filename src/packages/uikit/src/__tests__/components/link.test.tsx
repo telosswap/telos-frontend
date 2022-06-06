@@ -1,9 +1,9 @@
-import React from "react";
-import { renderWithTheme } from "../../testHelpers";
-import { Link, LinkExternal } from "../../components/Link";
+import React from 'react'
+import { renderWithTheme } from '../../testHelpers'
+import { Link, LinkExternal } from '../../components/Link'
 
-it("renders link correctly", () => {
-  const { asFragment } = renderWithTheme(<Link href="https://pancakeswap.finance">Link</Link>);
+it('renders link correctly', () => {
+  const { asFragment } = renderWithTheme(<Link href="https://exchange.wagyuswap.app">Link</Link>)
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -35,16 +35,16 @@ it("renders link correctly", () => {
     <a
         class="c0 c1"
         color="primary"
-        href="https://pancakeswap.finance"
+        href="https://exchange.wagyuswap.app"
       >
         Link
       </a>
     </DocumentFragment>
-  `);
-});
+  `)
+})
 
-it("renders link external link correctly", () => {
-  const { asFragment } = renderWithTheme(<LinkExternal href="https://pancakeswap.finance">Link</LinkExternal>);
+it('renders link external link correctly', () => {
+  const { asFragment } = renderWithTheme(<LinkExternal href="https://exchange.wagyuswap.app">Link</LinkExternal>)
   expect(asFragment()).toMatchInlineSnapshot(`
     <DocumentFragment>
       .c0 {
@@ -87,7 +87,7 @@ it("renders link external link correctly", () => {
     <a
         class="c0 c1"
         color="primary"
-        href="https://pancakeswap.finance"
+        href="https://exchange.wagyuswap.app"
         rel="noreferrer noopener"
         target="_blank"
       >
@@ -105,5 +105,5 @@ it("renders link external link correctly", () => {
         </svg>
       </a>
     </DocumentFragment>
-  `);
-});
+  `)
+})

@@ -66,7 +66,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
       style={{ maxWidth: '420px' }}
     >
       <ScrollableContainer>
-        <Flex pb="24px" flexDirection="column">
+        {/* <Flex pb="24px" flexDirection="column">
           <Text bold textTransform="uppercase" fontSize="12px" color="secondary" mb="24px">
             {t('Global')}
           </Text>
@@ -75,8 +75,8 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
             <ThemeSwitcher isDark={isDark} toggleTheme={() => setTheme(isDark ? 'light' : 'dark')} />
           </Flex>
           <GasSettings />
-        </Flex>
-        <Flex pt="24px" flexDirection="column" borderTop={`1px ${theme.colors.cardBorder} solid`}>
+        </Flex> */}
+        <Flex flexDirection="column">
           <Text bold textTransform="uppercase" fontSize="12px" color="secondary" mb="24px">
             {t('Swaps & Liquidity')}
           </Text>
@@ -107,7 +107,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
             }}
           />
         </Flex>
-        <Flex justifyContent="space-between" alignItems="center" mb="24px">
+        {/* <Flex justifyContent="space-between" alignItems="center" mb="24px">
           <Flex alignItems="center">
             <Text>{t('Subgraph Health Indicator')}</Text>
             <QuestionHelper
@@ -126,7 +126,7 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
               setSubgraphHealth(!subgraphHealth)
             }}
           />
-        </Flex>
+        </Flex> */}
         <Flex justifyContent="space-between" alignItems="center">
           <Flex alignItems="center">
             <Text>{t('Flippy sounds')}</Text>

@@ -1,6 +1,10 @@
+import { ChainId } from '@wagyu-swap/sdk'
+import { CHAIN_ID } from './networks'
+
+const chainId = parseInt(CHAIN_ID, 10)
+
 export const GRAPH_API_PROFILE = process.env.NEXT_PUBLIC_GRAPH_API_PROFILE
 export const GRAPH_API_PREDICTION = process.env.NEXT_PUBLIC_GRAPH_API_PREDICTION
-export const GRAPH_API_LOTTERY = process.env.NEXT_PUBLIC_GRAPH_API_LOTTERY
 export const SNAPSHOT_BASE_URL = process.env.NEXT_PUBLIC_SNAPSHOT_BASE_URL
 export const API_PROFILE = process.env.NEXT_PUBLIC_API_PROFILE
 export const API_NFT = process.env.NEXT_PUBLIC_API_NFT
@@ -12,8 +16,26 @@ export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
  */
 export const GRAPH_API_PREDICTION_V1 = 'https://api.thegraph.com/subgraphs/name/pancakeswap/prediction'
 
-export const INFO_CLIENT = 'https://bsc.streamingfast.io/subgraphs/name/pancakeswap/exchange-v2'
-export const BLOCKS_CLIENT = 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks'
+// https://thegraph.testnet.wagyuswap.app/subgraphs/name/wagyu/graphql
+export const INFO_CLIENT = 'http://209.237.140.231:8000/subgraphs/name/wagyu'
+
+// export const INFO_CLIENT = {
+//   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/wagyu',
+//   [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/wagyu',
+// }[chainId]
+
+export const BLOCKS_CLIENT = 'http://51.222.43.201:8000/subgraphs/name/wagyu'
+
+// export const BLOCKS_CLIENT = {
+//   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/blocks',
+//   [ChainId.MAINNET]: 'https://thegraph1.wagyuswap.app/subgraphs/name/wagyu',
+// }[chainId]
+
+export const GRAPH_API_LOTTERY = {
+  [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/lottery',
+  [ChainId.MAINNET]: 'https://thegraph.wagyuswap.app/subgraphs/name/lottery',
+}[chainId]
+
 export const GRAPH_API_NFTMARKET = process.env.NEXT_PUBLIC_GRAPH_API_NFT_MARKET
 export const GRAPH_HEALTH = 'https://api.thegraph.com/index-node/graphql'
 

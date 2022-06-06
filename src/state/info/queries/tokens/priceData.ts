@@ -19,7 +19,7 @@ const getPriceSubqueries = (tokenAddress: string, blocks: any) =>
   )
 
 /**
- * Price data for token and bnb based on block number
+ * Price data for token and vlx based on block number
  */
 const priceQueryConstructor = (subqueries: string[]) => {
   return gql`

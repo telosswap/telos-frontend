@@ -2,7 +2,7 @@ import { BigNumber, FixedNumber } from '@ethersproject/bignumber'
 import { WeiPerEther } from '@ethersproject/constants'
 import _toString from 'lodash/toString'
 import { BLOCKS_PER_YEAR } from 'config'
-import masterChefAbi from 'config/abi/masterchef.json'
+import masterChefAbi from 'config/abi/WagFarm.json'
 import { useCallback, useMemo } from 'react'
 import { useCakeVault } from 'state/pools/hooks'
 import useSWRImmutable from 'swr/immutable'
@@ -55,7 +55,7 @@ export function useVaultApy({ duration = MAX_LOCK_DURATION }: { duration?: numbe
     const calls = [
       {
         address: masterChefAddress,
-        name: 'cakePerBlock',
+        name: 'cakePerSecond',
         params: [false],
       },
       {

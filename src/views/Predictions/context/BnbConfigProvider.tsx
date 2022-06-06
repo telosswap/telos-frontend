@@ -11,7 +11,7 @@ export const config: PredictionConfig = {
   address: getAddress(addresses.predictions),
   api: GRAPH_API_PREDICTION,
   chainlinkOracleAddress: getAddress(addresses.chainlinkOracle),
-  token: tokens.bnb,
+  token: tokens.vlx,
 }
 
 export default configProviderFactory(config)

@@ -512,8 +512,8 @@ export default function RemoveLiquidity() {
                       ) : oneCurrencyIsWBNB ? (
                         <StyledInternalLink
                           href={`/remove/${
-                            currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'BNB' : currencyIdA
-                          }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'BNB' : currencyIdB}`}
+                            currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'VLX' : currencyIdA
+                          }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'VLX' : currencyIdB}`}
                         >
                           {t('Receive BNB')}
                         </StyledInternalLink>

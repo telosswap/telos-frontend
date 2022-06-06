@@ -1,10 +1,12 @@
 import { ChainId, JSBI, Percent, Token } from '@wagyu-swap/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { mainnetTokens, testnetTokens } from './tokens'
+import addresses from './addresses.json'
+import { CHAIN_ID } from './networks'
 
 export const ROUTER_ADDRESS = {
-  [ChainId.MAINNET]: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
-  [ChainId.TESTNET]: '0xD99D1c33F9fC3444f8101754aBC46c52416550D1',
+  [ChainId.MAINNET]: addresses[ChainId.MAINNET].WagyuRouter,
+  [ChainId.TESTNET]: addresses[ChainId.TESTNET].WagyuRouter,
 }
 
 // a list of tokens by chain
@@ -15,15 +17,15 @@ type ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.MAINNET]: [
-    mainnetTokens.wbnb,
+    mainnetTokens.wvlx,
     mainnetTokens.cake,
     mainnetTokens.busd,
     mainnetTokens.usdt,
-    mainnetTokens.btcb,
-    mainnetTokens.eth,
+    mainnetTokens.wbtc,
+    mainnetTokens.weth,
     mainnetTokens.usdc,
   ],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.busd],
 }
 
 /**
@@ -45,19 +47,19 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  [ChainId.MAINNET]: [mainnetTokens.busd, mainnetTokens.cake, mainnetTokens.btcb],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.MAINNET]: [mainnetTokens.busd, mainnetTokens.cake, mainnetTokens.wbtc],
+  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.busd],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  [ChainId.MAINNET]: [mainnetTokens.wbnb, mainnetTokens.dai, mainnetTokens.busd, mainnetTokens.usdt],
-  [ChainId.TESTNET]: [testnetTokens.wbnb, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.MAINNET]: [mainnetTokens.wvlx, mainnetTokens.dai, mainnetTokens.busd, mainnetTokens.usdt],
+  [ChainId.TESTNET]: [testnetTokens.wvlx, testnetTokens.cake, testnetTokens.busd],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
-    [mainnetTokens.cake, mainnetTokens.wbnb],
+    [mainnetTokens.cake, mainnetTokens.wvlx],
     [mainnetTokens.busd, mainnetTokens.usdt],
     [mainnetTokens.dai, mainnetTokens.usdt],
   ],
@@ -110,9 +112,9 @@ export const SLOW_INTERVAL = 60000
 export const NOT_ON_SALE_SELLER = '0x0000000000000000000000000000000000000000'
 
 // BNB
-export const DEFAULT_INPUT_CURRENCY = 'BNB'
+export const DEFAULT_INPUT_CURRENCY = 'VLX'
 // CAKE
-export const DEFAULT_OUTPUT_CURRENCY = '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82'
+export const DEFAULT_OUTPUT_CURRENCY = addresses[parseInt(CHAIN_ID, 10) as ChainId].WAGToken
 
 export const FARM_AUCTION_HOSTING_IN_SECONDS = 604800
 
@@ -122,7 +124,7 @@ export const GELATO_NATIVE = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
 export const GELATO_HANDLER = 'pancakeswap'
 export const GENERIC_GAS_LIMIT_ORDER_EXECUTION = BigNumber.from(500000)
 
-export const EXCHANGE_DOCS_URLS = 'https://docs.pancakeswap.finance/products/pancakeswap-exchange'
-export const LIMIT_ORDERS_DOCS_URL = 'https://docs.pancakeswap.finance/products/pancakeswap-exchange/limit-orders'
+export const EXCHANGE_DOCS_URLS = 'https://docs.wagyuswap.app/products/pancakeswap-exchange'
+export const LIMIT_ORDERS_DOCS_URL = 'https://docs.wagyuswap.app/products/pancakeswap-exchange/limit-orders'
 
 export const GALAXY_NFT_CAMPAIGN_ID = 'GCpp2UUxqQ'

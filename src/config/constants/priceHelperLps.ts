@@ -9,16 +9,6 @@ const priceHelperLps: SerializedFarmConfig[] = [
    * Prices are then fetched for all farms (masterchef + priceHelperLps).
    * Before storing to redux, farms without a PID are filtered out.
    */
-  {
-    pid: null,
-    lpSymbol: 'ANKR-BNB LP',
-    lpAddresses: {
-      97: '',
-      56: '0x3147F98B8f9C53Acdf8F16332eaD12B592a1a4ae',
-    },
-    token: tokens.ankr,
-    quoteToken: tokens.wbnb,
-  },
 ]
 
 export default priceHelperLps
