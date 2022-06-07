@@ -1,3 +1,4 @@
+import addresses from 'config/constants/addresses.json'
 import { useCallback, useState } from 'react'
 import BigNumber from 'bignumber.js'
 import { useFastRefreshEffect } from 'hooks/useRefreshEffect'
@@ -8,7 +9,7 @@ import { CHAIN_ID } from 'config/constants/networks'
 import { PoolCategory } from 'config/constants/types'
 import { serializeTokens } from 'config/constants/tokens'
 import { fetchUserStakeBalances, fetchUserPendingRewards } from './fetchPoolsUser'
-
+import { ChainId } from '@wagyu-swap/sdk'
 export interface PoolsState {
   data: SerializedPool
   userDataLoaded: boolean
@@ -23,8 +24,8 @@ const initialData = {
     stakingToken: serializedTokens.cake,
     earningToken: serializedTokens.cake,
     contractAddress: {
-      111: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-      106: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
+      111: addresses[ChainId.TESTNET].WagyuVault,
+      106: addresses[ChainId.MAINNET].WagyuVault,
     },
     poolCategory: PoolCategory.CORE,
     harvest: true,

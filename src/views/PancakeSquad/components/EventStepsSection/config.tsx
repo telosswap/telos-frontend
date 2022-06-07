@@ -35,7 +35,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
       title: t('Activate your profile'),
-      bodyText: [t('You’ll need an active WagyuSwap Profile to buy Minting Tickets and mint a Pancake Squad NFT!')],
+      bodyText: [t('You’ll need an active WagyuSwap Profile to buy Minting Tickets and mint a Wagyuswap Squad NFT!')],
       buttons: (
         <>
           <ActivateProfileButton userStatus={userStatus} t={t} />
@@ -56,7 +56,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         <>
           <Button
             as="a"
-            href="https://exchange.wagyuswap.app/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+            href="https://exchange.wagyuswap.app/swap?outputCurrency=0xaBf26902Fd7B624e0db40D31171eA9ddDf078351"
             target="_blank"
             width="100%"
           >
@@ -76,10 +76,10 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
       bodyText: [
         t('Buy Squad Tickets, while stocks last. You’ll use them in step 4.'),
         `04:00 UTC, Oct. 7 ${t(
-          'Pre-sale: Wallets which held “Gen 0” Pancake Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
+          'Pre-sale: Wallets which held “Gen 0” Wagyuswap Bunnies NFTs (bunnyID 0,1,2,3,4) at a snapshot taken some time between 12 and 2 hours before the presale begins can purchase one Squad Ticket per Gen 0 NFT.',
         )}`,
         `08:00 UTC, Oct. 7 ${t(
-          'Public Sale: Any wallet with an active Pancake Profile can purchase up to 10 Squad Tickets, while stocks last.',
+          'Public Sale: Any wallet with an active Wagyuswap Profile can purchase up to 10 Squad Tickets, while stocks last.',
         )}`,
       ],
       buttons: (
@@ -116,7 +116,9 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
       }),
       title: t('Claim Phase'),
       bodyText: [
-        t('During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a Pancake Squad NFT.'),
+        t(
+          'During this phase, any wallet holding a Squad Ticket can redeem their ticket to claim a Wagyuswap Squad NFT.',
+        ),
       ],
       buttons: (
         <>

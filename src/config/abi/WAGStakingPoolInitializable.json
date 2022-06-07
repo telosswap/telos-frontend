@@ -1,37 +1,6 @@
 [
   {
-    "inputs": [
-      {
-        "internalType": "contract IBEP20",
-        "name": "_stakedToken",
-        "type": "address"
-      },
-      {
-        "internalType": "contract IBEP20",
-        "name": "_rewardToken",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_rewardPerBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_startBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_bonusEndBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_poolLimitPerUser",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [],
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -111,20 +80,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "rewardPerBlock",
-        "type": "uint256"
-      }
-    ],
-    "name": "NewRewardPerBlock",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "startBlock",
+        "name": "startTimestamp",
         "type": "uint256"
       },
       {
@@ -135,6 +91,19 @@
       }
     ],
     "name": "NewStartAndEndBlocks",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardPerSecond",
+        "type": "uint256"
+      }
+    ],
+    "name": "NewrewardPerSecond",
     "type": "event"
   },
   {
@@ -203,6 +172,19 @@
   },
   {
     "inputs": [],
+    "name": "SOUS_CHEF_FACTORY",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "accTokenPerShare",
     "outputs": [
       {
@@ -216,7 +198,7 @@
   },
   {
     "inputs": [],
-    "name": "bonusEndBlock",
+    "name": "bonusEndTimestamp",
     "outputs": [
       {
         "internalType": "uint256",
@@ -274,13 +256,56 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "lastRewardBlock",
-    "outputs": [
+    "inputs": [
+      {
+        "internalType": "contract IBEP20",
+        "name": "_stakedToken",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IBEP20",
+        "name": "_rewardToken",
+        "type": "address"
+      },
       {
         "internalType": "uint256",
-        "name": "",
+        "name": "_rewardPerSecond",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_startTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_bonusEndTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_poolLimitPerUser",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_admin",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isInitialized",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -288,7 +313,7 @@
   },
   {
     "inputs": [],
-    "name": "numberBlocksForUserLimit",
+    "name": "lastRewardTimestamp",
     "outputs": [
       {
         "internalType": "uint256",
@@ -371,7 +396,7 @@
   },
   {
     "inputs": [],
-    "name": "rewardPerBlock",
+    "name": "rewardPerSecond",
     "outputs": [
       {
         "internalType": "uint256",
@@ -410,7 +435,7 @@
   },
   {
     "inputs": [],
-    "name": "startBlock",
+    "name": "startTimestamp",
     "outputs": [
       {
         "internalType": "uint256",
@@ -463,11 +488,16 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_rewardPerBlock",
+        "name": "_startTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_bonusEndTimestamp",
         "type": "uint256"
       }
     ],
-    "name": "updateRewardPerBlock",
+    "name": "updateStartAndEndBlocks",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -476,16 +506,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_startBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_bonusEndBlock",
+        "name": "_rewardPerSecond",
         "type": "uint256"
       }
     ],
-    "name": "updateStartAndEndBlocks",
+    "name": "updaterewardPerSecond",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

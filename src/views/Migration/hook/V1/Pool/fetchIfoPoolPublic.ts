@@ -6,7 +6,7 @@ import { BIG_ZERO } from 'utils/bigNumber'
 
 export const fetchPublicIfoPoolData = async (ifoPoolAddress: string) => {
   try {
-    const calls = ['getPricePerFullShare', 'totalShares', 'startBlock', 'endBlock'].map((method) => ({
+    const calls = ['getPricePerFullShare', 'totalShares', 'startTimestamp', 'endBlock'].map((method) => ({
       address: ifoPoolAddress,
       name: method,
     }))

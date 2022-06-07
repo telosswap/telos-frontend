@@ -140,7 +140,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       // },
       {
         label: t('Docs'),
-        href: 'https://docs.wagyuswap.app',
+        href: 'https://docs.wagyuswap.app/wagyuswap',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],

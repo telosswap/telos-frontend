@@ -10,9 +10,9 @@ import TransWithElement from '../../TransWithElement'
 const NotOkNFT = ({ admissionProfile }) => {
   const { t } = useTranslation()
 
-  const keyword = '%Pancake Squad NFT%'
+  const keyword = '%Wagyuswap Squad NFT%'
 
-  const rawText = t(`Set %Pancake Squad NFT% as Pancake Profile avatar`)
+  const rawText = t(`Set %Wagyuswap Squad NFT% as Wagyuswap Profile avatar`)
 
   return (
     <TransWithElement
@@ -24,7 +24,7 @@ const NotOkNFT = ({ admissionProfile }) => {
             style={{ display: 'inline' }}
             href={`https://exchange.wagyuswap.app/nfts/collections/${admissionProfile}`}
           >
-            {t('Pancake Squad NFT')}
+            {t('Wagyuswap Squad NFT')}
           </LinkExternal>
           <br />
         </>
@@ -37,9 +37,9 @@ const NotOkProfilePoints = ({ pointThreshold }) => {
   const { account } = useWeb3React()
   const { t } = useTranslation()
 
-  const keyword = '%Pancake Profile%'
+  const keyword = '%Wagyuswap Profile%'
 
-  const rawText = t(`Reach %point% or more %Pancake Profile% points`, { point: pointThreshold })
+  const rawText = t(`Reach %point% or more %Wagyuswap Profile% points`, { point: pointThreshold })
 
   return (
     <TransWithElement
@@ -52,7 +52,7 @@ const NotOkProfilePoints = ({ pointThreshold }) => {
             style={{ display: 'inline' }}
             href={`https://exchange.wagyuswap.app/nfts/profile/${account}/achievements/`}
           >
-            {t('Pancake Profile')}
+            {t('Wagyuswap Profile')}
           </LinkExternal>
         </>
       }
@@ -66,7 +66,7 @@ const configCriterias = (pointThreshold: number, admissionProfile: string, t) =>
     okMsg: t('Eligible NFT avatar found!'),
     notOkMsg: <NotOkNFT admissionProfile={admissionProfile} />,
     NotOkIcon: AccountIcon,
-    name: t('Pancake Squad'),
+    name: t('Wagyuswap Squad'),
   },
   isQualifiedPoints: {
     OkIcon: OkProfilePointsIcon,

@@ -8,7 +8,7 @@ import {
   Heading,
   IconButton,
   Button,
-  BinanceIcon,
+  VelasIcon,
   LogoIcon,
   Text,
   BalanceInput,
@@ -34,7 +34,7 @@ import PositionTag from '../PositionTag'
 import FlexRow from '../FlexRow'
 
 const LOGOS = {
-  VLX: BinanceIcon,
+  VLX: VelasIcon,
   WAG: LogoIcon,
 }
 

@@ -1,3 +1,4 @@
+import { VLX_WAG_FARM_PID } from 'config/constants/farms'
 import { useWeb3React } from '@web3-react/core'
 import BigNumber from 'bignumber.js'
 import { farmsConfig } from 'config/constants'
@@ -136,7 +137,7 @@ export const useLpTokenPrice = (symbol: string) => {
  * @@deprecated use the BUSD hook in /hooks
  */
 export const usePriceCakeBusd = (): BigNumber => {
-  const cakeBnbFarm = useFarmFromPid(251)
+  const cakeBnbFarm = useFarmFromPid(VLX_WAG_FARM_PID)
 
   const cakePriceBusdAsString = cakeBnbFarm.tokenPriceBusd
 

@@ -1,7 +1,7 @@
 {
   "short_name": "WagyuSwap",
   "name": "WagyuSwap",
-  "description": "Farm WAG with Pancake LP Tokens",
+  "description": "Farm WAG with Wagyuswap LP Tokens",
   "homepage_url": "https://exchange.wagyuswap.app",
   "start_url": ".",
   "display": "standalone",

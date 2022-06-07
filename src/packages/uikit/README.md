@@ -1,20 +1,20 @@
-# 🥞 Pancake UIkit
+# 🥞 Wagyuswap UIkit
 
 [![Version](https://img.shields.io/npm/v/packages/uikit)](https://www.npmjs.com/package/packages/uikit) [![Size](https://img.shields.io/bundlephobia/min/packages/uikit)](https://www.npmjs.com/package/packages/uikit)
 
-Pancake UIkit is a set of React components and hooks used to build pages on Pancake's apps. It also contains a theme file for dark and light mode.
+Wagyuswap UIkit is a set of React components and hooks used to build pages on Wagyuswap's apps. It also contains a theme file for dark and light mode.
 
 ## Install
 
 `yarn add packages/uikit`
 
-**\*Note**: In case you want to use the older version of the Pancake UIkit, you should install @pancakeswap-libs/uikit, instead, but we recommend using the latest version of the UIkit.\*
+**\*Note**: In case you want to use the older version of the Wagyuswap UIkit, you should install @pancakeswap-libs/uikit, instead, but we recommend using the latest version of the UIkit.\*
 
 ## Setup
 
 ### Theme
 
-Before using Pancake UIkit, you need to provide the theme file to styled-component.
+Before using Wagyuswap UIkit, you need to provide the theme file to styled-component.
 
 ```
 import { ThemeProvider } from 'styled-components'

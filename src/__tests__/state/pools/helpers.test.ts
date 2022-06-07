@@ -84,7 +84,7 @@ describe('transformPool', () => {
 
     expect(transformedPool).toHaveProperty('totalStaked')
     expect(transformedPool).toHaveProperty('stakingLimit')
-    expect(transformedPool).toHaveProperty('startBlock', 100)
+    expect(transformedPool).toHaveProperty('startTimestamp', 100)
     expect(transformedPool).toHaveProperty('endBlock', 100)
     expect(transformedPool).toHaveProperty('userData')
   })

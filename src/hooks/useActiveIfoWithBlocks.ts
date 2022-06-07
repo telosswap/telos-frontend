@@ -17,7 +17,7 @@ export const useActiveIfoWithBlocks = (): Ifo & { startBlock: number; endBlock: 
         [
           {
             address: activeIfo.address,
-            name: 'startBlock',
+            name: 'startTimestamp',
           },
           {
             address: activeIfo.address,

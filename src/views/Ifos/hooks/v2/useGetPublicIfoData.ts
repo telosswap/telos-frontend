@@ -85,7 +85,7 @@ const useGetPublicIfoData = (ifo: Ifo): PublicIfoData => {
         [
           {
             address,
-            name: 'startBlock',
+            name: 'startTimestamp',
           },
           {
             address,

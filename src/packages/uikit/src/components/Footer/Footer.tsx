@@ -65,9 +65,7 @@ const MenuItem: React.FC<FooterProps> = ({
               ))}
             </StyledList>
           ))}
-          <Box display={['none', null, 'block']}>
-            <LogoWithTextIcon isDark width="160px" />
-          </Box>
+          <Box display={['none', null, 'block']}>{/* <LogoWithTextIcon isDark width="160px" /> */}</Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={['42px', null, '32px']} mb={['0', null, '32px']} />
         <StyledToolsContainer
@@ -91,7 +89,7 @@ const MenuItem: React.FC<FooterProps> = ({
             </Box>
             <Button
               as="a"
-              href="https://exchange.wagyuswap.app/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+              href="https://exchange.wagyuswap.app/swap?outputCurrency=0xaBf26902Fd7B624e0db40D31171eA9ddDf078351"
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}

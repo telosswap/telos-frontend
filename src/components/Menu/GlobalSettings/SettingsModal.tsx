@@ -129,12 +129,8 @@ const SettingsModal: React.FC<InjectedModalProps> = ({ onDismiss }) => {
         </Flex> */}
         <Flex justifyContent="space-between" alignItems="center">
           <Flex alignItems="center">
-            <Text>{t('Flippy sounds')}</Text>
-            <QuestionHelper
-              text={t('Fun sounds to make a truly immersive pancake-flipping trading experience')}
-              placement="top-start"
-              ml="4px"
-            />
+            <Text>{t('Sizzle sounds')}</Text>
+            <QuestionHelper text={t('Truly immersive and tasty trading experience')} placement="top-start" ml="4px" />
           </Flex>
           <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
         </Flex>

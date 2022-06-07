@@ -1449,7 +1449,7 @@ exports[`renders correctly 1`] = `
             class="c3"
           >
             <a
-              aria-label="Pancake home page"
+              aria-label="Wagyuswap home page"
               class="c4"
               href="/"
             >

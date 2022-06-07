@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import BigNumber from 'bignumber.js'
 import poolsConfig from 'config/constants/pools'
-import sousChefV2 from 'config/abi/sousChefV2.json'
+import sousChefV2 from 'config/abi/WAGStakingPoolInitializable.json'
 import multicall from '../multicall'
 import { simpleRpcProvider } from '../providers'
 import { getAddress } from '../addressHelpers'
@@ -16,11 +16,11 @@ export const getActivePools = async (block?: number) => {
   const blockNumber = block || (await simpleRpcProvider.getBlockNumber())
   const startBlockCalls = eligiblePools.map(({ contractAddress }) => ({
     address: getAddress(contractAddress),
-    name: 'startBlock',
+    name: 'startTimestamp',
   }))
   const endBlockCalls = eligiblePools.map(({ contractAddress }) => ({
     address: getAddress(contractAddress),
-    name: 'bonusEndBlock',
+    name: 'bonusEndTimestamp',
   }))
   const [startBlocks, endBlocks] = await Promise.all([
     multicall(sousChefV2, startBlockCalls),

@@ -58,7 +58,7 @@ export const footerLinks: FooterLinkType[] = [
       },
       {
         label: 'Documentation',
-        href: 'https://docs.wagyuswap.app',
+        href: 'https://docs.wagyuswap.app/wagyuswap',
       },
       {
         label: 'Bug Bounty',
@@ -87,11 +87,11 @@ export const socials = [
     icon: TelegramIcon,
     href: 'http://t.me/wagyuswapofficial',
   },
-  {
-    label: 'Github',
-    icon: GithubIcon,
-    href: 'https://github.com/wagyuswapapp/',
-  },
+  // {
+  //   label: 'Github',
+  //   icon: GithubIcon,
+  //   href: 'https://github.com/wagyuswapapp/',
+  // },
 
   {
     label: 'Medium',

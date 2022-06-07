@@ -26,12 +26,12 @@ const MigrationPage: React.FC = () => {
     {
       stepId: ProgressStepsType.STEP1,
       canHover: true,
-      text: t('Unstake LP tokens and WAG from the old MasterChef contract.'),
+      text: t('Unstake LP tokens and WAG from the old WAGFarm contract.'),
     },
     {
       stepId: ProgressStepsType.STEP2,
       canHover: true,
-      text: t('Stake LP tokens and WAG to the new MasterChef v2 contract.'),
+      text: t('Stake LP tokens and WAG to the new WAGFarm v2 contract.'),
     },
   ]
 
@@ -43,10 +43,10 @@ const MigrationPage: React.FC = () => {
   const { data: cakePool, userDataLoaded } = useFetchUserPools(account)
 
   const v1Pools = useMemo(() => {
-    const ifoPoolVault = { ...cakePool, vaultKey: VaultKey.IfoPool }
+    // const ifoPoolVault = { ...cakePool, vaultKey: VaultKey.IfoPool }
     const cakeAutoVault = { ...cakePool, vaultKey: VaultKey.CakeVaultV1 }
 
-    return [ifoPoolVault, cakeAutoVault, cakePool]
+    return [cakeAutoVault, cakePool]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cakePool])
 
@@ -72,7 +72,7 @@ const MigrationPage: React.FC = () => {
           {t('Migration')}
         </Heading>
         <Heading scale="lg" color="text">
-          {t('Migrate your stakings to the new MasterChef contract.')}
+          {t('Migrate your stakings to the new WAGFarm contract.')}
         </Heading>
         <Link href="https://docs.wagyuswap.app/code/migration/migrate-your-stakings" external>
           <Button p="0" variant="text">

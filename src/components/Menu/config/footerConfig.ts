@@ -8,7 +8,6 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       {
         label: t('Contact'),
         href: 'mailto:support@wagyuswap.app',
-        isHighlighted: true,
       },
       {
         label: t('Brand'),
@@ -61,7 +60,7 @@ export const footerLinks: (t: ContextApi['t']) => FooterLinkType[] = (t) => [
       },
       {
         label: t('Documentation'),
-        href: 'https://docs.wagyuswap.app',
+        href: 'https://docs.wagyuswap.app/wagyuswap',
       },
       // {
       //   label: t('Bug Bounty'),

@@ -37,7 +37,7 @@ const useGetPublicIfoData = (ifo: Ifo): PublicIfoData => {
   })
   const fetchIfoData = useCallback(
     async (currentBlock: number) => {
-      const ifoCalls = ['startBlock', 'endBlock', 'raisingAmount', 'totalAmount'].map((method) => ({
+      const ifoCalls = ['startTimestamp', 'endBlock', 'raisingAmount', 'totalAmount'].map((method) => ({
         address,
         name: method,
       }))

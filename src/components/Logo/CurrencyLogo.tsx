@@ -1,5 +1,5 @@
 import { Currency, ETHER, Token } from '@wagyu-swap/sdk'
-import { BinanceIcon } from 'packages/uikit'
+import { VelasIcon } from 'packages/uikit'
 import { useMemo } from 'react'
 import styled from 'styled-components'
 import { WrappedTokenInfo } from 'state/types'
@@ -37,7 +37,7 @@ export default function CurrencyLogo({
   }, [currency, uriLocations])
 
   if (currency === ETHER) {
-    return <BinanceIcon width={size} style={style} />
+    return <VelasIcon width={size} style={style} />
   }
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />

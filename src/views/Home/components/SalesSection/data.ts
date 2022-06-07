@@ -11,7 +11,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.wagyuswap.app/',
+    to: 'https://docs.wagyuswap.app/wagyuswap/',
     text: t('Learn'),
     external: true,
   },
