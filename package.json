@@ -48,7 +48,7 @@
     "@ethersproject/units": "^5.5.0",
     "@gelatonetwork/limit-orders-lib": "^4.1.0",
     "@next/bundle-analyzer": "^12.0.7",
-    "@wagyu-swap/sdk": "https://github.com/wagyuswapapp/wagyu-swap-sdk.git#74b54690a0f49def30f19e0b0b1b2cb4b8576758",
+    "@wagyu-swap/sdk": "https://github.com/wagyuswapapp/wagyu-swap-sdk.git#06b00c583ed662ac51ef0adb5fa27d1b4e9799e5",
     "@reduxjs/toolkit": "^1.8.2",
     "@sentry/nextjs": "6.19.6",
     "@uniswap/token-lists": "^1.0.0-beta.19",

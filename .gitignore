@@ -31,6 +31,12 @@ storybook-static
 .env.test.local
 .env.production.local
 
+.env
+.env.development
+.env.production
+.env.test
+.env.testnet
+
 # debug
 npm-debug.log*
 yarn-debug.log*
