@@ -370,7 +370,7 @@ const Farms: React.FC = ({ children }) => {
           </Button>
         </NextLinkFromReactRouter> */}
       </PageHeader>
-      <Page>
+      <Page bgUrl="/images/farm/bg.svg">
         <ControlContainer>
           <ViewControls>
             <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
@@ -454,7 +454,7 @@ const Farms: React.FC = ({ children }) => {
           </Flex>
         )}
         <div ref={observerRef} />
-        <StyledImage src="/images/decorations/3dpan.png" alt="Wagyuswap illustration" width={120} height={103} />
+        {/* <StyledImage src="/images/decorations/3dpan.png" alt="Wagyuswap illustration" width={120} height={103} /> */}
       </Page>
     </FarmsContext.Provider>
   )

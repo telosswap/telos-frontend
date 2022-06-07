@@ -1,6 +1,7 @@
 import { Modal, ModalBody, Text, Image, Button, Link, OpenNewIcon } from 'packages/uikit'
 import { Token } from '@wagyu-swap/sdk'
 import { useTranslation } from 'contexts/Localization'
+import getTokenLogoURL from 'utils/getTokenLogoURL'
 
 interface Props {
   currency: Token
@@ -12,7 +13,7 @@ const GetTokenModal: React.FC<Partial<Props>> = ({ currency, onDismiss }) => {
   return (
     <Modal title={t('%symbol% required', { symbol: currency.symbol })} onDismiss={onDismiss}>
       <ModalBody maxWidth="288px">
-        <Image src={`/images/tokens/${currency.address}.png`} width={72} height={72} margin="auto" mb="24px" />
+        <Image src={getTokenLogoURL(currency.address)} width={72} height={72} margin="auto" mb="24px" />
         <Text mb="16px">
           {t('You’ll need %symbol% tokens to participate in the IFO!', { symbol: currency.symbol })}
         </Text>

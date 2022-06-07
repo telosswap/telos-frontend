@@ -270,7 +270,7 @@ const Pools: React.FC = () => {
           </Flex>
         </Flex>
       </PageHeader>
-      <Page>
+      <Page bgUrl="/images/farm/bg.svg">
         <PoolControls>
           <PoolTabButtons
             stakedOnly={stakedOnly}
@@ -337,14 +337,14 @@ const Pools: React.FC = () => {
         )}
         {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
         <div ref={observerRef} />
-        <Image
+        {/* <Image
           mx="auto"
           mt="12px"
           src="/images/decorations/3d-syrup-bunnies.png"
           alt="Wagyuswap illustration"
           width={192}
           height={184.5}
-        />
+        /> */}
       </Page>
     </>
   )

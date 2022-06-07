@@ -21,9 +21,9 @@ export const vaultPoolConfig = {
     name: <Trans>Auto WAG</Trans>,
     description: <Trans>Automatic restaking</Trans>,
     autoCompoundFrequency: 5000,
-    gasLimit: 380000,
+    gasLimit: 700000,
     tokenImage: {
-      primarySrc: `/images/tokens/${tokens.cake.address}.svg`,
+      primarySrc: `/images/toggle/wagyu.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
     },
   },
@@ -31,22 +31,12 @@ export const vaultPoolConfig = {
     name: <Trans>Stake WAG</Trans>,
     description: <Trans>Stake, Earn – And more!</Trans>,
     autoCompoundFrequency: 5000,
-    gasLimit: 500000,
+    gasLimit: 800000,
     tokenImage: {
-      primarySrc: `/images/tokens/${tokens.cake.address}.svg`,
+      primarySrc: `/images/toggle/wagyu.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
     },
   },
-  // [VaultKey.IfoPool]: {
-  //   name: 'IFO WAG',
-  //   description: <Trans>Stake WAG to participate in IFOs</Trans>,
-  //   autoCompoundFrequency: 1,
-  //   gasLimit: 500000,
-  //   tokenImage: {
-  //     primarySrc: `/images/tokens/${tokens.cake.address}.svg`,
-  //     secondarySrc: `/images/tokens/ifo-pool-icon.svg`,
-  //   },
-  // },
 } as const
 
 const pools: SerializedPoolConfig[] =
@@ -171,8 +161,8 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.cake,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            111: '0x0FE7711dD2A622725FfB30f378145e1D40127f80',
-            106: '0xa7e8280b8CE4f87dFeFc3d1F2254B5CCD971E852',
+            111: '0xF666b0875ca85f8E3D13607c666487534d2C9FE8',
+            106: '',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
@@ -186,13 +176,13 @@ const pools: SerializedPoolConfig[] =
           earningToken: serializedTokens.cake,
           contractAddress: {
             111: '0x77e631209Cc3151c2835fF2B7585d8f0Db781aff',
-            106: '0x77e631209Cc3151c2835fF2B7585d8f0Db781aff',
+            106: '',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
           tokenPerBlock: '1',
           sortOrder: 1,
-          isFinished: false,
+          isFinished: true,
         },
         {
           sousId: 2,
@@ -200,13 +190,13 @@ const pools: SerializedPoolConfig[] =
           earningToken: serializedTokens.cake,
           contractAddress: {
             111: '0xf4BB219600ad1680cA381331bF9ADd4422844BcC',
-            106: '0xf4BB219600ad1680cA381331bF9ADd4422844BcC',
+            106: '',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
           tokenPerBlock: '1',
           sortOrder: 1,
-          isFinished: false,
+          isFinished: true,
         },
         {
           sousId: 3,
@@ -214,13 +204,13 @@ const pools: SerializedPoolConfig[] =
           earningToken: serializedTokens.cake,
           contractAddress: {
             111: '0x98a6816Cd29F063Fe3c1ECA3492Bb2D5E36f467a',
-            106: '0x98a6816Cd29F063Fe3c1ECA3492Bb2D5E36f467a',
+            106: '',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
           tokenPerBlock: '1',
           sortOrder: 1,
-          isFinished: false,
+          isFinished: true,
         },
         {
           sousId: 4,
@@ -228,13 +218,13 @@ const pools: SerializedPoolConfig[] =
           earningToken: serializedTokens.cake,
           contractAddress: {
             111: '0xccE4829D6D2c04A006F774968bc41d1d2fe714cB',
-            106: '0xccE4829D6D2c04A006F774968bc41d1d2fe714cB',
+            106: '',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
           tokenPerBlock: '1',
           sortOrder: 1,
-          isFinished: false,
+          isFinished: true,
         },
       ]
 export default pools

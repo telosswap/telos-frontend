@@ -138,7 +138,16 @@ const usePoolDatas = (poolAddresses: string[]): PoolDatas => {
   const [fetchState, setFetchState] = useState<PoolDatas>({ error: false })
   const [t24h, t48h, t7d, t14d] = getDeltaTimestamps()
   const { blocks, error: blockError } = useBlocksFromTimestamps([t24h, t48h, t7d, t14d])
-  const [block24h, block48h, block7d, block14d] = blocks ?? []
+
+  // @ts-ignore
+  let [block24h, block48h, block7d, block14d]: Block[] = []
+  if (blocks && blocks.length > 0) {
+    block24h = blocks[0]
+    block48h = blocks.length > 1 ? blocks[1] : block24h
+    block7d = blocks.length > 2 ? blocks[2] : block48h
+    block14d = blocks.length > 3 ? blocks[3] : block7d
+  }
+  //
 
   useEffect(() => {
     const fetch = async () => {

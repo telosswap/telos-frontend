@@ -418,7 +418,7 @@ export default function RemoveLiquidity() {
   )
 
   return (
-    <Page>
+    <Page bgUrl="/images/swap/bg.svg">
       <AppBody>
         <AppHeader
           backTo="/liquidity"

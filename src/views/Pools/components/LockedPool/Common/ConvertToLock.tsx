@@ -18,6 +18,7 @@ const ConvertToLock: React.FC<ConvertToLockProps> = ({ stakingToken, currentStak
   const { isMobile } = useMatchBreakpoints()
   const isTableView = isInline && !isMobile
   const { avgLockDurationsInSeconds } = useAvgLockDuration()
+
   const { lockedApy } = useVaultApy({ duration: avgLockDurationsInSeconds })
 
   return (

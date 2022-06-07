@@ -27,7 +27,7 @@ const SpeechBubble = styled.div`
   background: rgba(39, 38, 44, 0.4);
   border-radius: 16px;
   padding: 8px;
-  width: 60%;
+  width: 55%;
   height: 80%;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ const PhishingWarningBanner: React.FC = () => {
   const [, hideBanner] = usePhishingBannerManager()
   const { isMobile, isMd } = useMatchBreakpoints()
   const warningText = t("please make sure you're visiting https://exchange.wagyuswap.app - check the URL carefully.")
-  const warningTextAsParts = warningText.split(/(https:\/\/pancakeswap.finance)/g)
+  const warningTextAsParts = warningText.split(/(https:\/\/exchange.wagyuswap.app)/g)
   const warningTextComponent = (
     <>
       <Text as="span" color="warning" small bold textTransform="uppercase">
@@ -76,11 +76,11 @@ const PhishingWarningBanner: React.FC = () => {
       ) : (
         <>
           <InnerContainer>
-            <picture>
+            {/* <picture>
               <source type="image/webp" srcSet="/images/decorations/phishing-warning-bunny.webp" />
               <source type="image/png" srcSet="/images/decorations/phishing-warning-bunny.png" />
               <img src="/images/decorations/phishing-warning-bunny.png" alt="phishing-warning" width="92px" />
-            </picture>
+            </picture> */}
             <SpeechBubble>{warningTextComponent}</SpeechBubble>
           </InnerContainer>
           <IconButton onClick={hideBanner} variant="text">

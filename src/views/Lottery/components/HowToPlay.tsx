@@ -332,9 +332,7 @@ const HowToPlay: React.FC = () => {
                 {t(
                   'An average total of 35,000 WAG from the treasury is added to lottery rounds over the course of a week. This WAG is of course also included in rollovers! Read more in our guide to ',
                 )}
-                <InlineLink href="https://docs.wagyuswap.app/tokenomics/cake/cake-tokenomics">
-                  {t('WAG Tokenomics')}
-                </InlineLink>
+                <InlineLink href="https://docs.wagyuswap.app/wagyuswap/">{t('WAG Tokenomics')}</InlineLink>
               </Text>
             </li>
           </BulletList>
@@ -345,14 +343,13 @@ const HowToPlay: React.FC = () => {
       </GappedFlex>
       <Divider />
       <Flex justifyContent="center" alignItems="center" flexDirection={['column', 'column', 'row']}>
-        <Image width={240} height={172} src="/images/lottery/tombola.png" alt="tombola bunny" mr="8px" mb="16px" />
         <Flex maxWidth="300px" flexDirection="column">
           <Heading mb="16px" scale="md">
             {t('Still got questions?')}
           </Heading>
           <Text>
             {t('Check our in-depth guide on')}{' '}
-            <InlineLink href="https://docs.wagyuswap.app/products/lottery/lottery-guide">
+            <InlineLink href="https://docs.wagyuswap.app/wagyuswap/products/wagyuswap-lottery">
               {t('how to play the WagyuSwap lottery!')}
             </InlineLink>
           </Text>

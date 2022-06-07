@@ -6,8 +6,8 @@ export default {
     106: addresses[106].WAGFarm,
   },
   masterChefV1: {
-    111: addresses[111].WAGFarm,
-    106: addresses[106].WAGFarm,
+    111: addresses[111].WAGFarmV1,
+    106: addresses[106].WAGFarmV1,
   },
   sousChef: {
     111: addresses[111].WAGStakingFactory,

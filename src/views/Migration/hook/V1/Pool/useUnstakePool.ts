@@ -28,7 +28,7 @@ const useUnstakePool = (sousId: number, enableEmergencyWithdraw = false) => {
       if (sousId === 0) {
         const gasPrice = getGasPrice()
         const value = new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString()
-        return masterChefV1Contract.leaveStaking(value, { gasLimit: DEFAULT_GAS_LIMIT, gasPrice })
+        return masterChefV1Contract.leaveStaking(value, { gasLimit: DEFAULT_GAS_LIMIT * 3, gasPrice })
       }
 
       if (enableEmergencyWithdraw) {

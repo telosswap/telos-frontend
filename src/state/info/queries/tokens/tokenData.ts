@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { gql } from 'graphql-request'
 import { useEffect, useState } from 'react'
-import { TokenData } from 'state/info/types'
+import { Block, TokenData } from 'state/info/types'
 import { infoClient } from 'utils/graphql'
 import { useBlocksFromTimestamps } from 'views/Info/hooks/useBlocksFromTimestamps'
 import { getAmountChange, getChangeForPeriod, getPercentChange } from 'views/Info/utils/infoDataHelpers'
@@ -117,7 +117,17 @@ const useFetchedTokenDatas = (tokenAddresses: string[]): TokenDatas => {
   const [fetchState, setFetchState] = useState<TokenDatas>({ error: false })
   const [t24h, t48h, t7d, t14d] = getDeltaTimestamps()
   const { blocks, error: blockError } = useBlocksFromTimestamps([t24h, t48h, t7d, t14d])
-  const [block24h, block48h, block7d, block14d] = blocks ?? []
+
+  // TODO:
+  // @ts-ignore
+  let [block24h, block48h, block7d, block14d]: Block[] = []
+  if (blocks && blocks.length > 0) {
+    block24h = blocks[0]
+    block48h = blocks.length > 1 ? blocks[1] : block24h
+    block7d = blocks.length > 2 ? blocks[2] : block48h
+    block14d = blocks.length > 3 ? blocks[3] : block7d
+  }
+  //
 
   useEffect(() => {
     const fetch = async () => {

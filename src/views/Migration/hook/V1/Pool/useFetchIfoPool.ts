@@ -13,12 +13,15 @@ import cakeVaultAbi from 'config/abi/cakeVault.json'
 import { FAST_INTERVAL } from 'config/constants'
 import { VaultKey } from 'state/types'
 import { fetchPublicVaultData } from './fetchPublicVaultData'
+import addresses from 'config/constants/addresses.json'
+import { CHAIN_ID } from 'config/constants/networks'
 
 export const ifoPoolV1Contract = '0x1B2A2f6ed4A1401E8C73B4c2B6172455ce2f78E8'
-export const cakeVaultAddress = '0xa80240Eb5d7E05d3F250cF000eEc0891d00b51CC'
+export const cakeVaultAddress = addresses[CHAIN_ID].WagyuVault
 
 const getCakeVaultContract = (signer?: Signer | Provider) => {
   const signerOrProvider = signer ?? simpleRpcProvider
+  console.log('cakeVaultAddress', cakeVaultAddress)
   return new Contract(cakeVaultAddress, cakeVaultAbi, signerOrProvider) as any
 }
 
@@ -104,9 +107,9 @@ export const useVaultPoolByKeyV1 = (key: VaultKey) => {
   const { data, mutate } = useSWR(
     account ? [key, 'v1'] : null,
     async () => {
-      if (key === VaultKey.IfoPool) {
-        return getIfoPoolData(account)
-      }
+      // if (key === VaultKey.IfoPool) {
+      //   return getIfoPoolData(account)
+      // }
       return getCakePoolData(account)
     },
     {

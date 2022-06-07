@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { BIG_TEN } from 'utils/bigNumber'
 import { getFullDisplayBalance } from 'utils/formatBalance'
 import { useUserEnoughCakeValidator } from '../hooks/useUserEnoughCakeValidator'
+import getTokenLogoURL from 'utils/getTokenLogoURL'
 
 const StyledButton = styled(Button)`
   flex-grow: 1;
@@ -73,7 +74,7 @@ const BalanceField: React.FC<PropsType> = ({
           {t('WAG to lock')}
         </Text>
         <Flex alignItems="center" minWidth="70px">
-          <Image src={`/images/tokens/${stakingAddress}.png`} width={24} height={24} alt={stakingSymbol} />
+          <Image src={getTokenLogoURL(stakingAddress)} width={24} height={24} alt={stakingSymbol} />
           <Text ml="4px" bold>
             {stakingSymbol}
           </Text>

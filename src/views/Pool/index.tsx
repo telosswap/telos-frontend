@@ -85,7 +85,7 @@ export default function Pool() {
   }
 
   return (
-    <Page>
+    <Page bgUrl="/images/swap/bg.svg">
       <AppBody>
         <AppHeader title={t('Your Liquidity')} subtitle={t('Remove liquidity to receive tokens back')} />
         <Body>

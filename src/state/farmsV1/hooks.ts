@@ -1,4 +1,4 @@
-import { VLX_WAG_FARM_PID } from 'config/constants/farms'
+import { VLX_USDT_FARM_PID, VLX_WAG_FARM_PID } from 'config/constants/farms'
 import { useWeb3React } from '@web3-react/core'
 import BigNumber from 'bignumber.js'
 import { farmsConfig } from 'config/constants'
@@ -68,7 +68,7 @@ export const usePollCoreFarmData = () => {
   const dispatch = useAppDispatch()
 
   useFastRefreshEffect(() => {
-    dispatch(fetchFarmsPublicDataAsync([251, 252]))
+    dispatch(fetchFarmsPublicDataAsync([VLX_WAG_FARM_PID, VLX_USDT_FARM_PID]))
   }, [dispatch])
 }
 

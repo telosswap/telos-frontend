@@ -12,6 +12,7 @@ import { FarmWithStakedValue } from 'views/Farms/components/types'
 import OldFarm from './FarmTable'
 import { RowProps } from './FarmRow'
 import { DesktopColumnSchema } from '../../types'
+import { CHAIN_ID } from 'config/constants/networks'
 
 const OldFarmStep1: React.FC = () => {
   const { account } = useWeb3React()
@@ -41,7 +42,7 @@ const OldFarmStep1: React.FC = () => {
           new BigNumber(farm.poolWeight),
           cakePrice,
           totalLiquidity,
-          farm.lpAddresses[ChainId.MAINNET],
+          farm.lpAddresses[CHAIN_ID],
           WAG_PER_YEAR,
         )
         return { ...farm, apr: cakeRewardsApr, lpRewardsApr, liquidity: totalLiquidity }

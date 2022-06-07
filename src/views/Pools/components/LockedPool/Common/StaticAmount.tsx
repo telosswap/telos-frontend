@@ -3,6 +3,7 @@ import { BalanceWithLoading } from 'components/Balance'
 import Divider from 'components/Divider'
 import { useTranslation } from 'contexts/Localization'
 import { StaticAmountPropsType } from '../types'
+import getTokenLogoURL from 'utils/getTokenLogoURL'
 
 const StaticAmount: React.FC<StaticAmountPropsType> = ({
   stakingSymbol,
@@ -30,7 +31,7 @@ const StaticAmount: React.FC<StaticAmountPropsType> = ({
           />
         </Box>
         <Flex alignItems="center" minWidth="70px">
-          <Image src={`/images/tokens/${stakingAddress}.png`} width={24} height={24} alt={stakingSymbol} />
+          <Image src={getTokenLogoURL(stakingAddress)} width={24} height={24} alt={stakingSymbol} />
           <Text ml="4px" bold>
             {stakingSymbol}
           </Text>

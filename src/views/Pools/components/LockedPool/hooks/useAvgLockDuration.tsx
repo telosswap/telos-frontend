@@ -24,6 +24,8 @@ export default function useAvgLockDuration() {
       .toFixed(0)
   }, [totalCakeInVault, totalLockedAmount, pricePerFullShare, totalShares])
 
+  console.log('==avgLockDurationsInSeconds', avgLockDurationsInSeconds)
+
   const avgLockDurationsInWeeks = useMemo(
     () => formatSecondsToWeeks(avgLockDurationsInSeconds),
     [avgLockDurationsInSeconds],

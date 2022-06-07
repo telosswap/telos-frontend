@@ -80,7 +80,6 @@ const ActionPanel: React.FC<ActionPanelProps> = ({ pool, account, expanded }) =>
 
   const vaultPools = {
     [VaultKey.CakeVaultV1]: useVaultPoolByKeyV1(VaultKey.CakeVaultV1).vaultPoolData,
-    [VaultKey.IfoPool]: useVaultPoolByKeyV1(VaultKey.IfoPool).vaultPoolData,
   }
   const cakeInVaults = Object.values(vaultPools).reduce((total, vault) => {
     return total.plus(vault.totalCakeInVault)

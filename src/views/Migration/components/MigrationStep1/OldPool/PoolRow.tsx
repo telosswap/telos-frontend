@@ -63,7 +63,6 @@ const PoolRow: React.FC<PoolRowProps> = ({ pool, account }) => {
 
   const vaultPools = {
     [VaultKey.CakeVaultV1]: useVaultPoolByKeyV1(VaultKey.CakeVaultV1).vaultPoolData,
-    [VaultKey.IfoPool]: useVaultPoolByKeyV1(VaultKey.IfoPool).vaultPoolData,
   }
   const cakeInVaults = Object.values(vaultPools).reduce((total, vault) => {
     return total.plus(vault.totalCakeInVault)
@@ -91,7 +90,7 @@ const PoolRow: React.FC<PoolRowProps> = ({ pool, account }) => {
 
   const EarningComponent = () => {
     if (isLargerScreen || !expanded) {
-      return pool.vaultKey === VaultKey.IfoPool || pool.vaultKey === VaultKey.CakeVaultV1 ? (
+      return pool.vaultKey === VaultKey.CakeVaultV1 ? (
         <AutoEarningsCell hasEarnings={hasEarnings} earningTokenBalance={earningTokenBalance} />
       ) : (
         <EarningsCell pool={pool} account={account} />
