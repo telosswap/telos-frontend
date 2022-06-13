@@ -9,7 +9,7 @@ import {
   TrophyFillIcon,
   NftIcon,
   NftFillIcon,
-  MoreIcon,
+  MoreIcon,TradeIcon, FarmIcon
 } from 'packages/uikit'
 import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -138,6 +138,11 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       //   href: 'https://medium.com/pancakeswap',
       //   type: DropdownMenuItemType.EXTERNAL_LINK,
       // },
+      {
+        label: t('Cross chain swapz'),
+        href: 'https://cross.swapz.app/',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
       {
         label: t('Docs'),
         href: 'https://docs.wagyuswap.app/wagyuswap',

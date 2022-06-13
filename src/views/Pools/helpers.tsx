@@ -72,9 +72,10 @@ export const getCakeVaultEarnings = (
 
 export const getPoolBlockInfo = (pool: DeserializedPool, currentBlock: number) => {
   const { startBlock, endBlock, isFinished } = pool
+  const currentTimeSeconds = Math.floor(Date.now() / 1000)
   const shouldShowBlockCountdown = Boolean(!isFinished && startBlock && endBlock)
-  const blocksUntilStart = Math.max(startBlock - currentBlock, 0)
-  const blocksRemaining = Math.max(endBlock - currentBlock, 0)
+  const blocksUntilStart = Math.max(startBlock - currentTimeSeconds, 0)
+  const blocksRemaining = Math.max(endBlock - currentTimeSeconds, 0)
   const hasPoolStarted = blocksUntilStart === 0 && blocksRemaining > 0
   const blocksToDisplay = hasPoolStarted ? blocksRemaining : blocksUntilStart
   return { shouldShowBlockCountdown, blocksUntilStart, blocksRemaining, hasPoolStarted, blocksToDisplay }

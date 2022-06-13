@@ -23,6 +23,8 @@ const DetailsFooter = styled.div`
   color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.invertedContrast};
   text-align: center;
+  z-index: 2;
+  position: relative;
 `
 
 const UnsupportedModal: React.FC<Props> = ({ currencies, onDismiss }) => {

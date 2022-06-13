@@ -151,7 +151,7 @@ const sortPools = (account: string, sortOption: string, pools: DeserializedPool[
   }
 }
 
-const POOL_START_BLOCK_THRESHOLD = (60 / VELAS_BLOCK_TIME) * 4
+const POOL_START_THRESHOLD = 60 * 4
 
 const Pools: React.FC = () => {
   const router = useRouter()
@@ -168,15 +168,8 @@ const Pools: React.FC = () => {
   const initialBlock = useInitialBlock()
 
   const [finishedPools, openPools] = useMemo(() => partition(pools, (pool) => pool.isFinished), [pools])
-  const openPoolsWithStartBlockFilter = useMemo(
-    () =>
-      openPools.filter((pool) =>
-        initialBlock > 0 && pool.startBlock
-          ? Number(pool.startBlock) < initialBlock + POOL_START_BLOCK_THRESHOLD
-          : true,
-      ),
-    [initialBlock, openPools],
-  )
+  const openPoolsWithStartBlockFilter = useMemo(() => openPools.filter((pool) => true), [openPools])
+
   const stakedOnlyFinishedPools = useMemo(
     () =>
       finishedPools.filter((pool) => {

@@ -9,143 +9,166 @@ import { infoClient } from 'utils/graphql'
  */
 const TOKEN_TRANSACTIONS = gql`
   query tokenTransactions($address: Bytes!) {
-    mintsAs0: mints(first: 10, orderBy: timestamp, orderDirection: desc, where: { token0: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    mintsAs0: pairs(first: 1, where: { token0: $address }) {
+      mints(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        to
+        amount0
+        amount1
+        amountUSD
       }
-      to
-      amount0
-      amount1
-      amountUSD
     }
-    mintsAs1: mints(first: 10, orderBy: timestamp, orderDirection: desc, where: { token1: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    mintsAs1: pairs(first: 1, where: { token1: $address }) {
+      mints(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        to
+        amount0
+        amount1
+        amountUSD
       }
-      to
-      amount0
-      amount1
-      amountUSD
     }
-    swapsAs0: swaps(first: 10, orderBy: timestamp, orderDirection: desc, where: { token0: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    swapsAs0: pairs(first: 1, where: { token0: $address }) {
+      swaps(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        from
+        amount0In
+        amount1In
+        amount0Out
+        amount1Out
+        amountUSD
       }
-      from
-      amount0In
-      amount1In
-      amount0Out
-      amount1Out
-      amountUSD
     }
-    swapsAs1: swaps(first: 10, orderBy: timestamp, orderDirection: desc, where: { token1: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    swapsAs1: pairs(first: 1, where: { token1: $address }) {
+      swaps(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        from
+        amount0In
+        amount1In
+        amount0Out
+        amount1Out
+        amountUSD
       }
-      from
-      amount0In
-      amount1In
-      amount0Out
-      amount1Out
-      amountUSD
     }
-    burnsAs0: burns(first: 10, orderBy: timestamp, orderDirection: desc, where: { token0: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    burnsAs0: pairs(first: 1, where: { token0: $address }) {
+      burns(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        sender
+        amount0
+        amount1
+        amountUSD
       }
-      sender
-      amount0
-      amount1
-      amountUSD
     }
-    burnsAs1: burns(first: 10, orderBy: timestamp, orderDirection: desc, where: { token1: $address }) {
-      id
-      timestamp
-      pair {
-        token0 {
-          id
-          symbol
+    burnsAs1: pairs(first: 1, where: { token1: $address }) {
+      burns(first: 10, orderBy: timestamp, orderDirection: desc) {
+        id
+        timestamp
+        pair {
+          token0 {
+            id
+            symbol
+          }
+          token1 {
+            id
+            symbol
+          }
         }
-        token1 {
-          id
-          symbol
-        }
+        sender
+        amount0
+        amount1
+        amountUSD
       }
-      sender
-      amount0
-      amount1
-      amountUSD
     }
   }
 `
 
 interface TransactionResults {
-  mintsAs0: MintResponse[]
-  mintsAs1: MintResponse[]
-  swapsAs0: SwapResponse[]
-  swapsAs1: SwapResponse[]
-  burnsAs0: BurnResponse[]
-  burnsAs1: BurnResponse[]
+  mintsAs0: {
+    mints: MintResponse[]
+  }[]
+  mintsAs1: {
+    mints: MintResponse[]
+  }[]
+  swapsAs0: {
+    swaps: SwapResponse[]
+  }[]
+  swapsAs1: {
+    swaps: SwapResponse[]
+  }[]
+  burnsAs0: {
+    burns: BurnResponse[]
+  }[]
+  burnsAs1: {
+    burns: BurnResponse[]
+  }[]
 }
-
 const fetchTokenTransactions = async (address: string): Promise<{ data?: Transaction[]; error: boolean }> => {
   try {
     const data = await infoClient.request<TransactionResults>(TOKEN_TRANSACTIONS, {
       address,
     })
-    const mints0 = data.mintsAs0.map(mapMints)
-    const mints1 = data.mintsAs1.map(mapMints)
+    const mints0 = data.mintsAs0.length > 0 ? data.mintsAs0[0].mints.map(mapMints) : []
+    const mints1 = data.mintsAs1.length > 0 ? data.mintsAs1[0].mints.map(mapMints) : []
 
-    const burns0 = data.burnsAs0.map(mapBurns)
-    const burns1 = data.burnsAs1.map(mapBurns)
+    const burns0 = data.burnsAs0.length > 0 ? data.burnsAs0[0].burns.map(mapBurns) : []
+    const burns1 = data.burnsAs1.length > 0 ? data.burnsAs1[0].burns.map(mapBurns) : []
 
-    const swaps0 = data.swapsAs0.map(mapSwaps)
-    const swaps1 = data.swapsAs1.map(mapSwaps)
+    const swaps0 = data.swapsAs0.length > 0 ? data.swapsAs0[0].swaps.map(mapSwaps) : []
+    const swaps1 = data.swapsAs1.length > 0 ? data.swapsAs1[0].swaps.map(mapSwaps) : []
 
     return { data: [...mints0, ...mints1, ...burns0, ...burns1, ...swaps0, ...swaps1], error: false }
   } catch (error) {
