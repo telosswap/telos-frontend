@@ -9,7 +9,9 @@ import {
   TrophyFillIcon,
   NftIcon,
   NftFillIcon,
-  MoreIcon,TradeIcon, FarmIcon
+  MoreIcon,
+  TradeIcon,
+  FarmIcon,
 } from 'packages/uikit'
 import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -64,27 +66,27 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       },
     ],
   },
-  {
-    label: t('Win'),
-    href: '/prediction',
-    icon: TrophyIcon,
-    fillIcon: TrophyFillIcon,
-    items: [
-      // {
-      //   label: t('Trading Competition'),
-      //   href: '/competition',
-      //   hideSubNav: true,
-      // },
-      // {
-      //   label: t('Prediction (BETA)'),
-      //   href: '/prediction',
-      // },
-      {
-        label: t('Lottery'),
-        href: '/lottery',
-      },
-    ],
-  },
+  // {
+  //   label: t('Win'),
+  //   href: '/prediction',
+  //   icon: TrophyIcon,
+  //   fillIcon: TrophyFillIcon,
+  //   items: [
+  // {
+  //   label: t('Trading Competition'),
+  //   href: '/competition',
+  //   hideSubNav: true,
+  // },
+  // {
+  //   label: t('Prediction (BETA)'),
+  //   href: '/prediction',
+  // },
+  //     {
+  //       label: t('Lottery'),
+  //       href: '/lottery',
+  //     },
+  //   ],
+  // },
   // {
   //   label: t('NFT'),
   //   href: `${nftsBaseUrl}`,
