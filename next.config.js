@@ -40,6 +40,13 @@ const config = {
   images: {
     domains: ['static-nft.pancakeswap.com'],
   },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
   async rewrites() {
     return [
       {

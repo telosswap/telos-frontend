@@ -107,8 +107,8 @@
       "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/velas/assets/0xcd7509b76281223f5b7d3ad5d47f8d7aa5c2b9bf/logo.png?raw=true"
     },
     {
-      "name": "VLX",
-      "symbol": "VLX",
+      "name": "BNB",
+      "symbol": "BNB",
       "address": "0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4",
       "chainId": 106,
       "decimals": 18,
