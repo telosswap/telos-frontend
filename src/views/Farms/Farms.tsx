@@ -433,7 +433,7 @@ const Farms: React.FC = ({ children }) => {
               <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
                 {t('Go to migration page')}
               </FinishedTextLink>
-              <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
+              {/* <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
                 or
               </Text>
               <FinishedTextLink
@@ -443,7 +443,7 @@ const Farms: React.FC = ({ children }) => {
                 href="https://v1-farms.pancakeswap.finance/farms/history"
               >
                 {t('check out v1 farms')}.
-              </FinishedTextLink>
+              </FinishedTextLink> */}
             </Flex>
           </FinishedTextContainer>
         )}
