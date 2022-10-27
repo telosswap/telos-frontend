@@ -1,4 +1,4 @@
-import masterchefABI from 'config/abi/WagFarm.json'
+import masterchefABI from 'config/abi/WAGFarm.json'
 import chunk from 'lodash/chunk'
 import { multicallv2 } from 'utils/multicall'
 import { SerializedFarmConfig } from '../../config/constants/types'
