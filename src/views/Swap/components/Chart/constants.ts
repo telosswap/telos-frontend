@@ -1,4 +1,4 @@
 // VLX Address
-const BNB_ADDRESS = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c'
+const VLX_ADDRESS = '0xc579d1f3cf86749e05cd06f7ade17856c2ce3126'
 
-export { BNB_ADDRESS }
+export { VLX_ADDRESS }
