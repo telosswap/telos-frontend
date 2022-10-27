@@ -5,6 +5,7 @@ import useTheme from 'hooks/useTheme'
 import Container from 'components/Layout/Container'
 import { PageMeta } from 'components/Layout/Page'
 import { useTranslation } from 'contexts/Localization'
+import Router from 'next/router'
 import Hero from './components/Hero'
 import { swapSectionData, earnSectionData, cakeSectionData } from './components/SalesSection/data'
 import MetricsSection from './components/MetricsSection'
@@ -16,6 +17,7 @@ import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
 import UserBanner from './components/UserBanner'
 import MultipleBanner from './components/Banners/MultipleBanner'
+import { useEffect } from 'react'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -48,6 +50,12 @@ const Home: React.FC = () => {
   const HomeSectionContainerStyles = { margin: '0', width: '100%', maxWidth: '968px' }
 
   const { t } = useTranslation()
+
+  useEffect(() => {
+    Router.push('/')
+  }, [])
+
+  return null
 
   return (
     <>

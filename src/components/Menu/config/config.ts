@@ -142,12 +142,32 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       // },
       {
         label: t('Cross chain swapz'),
-        href: 'https://cross.swapz.app/',
+        href: 'https://cross2.swapz.app/',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
         label: t('Docs'),
         href: 'https://docs.wagyuswap.app/wagyuswap',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Github'),
+        href: 'https://github.com/wagyuswapapp',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Blog'),
+        href: 'https://medium.com/@wagyuswap.app',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Support'),
+        href: 'mailto:support@wagyuswap.app',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
+      {
+        label: t('Velascan'),
+        href: 'https://velascan.org/',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
