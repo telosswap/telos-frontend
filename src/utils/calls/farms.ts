@@ -3,7 +3,7 @@ import { DEFAULT_GAS_LIMIT, DEFAULT_TOKEN_DECIMAL } from 'config'
 import getGasPrice from 'utils/getGasPrice'
 
 const options = {
-  gasLimit: DEFAULT_GAS_LIMIT,
+  gasLimit: DEFAULT_GAS_LIMIT * 4,
 }
 
 export const stakeFarm = async (masterChefContract, pid, amount) => {
