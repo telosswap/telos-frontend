@@ -33,7 +33,7 @@ export const mainnetTokens = {
     'Multichain WETH',
     'https://wagyuswap.app/',
   ),
-  bnb: new Token(MAINNET, '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', 18, 'VLX', 'VLX', 'https://wagyuswap.app/'),
+  bnb: new Token(MAINNET, '0x2b8e9cd44c9e09d936149549a8d207c918ecb5c4', 18, 'BNB', 'BNB', 'https://wagyuswap.app/'),
   busd: new Token(
     MAINNET,
     '0xc111c29A988AE0C0087D97b33C6E6766808A3BD3',
