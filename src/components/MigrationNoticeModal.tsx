@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme'
-import { Box, Modal, Text, useModal, Link } from 'packages/uikit'
+import { Box, Modal, Text, useModal, Link, InjectedModalProps } from 'packages/uikit'
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
@@ -14,17 +14,24 @@ const MigrationWrapper = styled.div`
   justify-content: center;
 `
 
-const MigrationNoticeModalWrapper = () => {
+const STORAGE_KEY = 'WAG_V2_Migration_Notice_Modal'
+
+const MigrationNoticeModalWrapper: React.FC<InjectedModalProps> = ({ onDismiss }) => {
   const { theme } = useTheme()
-
-  const [visible, setVisible] = useState(true)
-
-  if (!visible) return null
 
   return (
     <Modal
       title={`Migration to V2`}
-      onDismiss={() => setVisible(false)}
+      onDismiss={() => {
+        console.log('Dismiss')
+        try {
+          localStorage.setItem(STORAGE_KEY, 'true')
+        } catch (error) {
+          console.error(error)
+        }
+
+        onDismiss()
+      }}
       headerBackground={theme.colors.gradients.cardHeader}
     >
       <Box>
@@ -41,10 +48,18 @@ const MigrationNoticeModalWrapper = () => {
 }
 
 export const MigrationNoticeModal = () => {
-  const [onPresent] = useModal(<MigrationNoticeModalWrapper />)
+  const [onPresent] = useModal(<MigrationNoticeModalWrapper />, false)
 
   useEffect(() => {
-    onPresent()
+    const check = () => {
+      try {
+        const value = localStorage.getItem(STORAGE_KEY)
+        if (value !== 'true') {
+          onPresent()
+        }
+      } catch (error) {}
+    }
+    check()
   }, [])
 
   return null
