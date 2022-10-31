@@ -28,6 +28,7 @@ import CakeVaultCard from './components/CakeVaultCard'
 import PoolTabButtons from './components/PoolTabButtons'
 import PoolsTable from './components/PoolsTable/PoolsTable'
 import { getCakeVaultEarnings } from './helpers'
+import { MigrationNoticeModal } from 'components/MigrationNoticeModal'
 
 const CardLayout = styled(FlexLayout)`
   justify-content: center;
@@ -248,6 +249,7 @@ const Pools: React.FC = () => {
 
   return (
     <>
+      <MigrationNoticeModal />
       <PageHeader>
         <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" mr={['8px', 0]}>

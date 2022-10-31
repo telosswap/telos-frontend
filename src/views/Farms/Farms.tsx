@@ -27,6 +27,7 @@ import Table from './components/FarmTable/FarmTable'
 import FarmTabButtons from './components/FarmTabButtons'
 import { RowProps } from './components/FarmTable/Row'
 import { DesktopColumnSchema, FarmWithStakedValue } from './components/types'
+import { MigrationNoticeModal } from 'components/MigrationNoticeModal'
 
 const ControlContainer = styled.div`
   display: flex;
@@ -354,6 +355,8 @@ const Farms: React.FC = ({ children }) => {
 
   return (
     <FarmsContext.Provider value={{ chosenFarmsMemoized }}>
+      <MigrationNoticeModal />
+
       <PageHeader>
         <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
           {t('Farms')}
