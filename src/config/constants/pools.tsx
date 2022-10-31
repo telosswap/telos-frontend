@@ -21,7 +21,7 @@ export const vaultPoolConfig = {
     name: <Trans>Auto WAG</Trans>,
     description: <Trans>Automatic restaking</Trans>,
     autoCompoundFrequency: 5000,
-    gasLimit: 700000,
+    gasLimit: 1000000,
     tokenImage: {
       primarySrc: `/images/toggle/wagyu.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
@@ -31,7 +31,7 @@ export const vaultPoolConfig = {
     name: <Trans>Stake WAG</Trans>,
     description: <Trans>Stake, Earn – And more!</Trans>,
     autoCompoundFrequency: 5000,
-    gasLimit: 800000,
+    gasLimit: 1000000,
     tokenImage: {
       primarySrc: `/images/toggle/wagyu.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
