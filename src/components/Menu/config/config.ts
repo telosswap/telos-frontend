@@ -107,6 +107,7 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
   //     },
   //   ],
   // },
+
   {
     label: '',
     href: '/info',
@@ -140,6 +141,11 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       //   href: 'https://medium.com/pancakeswap',
       //   type: DropdownMenuItemType.EXTERNAL_LINK,
       // },
+      {
+        label: 'NFT Marketplace',
+        href: 'https://kitchenft.io',
+        type: DropdownMenuItemType.EXTERNAL_LINK,
+      },
       {
         label: t('Cross chain swapz'),
         href: 'https://cross2.swapz.app/',
