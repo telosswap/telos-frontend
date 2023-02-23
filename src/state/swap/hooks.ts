@@ -54,7 +54,7 @@ export function useSwapActionHandlers(): {
       dispatch(
         selectCurrency({
           field,
-          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'VLX' : '',
+          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'TLOS' : '',
         }),
       )
     },
@@ -224,8 +224,8 @@ function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'VLX') return 'VLX'
-    if (valid === false) return 'VLX'
+    if (urlParam.toUpperCase() === 'TLOS') return 'TLOS'
+    if (valid === false) return 'TLOS'
   }
   return ''
 }

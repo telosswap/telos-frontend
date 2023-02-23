@@ -19,7 +19,7 @@ const getPriceSubqueries = (tokenAddress: string, blocks: any) =>
   )
 
 /**
- * Price data for token and vlx based on block number
+ * Price data for token and tlos based on block number
  */
 const priceQueryConstructor = (subqueries: string[]) => {
   return gql`
@@ -68,17 +68,17 @@ const fetchTokenPriceData = async (
       }
     }
 
-    // format token VLX price results
+    // format token TLOS price results
     const tokenPrices: {
       timestamp: string
       derivedBNB: number
       priceUSD: number
     }[] = []
 
-    // Get Token prices in VLX
+    // Get Token prices in TLOS
     Object.keys(prices).forEach((priceKey) => {
       const timestamp = priceKey.split('t')[1]
-      // if its VLX price e.g. `b123` split('t')[1] will be undefined and skip VLX price entry
+      // if its TLOS price e.g. `b123` split('t')[1] will be undefined and skip TLOS price entry
       if (timestamp) {
         tokenPrices.push({
           timestamp,
@@ -88,7 +88,7 @@ const fetchTokenPriceData = async (
       }
     })
 
-    // Go through VLX USD prices and calculate Token price based on it
+    // Go through TLOS USD prices and calculate Token price based on it
     Object.keys(prices).forEach((priceKey) => {
       const timestamp = priceKey.split('b')[1]
       // if its Token price e.g. `t123` split('b')[1] will be undefined and skip Token price entry

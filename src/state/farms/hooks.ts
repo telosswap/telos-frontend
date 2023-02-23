@@ -49,8 +49,8 @@ export const usePollFarmsWithUserData = () => {
 
 /**
  * Fetches the "core" farm data used globally
- * 2 = WAG-VLX LP
- * 3 = BUSD-VLX LP
+ * 2 = WAG-TLOS LP
+ * 3 = BUSD-TLOS LP
  */
 const coreFarmPIDs = CHAIN_ID === String(ChainId.MAINNET) ? [2, 3] : [1, 2]
 export const usePollCoreFarmData = () => {

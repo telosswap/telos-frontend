@@ -434,7 +434,7 @@ const tokens = {
     decimals: 18,
     projectLink: 'https://venus.io/',
   },
-  wvlx: {
+  wtlos: {
     symbol: 'wBNB',
     address: {
       40: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',

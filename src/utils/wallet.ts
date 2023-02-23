@@ -45,8 +45,8 @@ export const setupNetwork = async (externalProvider?: ExternalProvider) => {
                 chainId: `0x${chainId.toString(16)}`,
                 chainName: NETWORK_CONFIG[chainId].name,
                 nativeCurrency: {
-                  name: 'VLX',
-                  symbol: 'vlx',
+                  name: 'TLOS',
+                  symbol: 'tlos',
                   decimals: 18,
                 },
                 rpcUrls: nodes,

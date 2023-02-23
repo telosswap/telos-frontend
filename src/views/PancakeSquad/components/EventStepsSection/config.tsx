@@ -51,7 +51,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
       title: t('Hold WAG'),
-      bodyText: [t('Each NFT costs WAG to mint. Remember you also need VLX to cover transaction fees too!')],
+      bodyText: [t('Each NFT costs WAG to mint. Remember you also need TLOS to cover transaction fees too!')],
       buttons: (
         <>
           <Button

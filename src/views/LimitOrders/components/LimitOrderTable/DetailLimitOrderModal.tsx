@@ -107,8 +107,8 @@ export const DetailLimitOrderModal: React.FC<DetailLimitOrderModalProps> = ({ on
         />
       </Flex>
       <LimitTradeInfoCard
-        currentPriceExchangeRateText="0.002474 VLX = 1 BUSD"
-        currentPriceExchangeRateTextReversed="404.11169 BUSD = 1 VLX"
+        currentPriceExchangeRateText="0.002474 TLOS = 1 BUSD"
+        currentPriceExchangeRateTextReversed="404.11169 BUSD = 1 TLOS"
         limitPriceExchangeRateText={limitPriceExchangeRateText}
         limitPriceExchangeRateTextReversed={limitPriceExchangeRateTextReversed}
         isOpen={isOpen}

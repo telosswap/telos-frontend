@@ -35,8 +35,13 @@ export const formatUsdv2 = (usd: BigNumber) => {
   return formatPriceDifference({ price: usd, minPriceDisplayed: MIN_PRICE_USD_DISPLAYED, unitPrefix: '$', decimals: 8 })
 }
 
-export const formatBnbv2 = (vlx: BigNumber) => {
-  return formatPriceDifference({ price: vlx, minPriceDisplayed: MIN_PRICE_BNB_DISPLAYED, unitPrefix: '', decimals: 18 })
+export const formatBnbv2 = (tlos: BigNumber) => {
+  return formatPriceDifference({
+    price: tlos,
+    minPriceDisplayed: MIN_PRICE_BNB_DISPLAYED,
+    unitPrefix: '',
+    decimals: 18,
+  })
 }
 
 export const padTime = (num: number) => num.toString().padStart(2, '0')

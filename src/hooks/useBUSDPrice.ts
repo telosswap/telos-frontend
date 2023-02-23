@@ -6,7 +6,7 @@ import { multiplyPriceByAmount } from 'utils/prices'
 import { wrappedCurrency } from '../utils/wrappedCurrency'
 import { PairState, usePairs } from './usePairs'
 
-const { wvlx: WVLX, busd } = tokens
+const { wtlos: WVLX, busd } = tokens
 
 /**
  * Returns the price in BUSD of the input currency
@@ -29,7 +29,7 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
     if (!currency || !wrapped || !chainId) {
       return undefined
     }
-    // handle wvlx/vlx
+    // handle wtlos/tlos
     if (wrapped.equals(WVLX)) {
       if (busdPair) {
         const price = busdPair.priceOf(WVLX)
@@ -89,6 +89,6 @@ export const useBUSDCakeAmount = (amount: number): number | undefined => {
 }
 
 export const useBNBBusdPrice = (): Price | undefined => {
-  const bnbBusdPrice = useBUSDPrice(tokens.wvlx)
+  const bnbBusdPrice = useBUSDPrice(tokens.wtlos)
   return bnbBusdPrice
 }

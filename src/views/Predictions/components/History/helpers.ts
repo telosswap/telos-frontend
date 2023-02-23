@@ -5,8 +5,8 @@ export const formatUsd = (usd: number) => {
   return `$${formatNumber(usd || 0, 3, 3)}`
 }
 
-export const formatBnb = (vlx: number) => {
-  return vlx ? vlx.toLocaleString(undefined, { minimumFractionDigits: 3, maximumFractionDigits: 3 }) : '0'
+export const formatBnb = (tlos: number) => {
+  return tlos ? tlos.toLocaleString(undefined, { minimumFractionDigits: 3, maximumFractionDigits: 3 }) : '0'
 }
 
 export const getMultiplier = (total: number, amount: number) => {

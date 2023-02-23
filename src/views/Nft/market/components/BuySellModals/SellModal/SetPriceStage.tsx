@@ -50,7 +50,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
     <>
       <Text>
         {t(
-          'When selling NFTs from this collection, a portion of the VLX paid will be diverted before reaching the seller:',
+          'When selling NFTs from this collection, a portion of the TLOS paid will be diverted before reaching the seller:',
         )}
       </Text>
       {creatorFeeAsNumber > 0 && (
@@ -162,7 +162,7 @@ const SetPriceStage: React.FC<SetPriceStageProps> = ({
             {t('The NFT will be removed from your wallet and put on sale at this price.')}
           </Text>
           <Text small color="textSubtle">
-            {t('Sales are in WVLX. You can swap WVLX to VLX 1:1 for free with WagyuSwap.')}
+            {t('Sales are in WVLX. You can swap WVLX to TLOS 1:1 for free with WagyuSwap.')}
           </Text>
         </Box>
       </Grid>

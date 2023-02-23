@@ -9,7 +9,7 @@ import orderBy from 'lodash/orderBy'
 import { useSingleContractMultipleData, useMultipleContractSingleData } from '../multicall/hooks'
 
 /**
- * Returns a map of the given addresses to their eventually consistent VLX balances.
+ * Returns a map of the given addresses to their eventually consistent TLOS balances.
  */
 export function useBNBBalances(uncheckedAddresses?: (string | undefined)[]): {
   [address: string]: CurrencyAmount | undefined

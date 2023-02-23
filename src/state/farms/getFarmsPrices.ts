@@ -25,11 +25,11 @@ const getFarmBaseTokenPrice = (
     return hasTokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  if (farm.quoteToken.symbol === tokens.wvlx.symbol) {
+  if (farm.quoteToken.symbol === tokens.wtlos.symbol) {
     return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  // We can only calculate profits without a quoteTokenFarm for BUSD/VLX farms
+  // We can only calculate profits without a quoteTokenFarm for BUSD/TLOS farms
   if (!quoteTokenFarm) {
     return BIG_ZERO
   }
@@ -37,9 +37,9 @@ const getFarmBaseTokenPrice = (
   // Possible alternative farm quoteTokens:
   // UST (i.e. MIR-UST), pBTC (i.e. PNT-pBTC), BTCB (i.e. bBADGER-BTCB), ETH (i.e. SUSHI-ETH)
   // If the farm's quote token isn't BUSD or WVLX, we then use the quote token, of the original farm's quote token
-  // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - VLX, (pBTC - VLX)
-  // from the VLX - pBTC price, we can calculate the PNT - BUSD price
-  if (quoteTokenFarm.quoteToken.symbol === tokens.wvlx.symbol) {
+  // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - TLOS, (pBTC - TLOS)
+  // from the TLOS - pBTC price, we can calculate the PNT - BUSD price
+  if (quoteTokenFarm.quoteToken.symbol === tokens.wtlos.symbol) {
     const quoteTokenInBusd = bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote)
     return hasTokenPriceVsQuote && quoteTokenInBusd
       ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)

@@ -70,7 +70,7 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
             scale="sm"
             variant="subtle"
           >
-            <ButtonMenuItem>VLX</ButtonMenuItem>
+            <ButtonMenuItem>TLOS</ButtonMenuItem>
             <ButtonMenuItem>WVLX</ButtonMenuItem>
           </ButtonMenu>
           <Text small color="textSubtle">
@@ -78,7 +78,7 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
           </Text>
           <BnbAmountCell bnbAmount={nftPrice} />
           <Text small color="textSubtle">
-            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WVLX' })}
+            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.TLOS ? 'TLOS' : 'WVLX' })}
           </Text>
           {!account ? (
             <Flex justifySelf="flex-end">
@@ -96,14 +96,14 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
           <Message p="8px" variant="danger">
             <Text>
               {t('Not enough %symbol% to purchase this NFT', {
-                symbol: paymentCurrency === PaymentCurrency.VLX ? 'VLX' : 'WVLX',
+                symbol: paymentCurrency === PaymentCurrency.TLOS ? 'TLOS' : 'WVLX',
               })}
             </Text>
           </Message>
         )}
         <Flex alignItems="center">
           <Text my="16px" mr="4px">
-            {t('Convert between VLX and WVLX for free')}:
+            {t('Convert between TLOS and WVLX for free')}:
           </Text>
           <Button
             as={Link}
@@ -111,7 +111,7 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
             height="16px"
             external
             variant="text"
-            href="/swap?inputCurrency=VLX&outputCurrency=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
+            href="/swap?inputCurrency=TLOS&outputCurrency=0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c"
           >
             {t('Convert')}
           </Button>
@@ -126,8 +126,8 @@ const ReviewStage: React.FC<ReviewStageProps> = ({
         >
           {t('Checkout')}
         </Button>
-        <Button as={Link} external style={{ width: '100%' }} href="/swap?outputCurrency=VLX" variant="secondary">
-          {t('Get %symbol1% or %symbol2%', { symbol1: 'VLX', symbol2: 'WVLX' })}
+        <Button as={Link} external style={{ width: '100%' }} href="/swap?outputCurrency=TLOS" variant="secondary">
+          {t('Get %symbol1% or %symbol2%', { symbol1: 'TLOS', symbol2: 'WVLX' })}
         </Button>
       </Flex>
     </>

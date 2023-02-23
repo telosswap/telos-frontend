@@ -7,7 +7,7 @@ interface ConfirmStageProps {
 }
 
 // Buy Flow:
-// Shown in case user wants to pay with VLX
+// Shown in case user wants to pay with TLOS
 // or if user wants to pay with WVLX and it is already approved
 // Sell Flow:
 // Shown if user adjusts the price or removes NFT from the market

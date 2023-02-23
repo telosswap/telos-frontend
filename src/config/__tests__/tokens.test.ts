@@ -5,13 +5,13 @@ import tokens from 'config/constants/tokens'
 import { Token } from '@wagyu-swap/sdk'
 import multicall from 'utils/multicall'
 
-// remove VLX because it's not a Bep20 token
+// remove TLOS because it's not a Bep20 token
 // remove ONE because there are two tokens with the symbol ONE (Harmony ONE and BigONE)
 // remove HERO because there are two tokens with the symbol HERO (StepHero and Hero)
 const tokensToTest = omitBy(
   tokens,
   (token) =>
-    token.symbol.toLowerCase() === 'vlx' ||
+    token.symbol.toLowerCase() === 'tlos' ||
     token.symbol.toLowerCase() === 'one' ||
     token.symbol.toLowerCase() === 'bttold' ||
     token.symbol.toLowerCase() === 'hero',

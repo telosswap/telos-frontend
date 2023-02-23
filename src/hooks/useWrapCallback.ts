@@ -51,7 +51,7 @@ export default function useWrapCallback(
                     value: `0x${inputAmount.raw.toString(16)}`,
                   })
                   addTransaction(txReceipt, {
-                    summary: `Wrap ${inputAmount.toSignificant(6)} VLX to WVLX`,
+                    summary: `Wrap ${inputAmount.toSignificant(6)} TLOS to WVLX`,
                     type: 'wrap',
                   })
                 } catch (error) {
@@ -59,7 +59,7 @@ export default function useWrapCallback(
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : t('Insufficient VLX balance'),
+        inputError: sufficientBalance ? undefined : t('Insufficient TLOS balance'),
       }
     }
     if (currencyEquals(WETH[chainId], inputCurrency) && outputCurrency === ETHER) {
@@ -72,7 +72,7 @@ export default function useWrapCallback(
                   const txReceipt = await callWithGasPrice(wbnbContract, 'withdraw', [
                     `0x${inputAmount.raw.toString(16)}`,
                   ])
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WVLX to VLX` })
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WVLX to TLOS` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }

@@ -130,7 +130,7 @@ const pools: SerializedPoolConfig[] =
         {
           sousId: 7,
           stakingToken: serializedTokens.cake,
-          earningToken: serializedTokens.wvlx,
+          earningToken: serializedTokens.wtlos,
           contractAddress: {
             41: '',
             40: '0xe68a572CEc1C021d8a13DbDd0bDBCFEdc8F1901f',
@@ -162,7 +162,7 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.cake,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            41: '0xB10b783c4002965F9CEA0Df63F10118c3ED61704',
+            41: '0xd3B39b20a95dE0A978AC1E605A4F6c0eefAb1a04',
             40: '',
           },
           poolCategory: PoolCategory.CORE,
@@ -176,7 +176,7 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.te6,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            41: '0x6963bD4b2657Ef5D41AE3fC5853D104186fb8375',
+            41: '0x8Ec57c8C45fCc8B9c7F0A721842e87d94c3570C3',
             40: '',
           },
           poolCategory: PoolCategory.CORE,
@@ -190,7 +190,7 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.te9,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            41: '0xbbbbd1834E52555B124831a87B6C113a4900b45f',
+            41: '0xA58DD43Db04726C11a4E00d63EEEe1c6aB5Aa463',
             40: '',
           },
           poolCategory: PoolCategory.CORE,
@@ -204,7 +204,7 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.te12,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            41: '0x050A703e5fa220Bc86d0E29F694C1215D020745c',
+            41: '0x3de79CA5c2a2902dA6453EEaAA40a3bBB9DDBe01',
             40: '',
           },
           poolCategory: PoolCategory.CORE,
@@ -218,7 +218,7 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.te18,
           earningToken: serializedTokens.cake,
           contractAddress: {
-            41: '0x671C7efe0847A5E87d2b7Ffeb539d9383F638072',
+            41: '0xe1230a450eDf6D9E927C9e4B0deaBF1c99826061',
             40: '',
           },
           poolCategory: PoolCategory.CORE,

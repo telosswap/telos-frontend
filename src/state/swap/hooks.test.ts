@@ -10,16 +10,16 @@ import { queryParametersToSwapState, useDerivedSwapInfo, useSwapState } from './
 
 describe('hooks', () => {
   describe('#queryParametersToSwapState', () => {
-    test('VLX to DAI', () => {
+    test('TLOS to DAI', () => {
       expect(
         queryParametersToSwapState(
           parse(
-            'inputCurrency=VLX&outputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&exactAmount=20.5&exactField=outPUT',
+            'inputCurrency=TLOS&outputCurrency=0x6b175474e89094c44da98b954eedeac495271d0f&exactAmount=20.5&exactField=outPUT',
           ),
         ),
       ).toEqual({
         [Field.OUTPUT]: { currencyId: '0x6B175474E89094C44Da98b954EedeAC495271d0F' },
-        [Field.INPUT]: { currencyId: 'VLX' },
+        [Field.INPUT]: { currencyId: 'TLOS' },
         typedValue: '20.5',
         independentField: Field.OUTPUT,
         pairDataById: {},
@@ -28,10 +28,10 @@ describe('hooks', () => {
       })
     })
 
-    test('should return VLX BUSD pair by default', () => {
+    test('should return TLOS BUSD pair by default', () => {
       expect(queryParametersToSwapState(parse(''))).toEqual({
         [Field.OUTPUT]: { currencyId: DEFAULT_OUTPUT_CURRENCY },
-        [Field.INPUT]: { currencyId: 'VLX' },
+        [Field.INPUT]: { currencyId: 'TLOS' },
         typedValue: '',
         independentField: Field.INPUT,
         pairDataById: {},
@@ -40,10 +40,10 @@ describe('hooks', () => {
       })
     })
 
-    test('does not duplicate VLX for invalid output token', () => {
+    test('does not duplicate TLOS for invalid output token', () => {
       expect(queryParametersToSwapState(parse('outputCurrency=invalid'))).toEqual({
         [Field.INPUT]: { currencyId: '' },
-        [Field.OUTPUT]: { currencyId: 'VLX' },
+        [Field.OUTPUT]: { currencyId: 'TLOS' },
         typedValue: '',
         independentField: Field.INPUT,
         pairDataById: {},
@@ -52,9 +52,9 @@ describe('hooks', () => {
       })
     })
 
-    test('output VLX only', () => {
-      expect(queryParametersToSwapState(parse('outputCurrency=vlx&exactAmount=20.5'))).toEqual({
-        [Field.OUTPUT]: { currencyId: 'VLX' },
+    test('output TLOS only', () => {
+      expect(queryParametersToSwapState(parse('outputCurrency=tlos&exactAmount=20.5'))).toEqual({
+        [Field.OUTPUT]: { currencyId: 'TLOS' },
         [Field.INPUT]: { currencyId: '' },
         typedValue: '20.5',
         independentField: Field.INPUT,
@@ -65,8 +65,8 @@ describe('hooks', () => {
     })
 
     test('invalid recipient', () => {
-      expect(queryParametersToSwapState(parse('outputCurrency=VLX&exactAmount=20.5&recipient=abc'))).toEqual({
-        [Field.OUTPUT]: { currencyId: 'VLX' },
+      expect(queryParametersToSwapState(parse('outputCurrency=TLOS&exactAmount=20.5&recipient=abc'))).toEqual({
+        [Field.OUTPUT]: { currencyId: 'TLOS' },
         [Field.INPUT]: { currencyId: '' },
         typedValue: '20.5',
         independentField: Field.INPUT,
@@ -79,10 +79,10 @@ describe('hooks', () => {
     test('valid recipient', () => {
       expect(
         queryParametersToSwapState(
-          parse('outputCurrency=VLX&exactAmount=20.5&recipient=0x0fF2D1eFd7A57B7562b2bf27F3f37899dB27F4a5'),
+          parse('outputCurrency=TLOS&exactAmount=20.5&recipient=0x0fF2D1eFd7A57B7562b2bf27F3f37899dB27F4a5'),
         ),
       ).toEqual({
-        [Field.OUTPUT]: { currencyId: 'VLX' },
+        [Field.OUTPUT]: { currencyId: 'TLOS' },
         [Field.INPUT]: { currencyId: '' },
         typedValue: '20.5',
         independentField: Field.INPUT,
@@ -150,8 +150,8 @@ describe('#useDerivedSwapInfo', () => {
         wrapper: createReduxWrapper({
           swap: {
             typedValue: '0.11',
-            [Field.INPUT]: { currencyId: 'VLX' },
-            [Field.OUTPUT]: { currencyId: 'VLX' },
+            [Field.INPUT]: { currencyId: 'TLOS' },
+            [Field.OUTPUT]: { currencyId: 'TLOS' },
           },
         }),
       },

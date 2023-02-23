@@ -36,13 +36,13 @@ const WalletInfo: React.FC<WalletInfoProps> = ({ hasLowBnbBalance, onDismiss }) 
       {hasLowBnbBalance && (
         <Message variant="warning" mb="24px">
           <Box>
-            <Text fontWeight="bold">{t('VLX Balance Low')}</Text>
-            <Text as="p">{t('You need VLX for transaction fees.')}</Text>
+            <Text fontWeight="bold">{t('TLOS Balance Low')}</Text>
+            <Text as="p">{t('You need TLOS for transaction fees.')}</Text>
           </Box>
         </Message>
       )}
       <Flex alignItems="center" justifyContent="space-between">
-        <Text color="textSubtle">{t('VLX Balance')}</Text>
+        <Text color="textSubtle">{t('TLOS Balance')}</Text>
         {fetchStatus !== FetchStatus.Fetched ? (
           <Skeleton height="22px" width="60px" />
         ) : (

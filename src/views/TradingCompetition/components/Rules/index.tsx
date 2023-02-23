@@ -30,7 +30,7 @@ const Rules = () => {
         <RulesCard title={t('Trade to increase your rank')}>
           <Text textAlign="center" fontSize="14px" color="textSubtle">
             {t(
-              'Eligible pairs: DAR/VLX, WAG/VLX, and WAG/BUSD. Please note that the volume from limit orders will not be indexed.',
+              'Eligible pairs: DAR/TLOS, WAG/TLOS, and WAG/BUSD. Please note that the volume from limit orders will not be indexed.',
             )}
           </Text>
         </RulesCard>

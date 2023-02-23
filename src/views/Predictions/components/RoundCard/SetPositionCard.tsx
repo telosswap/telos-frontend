@@ -34,7 +34,7 @@ import PositionTag from '../PositionTag'
 import FlexRow from '../FlexRow'
 
 const LOGOS = {
-  VLX: VelasIcon,
+  TLOS: VelasIcon,
   WAG: LogoIcon,
 }
 
@@ -58,7 +58,7 @@ const getButtonProps = (value: BigNumber, bnbBalance: BigNumber, minBetAmountBal
   }
 
   if (!hasSufficientBalance()) {
-    return { key: 'Insufficient VLX balance', disabled: true }
+    return { key: 'Insufficient TLOS balance', disabled: true }
   }
 
   if (value.eq(0)) {

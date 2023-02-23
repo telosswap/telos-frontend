@@ -8,8 +8,8 @@ const serializedTokens = serializeTokens()
 const chainId = parseInt(CHAIN_ID, 10)
 const { MAINNET } = ChainId
 
-export const VLX_WAG_FARM_PID = chainId === MAINNET ? 1 : 9 // WAG-VLX (2)
-export const VLX_USDT_FARM_PID = chainId === MAINNET ? 5 : 6 // BUSD-VLX (3)
+export const VLX_WAG_FARM_PID = chainId === MAINNET ? 1 : 5 // WAG-TLOS (2)
+export const VLX_USDT_FARM_PID = chainId === MAINNET ? 5 : 6 // USDT-TLOS (3)
 
 const farms: SerializedFarmConfig[] =
   chainId === MAINNET
@@ -23,84 +23,84 @@ const farms: SerializedFarmConfig[] =
             40: '0xaBf26902Fd7B624e0db40D31171eA9ddDf078351',
           },
           token: serializedTokens.syrup,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 1,
           v1pid: 1,
-          lpSymbol: 'VLX_WAG LP',
+          lpSymbol: 'TLOS_WAG LP',
           lpAddresses: {
             41: '',
             40: '0x33f879690C165cC320B0BA04cEb1F9CeaC80F376',
           },
           token: serializedTokens.cake,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 2,
           v1pid: 2,
-          lpSymbol: 'VLX_ETH LP',
+          lpSymbol: 'TLOS_ETH LP',
           lpAddresses: {
             41: '',
             40: '0x7c3F1eA99770aa23Fe1b19097c93BB0cF34C8351',
           },
           token: serializedTokens.weth,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 3,
           v1pid: 3,
-          lpSymbol: 'VLX_BUSD LP',
+          lpSymbol: 'TLOS_BUSD LP',
           lpAddresses: {
             41: '',
             40: '0x8e2B762Bee3E2bf2C8fB0cdd04274042748D6C23',
           },
           token: serializedTokens.busd,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 4,
           v1pid: 4,
-          lpSymbol: 'VLX_USDC LP',
+          lpSymbol: 'TLOS_USDC LP',
           lpAddresses: {
             41: '',
             40: '0x757Ac3cDFfa84b67dFC58c5880Aa8037ef5a23d5',
           },
           token: serializedTokens.usdc,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 5,
           v1pid: 5,
-          lpSymbol: 'VLX_USDT LP',
+          lpSymbol: 'TLOS_USDT LP',
           lpAddresses: {
             41: '',
             40: '0x7F3cB73FC470c2c9F543FdD17dF4De0e97b51A97',
           },
           token: serializedTokens.usdt,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 6,
           v1pid: 6,
-          lpSymbol: 'VLX_BITORB LP',
+          lpSymbol: 'TLOS_BITORB LP',
           lpAddresses: {
             41: '',
             40: '0xa4c1Ee69750Ff17a2fa561D697E2fb23f4e0A842',
           },
           token: serializedTokens.bitorb,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 7,
           v1pid: 7,
-          lpSymbol: 'VLX_SCAR LP',
+          lpSymbol: 'TLOS_SCAR LP',
           lpAddresses: {
             41: '',
             40: '0x9D4192D18c49dd9e4DBC3892dd55Cd8EC4081299',
           },
           token: serializedTokens.scar,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 10,
@@ -149,13 +149,13 @@ const farms: SerializedFarmConfig[] =
         {
           pid: 14,
           v1pid: 14,
-          lpSymbol: 'VLX_VDGT LP',
+          lpSymbol: 'TLOS_VDGT LP',
           lpAddresses: {
             41: '',
             40: '0x7b714BC5dD176EaA198fe6C07E415a87A40dc858',
           },
           token: serializedTokens.vdgt,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 15,
@@ -233,110 +233,77 @@ const farms: SerializedFarmConfig[] =
           v1pid: 0,
           lpSymbol: 'WAG',
           lpAddresses: {
-            41: '0xb830d8213e2c3dD621037703D05A5e594387B6Be',
+            41: '0x355108903c6BFee699C493CD5e13795C43EF81Bd',
             40: '',
           },
           token: serializedTokens.syrup,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 1,
           v1pid: 1,
-          lpSymbol: 'VLX_TE6 LP',
+          lpSymbol: 'TLOS_TE6 LP',
           lpAddresses: {
-            41: '0xC056BBe888547986Ad2bb0Ff7F9fA484A0c27743',
+            41: '0xa5c5df71E23cd11f79EA4ce3C74F1FE036DA9a29',
             40: '',
           },
           token: serializedTokens.te6,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 2,
           v1pid: 2,
-          lpSymbol: 'VLX_TE9 LP',
+          lpSymbol: 'TLOS_TE9 LP',
           lpAddresses: {
-            41: '0x40d4fC460eF4C76a20CE1BaEAEB6b921050f483f',
+            41: '0xfb3EDBDf6Bc0E20346728761c525603da76bDf7C',
             40: '',
           },
           token: serializedTokens.te9,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 3,
           v1pid: 3,
-          lpSymbol: 'VLX_TE12 LP',
+          lpSymbol: 'TLOS_TE12 LP',
           lpAddresses: {
-            41: '0xc40969848d5B549138f0b1B499a69fA9B510407d',
+            41: '0xD07443d96B710A18603609678a2C8a4B37b731C1',
             40: '',
           },
           token: serializedTokens.te12,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 4,
           v1pid: 4,
-          lpSymbol: 'VLX_TE18 LP',
+          lpSymbol: 'TLOS_TE18 LP',
           lpAddresses: {
-            41: '0xf01D3d7827211626E7b76DD583EaC8b369d046b0',
+            41: '0x3470A1d994dADf4fB5e899922d2EC2584e3D995a',
             40: '',
           },
           token: serializedTokens.te18,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 5,
           v1pid: 5,
-          lpSymbol: 'VLX_ETH LP',
+          lpSymbol: 'TLOS_WAG LP',
           lpAddresses: {
-            41: '0x8A70d2a3e2cba2CAD61FbA419E62eB821F18Bb57',
+            41: '0x7A3D4Df3F11F5BC54bA757e3FE01aDEe2B6c2e9B',
             40: '',
           },
-          token: serializedTokens.weth,
-          quoteToken: serializedTokens.wvlx,
+          token: serializedTokens.cake,
+          quoteToken: serializedTokens.wtlos,
         },
         {
           pid: 6,
           v1pid: 6,
-          lpSymbol: 'VLX_USDT LP',
+          lpSymbol: 'TLOS_USDT LP',
           lpAddresses: {
-            41: '0xF20c93c5e5F534C9D95567497Ea17a841164d37b',
+            41: '0x3108a4ec070fc51f74ce00cda009578d594e35b8',
             40: '',
           },
           token: serializedTokens.usdt,
-          quoteToken: serializedTokens.wvlx,
-        },
-        {
-          pid: 7,
-          v1pid: 7,
-          lpSymbol: 'VLX_USDC LP',
-          lpAddresses: {
-            41: '0x33ea93e391aF9cAA4b8e9C3368236B93DFCF39C4',
-            40: '',
-          },
-          token: serializedTokens.usdc,
-          quoteToken: serializedTokens.wvlx,
-        },
-        {
-          pid: 8,
-          v1pid: 8,
-          lpSymbol: 'VLX_BUSD LP',
-          lpAddresses: {
-            41: '0xe25107384e3d23403c4537967D34cCe02A2b56c6',
-            40: '',
-          },
-          token: serializedTokens.busd,
-          quoteToken: serializedTokens.wvlx,
-        },
-        {
-          pid: 9,
-          v1pid: 9,
-          lpSymbol: 'VLX_WAG LP',
-          lpAddresses: {
-            41: '0xdC415f9c745a28893b0Cbb6A8eaC1bb6ed42C581',
-            40: '',
-          },
-          token: serializedTokens.cake,
-          quoteToken: serializedTokens.wvlx,
+          quoteToken: serializedTokens.wtlos,
         },
       ]
 

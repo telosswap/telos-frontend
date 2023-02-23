@@ -38,12 +38,12 @@ interface BuyModalProps extends InjectedModalProps {
 
 // NFT WVLX in testnet contract is different
 const wbnbAddress =
-  CHAIN_ID === String(ChainId.MAINNET) ? tokens.wvlx.address : '0x094616f0bdfb0b526bd735bf66eca0ad254ca81f'
+  CHAIN_ID === String(ChainId.MAINNET) ? tokens.wtlos.address : '0x094616f0bdfb0b526bd735bf66eca0ad254ca81f'
 
 const BuyModal: React.FC<BuyModalProps> = ({ nftToBuy, onDismiss }) => {
   const [stage, setStage] = useState(BuyingStage.REVIEW)
   const [confirmedTxHash, setConfirmedTxHash] = useState('')
-  const [paymentCurrency, setPaymentCurrency] = useState<PaymentCurrency>(PaymentCurrency.VLX)
+  const [paymentCurrency, setPaymentCurrency] = useState<PaymentCurrency>(PaymentCurrency.TLOS)
   const [isPaymentCurrentInitialized, setIsPaymentCurrentInitialized] = useState(false)
   const { theme } = useTheme()
   const { t } = useTranslation()
@@ -59,18 +59,18 @@ const BuyModal: React.FC<BuyModalProps> = ({ nftToBuy, onDismiss }) => {
   const nftPriceWei = parseUnits(nftToBuy?.marketData?.currentAskPrice, 'ether')
   const nftPrice = parseFloat(nftToBuy?.marketData?.currentAskPrice)
 
-  // VLX - returns ethers.BigNumber
+  // TLOS - returns ethers.BigNumber
   const { balance: bnbBalance, fetchStatus: bnbFetchStatus } = useGetBnbBalance()
   const formattedBnbBalance = parseFloat(formatEther(bnbBalance))
   // WVLX - returns BigNumber
   const { balance: wbnbBalance, fetchStatus: wbnbFetchStatus } = useTokenBalance(wbnbAddress)
   const formattedWbnbBalance = getBalanceNumber(wbnbBalance)
 
-  const walletBalance = paymentCurrency === PaymentCurrency.VLX ? formattedBnbBalance : formattedWbnbBalance
-  const walletFetchStatus = paymentCurrency === PaymentCurrency.VLX ? bnbFetchStatus : wbnbFetchStatus
+  const walletBalance = paymentCurrency === PaymentCurrency.TLOS ? formattedBnbBalance : formattedWbnbBalance
+  const walletFetchStatus = paymentCurrency === PaymentCurrency.TLOS ? bnbFetchStatus : wbnbFetchStatus
 
   const notEnoughBnbForPurchase =
-    paymentCurrency === PaymentCurrency.VLX
+    paymentCurrency === PaymentCurrency.TLOS
       ? bnbBalance.lt(nftPriceWei)
       : wbnbBalance.lt(ethersToBigNumber(nftPriceWei))
 
@@ -96,7 +96,7 @@ const BuyModal: React.FC<BuyModalProps> = ({ nftToBuy, onDismiss }) => {
     },
     onConfirm: () => {
       const payAmount = Number.isNaN(nftPrice) ? Zero : parseUnits(nftToBuy?.marketData?.currentAskPrice)
-      if (paymentCurrency === PaymentCurrency.VLX) {
+      if (paymentCurrency === PaymentCurrency.TLOS) {
         return callWithGasPrice(nftMarketContract, 'buyTokenUsingBNB', [nftToBuy.collectionAddress, nftToBuy.tokenId], {
           value: payAmount,
         })

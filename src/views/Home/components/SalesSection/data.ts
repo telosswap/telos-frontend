@@ -3,7 +3,7 @@ import { SalesSectionProps } from '.'
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
   headingText: t('Trade anything. No registration, no hassle.'),
-  bodyText: t('Trade any token on VLX Smart Chain in seconds, just by connecting your wallet.'),
+  bodyText: t('Trade any token on TLOS Smart Chain in seconds, just by connecting your wallet.'),
   reverse: false,
   primaryButton: {
     to: '/swap',
@@ -18,7 +18,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: 'VLX', alt: t('VLX token') },
+      { src: 'TLOS', alt: t('TLOS token') },
       { src: 'BTC', alt: t('BTC token') },
       { src: 'WAG', alt: t('WAG token') },
     ],
