@@ -52,7 +52,7 @@
     "@reduxjs/toolkit": "^1.8.2",
     "@sentry/nextjs": "6.19.6",
     "@uniswap/token-lists": "^1.0.0-beta.19",
-    "@wagyu-swap/sdk": "https://github.com/wagyuswapapp/wagyu-swap-sdk.git#06b00c583ed662ac51ef0adb5fa27d1b4e9799e5",
+    "@wagyu-swap/sdk": "https://github.com/telosswap/wagyu-swap-sdk.git#5c8f98d0f44bc45a2601d2e5e7ca4b254814824a",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "@web3-react/walletconnect-connector": "6.2.4",

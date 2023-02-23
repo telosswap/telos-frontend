@@ -24,8 +24,8 @@ const initialData = {
     stakingToken: serializedTokens.cake,
     earningToken: serializedTokens.cake,
     contractAddress: {
-      111: addresses[ChainId.TESTNET].WAGFarmV1,
-      106: addresses[ChainId.MAINNET].WAGFarmV1,
+      41: addresses[ChainId.TESTNET].WAGFarmV1,
+      40: addresses[ChainId.MAINNET].WAGFarmV1,
     },
     poolCategory: PoolCategory.CORE,
     harvest: true,

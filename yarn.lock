@@ -4818,19 +4818,19 @@
   resolved "https://registry.yarnpkg.com/@uniswap/token-lists/-/token-lists-1.0.0-beta.27.tgz#8b02a979b0b0024cc96f60e694a3f6db6b2ccab2"
   integrity sha512-x5hmIniQ9TGqOBCRqfWcmZi/U5kB0qrHMDQ9igs3nMbK0wwmYLraL4owbIwXFGR/co6/lJYJC4K/Gjn4wZY5mQ==
 
-"@wagyu-swap-libs/wagyu-swap-core@https://github.com/wagyuswapapp/wagyu-swap-core.git":
+"@wagyu-swap-libs/wagyu-swap-core@git://github.com/wagyuswapapp/wagyu-swap-core.git":
   version "0.1.0"
-  resolved "https://github.com/wagyuswapapp/wagyu-swap-core.git#5d789603a704fcd748f7d278adcb417a50c5021e"
+  resolved "git://github.com/wagyuswapapp/wagyu-swap-core.git#5d789603a704fcd748f7d278adcb417a50c5021e"
   dependencies:
     truffle "^5.1.41"
     truffle-flattener "^1.4.4"
     truffle-hdwallet-provider "^1.0.17"
 
-"@wagyu-swap/sdk@https://github.com/wagyuswapapp/wagyu-swap-sdk.git#06b00c583ed662ac51ef0adb5fa27d1b4e9799e5":
+"@wagyu-swap/sdk@https://github.com/telosswap/wagyu-swap-sdk.git#5c8f98d0f44bc45a2601d2e5e7ca4b254814824a":
   version "2.4.0"
-  resolved "https://github.com/wagyuswapapp/wagyu-swap-sdk.git#06b00c583ed662ac51ef0adb5fa27d1b4e9799e5"
+  resolved "https://github.com/telosswap/wagyu-swap-sdk.git#5c8f98d0f44bc45a2601d2e5e7ca4b254814824a"
   dependencies:
-    "@wagyu-swap-libs/wagyu-swap-core" "https://github.com/wagyuswapapp/wagyu-swap-core.git"
+    "@wagyu-swap-libs/wagyu-swap-core" "git://github.com/wagyuswapapp/wagyu-swap-core.git"
     big.js "^5.2.2"
     decimal.js-light "^2.5.0"
     jsbi "^3.1.1"
