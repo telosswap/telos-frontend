@@ -10,8 +10,8 @@ BigNumber.config({
 export const VELAS_BLOCK_TIME = 0.4
 
 export const BASE_VELAS_SCAN_URLS = {
-  [ChainId.MAINNET]: 'https://evmexplorer.velas.com',
-  [ChainId.TESTNET]: 'https://evmexplorer.testnet.velas.com',
+  [ChainId.MAINNET]: 'https://teloscan.io/',
+  [ChainId.TESTNET]: 'https://testnet.teloscan.io/',
 }
 
 // WAG_PER_SECOND details
@@ -26,11 +26,11 @@ export const WAG_PER_SECOND = 13
 export const BLOCKS_PER_YEAR = 60 * 60 * 24 * 365
 // export const BLOCKS_PER_YEAR = (60 / VELAS_BLOCK_TIME) * 60 * 24 * 365 // 10512000
 export const WAG_PER_YEAR = WAG_PER_SECOND * BLOCKS_PER_YEAR
-export const BASE_URL = `https://exchange.wagyuswap.app`
+export const BASE_URL = `https://telos.wagyuswap.app`
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_URL}/add`
 export const BASE_VELAS_SCAN_URL = BASE_VELAS_SCAN_URLS[ChainId.MAINNET]
 export const DEFAULT_TOKEN_DECIMAL = BIG_TEN.pow(18)
-export const DEFAULT_GAS_LIMIT = 600000
+export const DEFAULT_GAS_LIMIT = 1000000
 export const AUCTION_BIDDERS_TO_FETCH = 500
 export const RECLAIM_AUCTIONS_TO_FETCH = 500
 export const AUCTION_WHITELISTED_BIDDERS_TO_FETCH = 500

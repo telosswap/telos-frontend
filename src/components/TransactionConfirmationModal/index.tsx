@@ -83,7 +83,7 @@ export function TransactionSubmittedContent({
           <Text fontSize="20px">{t('Transaction Submitted')}</Text>
           {chainId && hash && (
             <Link external small href={getBscScanLink(hash, 'transaction', chainId)}>
-              {t('View on Velas Explorer')}
+              {t('View on Telos Explorer')}
             </Link>
           )}
           {currencyToAdd && library?.provider?.isMetaMask && (

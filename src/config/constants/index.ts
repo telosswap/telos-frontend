@@ -19,15 +19,12 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.MAINNET]: [
     mainnetTokens.wtlos,
     mainnetTokens.cake,
-    mainnetTokens.busd,
     mainnetTokens.usdt,
     mainnetTokens.wbtc,
     mainnetTokens.weth,
     mainnetTokens.usdc,
-    mainnetTokens.usdv,
-    mainnetTokens.dai,
   ],
-  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.usdt],
 }
 
 /**
@@ -49,21 +46,21 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
-  [ChainId.MAINNET]: [mainnetTokens.busd, mainnetTokens.cake, mainnetTokens.wbtc],
-  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.MAINNET]: [mainnetTokens.usdt, mainnetTokens.cake, mainnetTokens.wbtc],
+  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.usdt],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
-  [ChainId.MAINNET]: [mainnetTokens.wtlos, mainnetTokens.dai, mainnetTokens.busd, mainnetTokens.usdt],
-  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.busd],
+  [ChainId.MAINNET]: [mainnetTokens.wtlos, mainnetTokens.usdc, mainnetTokens.usdt],
+  [ChainId.TESTNET]: [testnetTokens.wtlos, testnetTokens.cake, testnetTokens.usdt],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [mainnetTokens.cake, mainnetTokens.wtlos],
-    [mainnetTokens.busd, mainnetTokens.usdt],
-    [mainnetTokens.dai, mainnetTokens.usdt],
+    [mainnetTokens.usdc, mainnetTokens.usdt],
+    [mainnetTokens.wtlos, mainnetTokens.usdt],
   ],
 }
 

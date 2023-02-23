@@ -103,7 +103,7 @@ export default function AddressInputPanel({
               <Text>{t('Recipient')}</Text>
               {address && chainId && (
                 <Link external small href={getBscScanLink(address, 'address', chainId)}>
-                  ({t('View on Velas Explorer')})
+                  ({t('View on Telos Explorer')})
                 </Link>
               )}
             </RowBetween>
