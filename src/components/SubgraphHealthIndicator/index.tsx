@@ -1,4 +1,4 @@
-import { VELAS_BLOCK_TIME } from 'config'
+import { TELOS_BLOCK_TIME } from 'config'
 import { useTranslation } from 'contexts/Localization'
 import { TranslateFunction } from 'contexts/Localization/types'
 import styled from 'styled-components'
@@ -99,7 +99,7 @@ export const SubgraphHealthIndicator: React.FC<{
 
   const indicatorProps = indicator(t, customDescriptions)
 
-  const secondRemainingBlockSync = blockDifference * VELAS_BLOCK_TIME
+  const secondRemainingBlockSync = blockDifference * TELOS_BLOCK_TIME
 
   const indicatorValue = getIndicator(status)
 

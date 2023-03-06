@@ -13,6 +13,7 @@ import { useMenuItems } from './hooks/useMenuItems'
 import GlobalSettings from './GlobalSettings'
 import { getActiveMenuItem, getActiveSubMenuItem } from './utils'
 import { footerLinks } from './config/footerConfig'
+import { NetworkSwitcher } from 'components/NetworkSwitcher'
 
 const Menu = (props) => {
   const { isDark, setTheme } = useTheme()
@@ -36,7 +37,12 @@ const Menu = (props) => {
         return <NextLinkFromReactRouter to={linkProps.href} {...linkProps} prefetch={false} />
       }}
       userMenu={<UserMenu />}
-      globalMenu={<GlobalSettings />}
+      globalMenu={
+        <>
+          <GlobalSettings />
+          <NetworkSwitcher />
+        </>
+      }
       banner={showPhishingWarningBanner && typeof window !== 'undefined' && <PhishingWarningBanner />}
       isDark={isDark}
       toggleTheme={toggleTheme}

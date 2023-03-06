@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex, Card, Grid, SellIcon, Text, useModal, Box, VelasIcon, Skeleton, Button } from 'packages/uikit'
+import { Flex, Card, Grid, SellIcon, Text, useModal, Box, TelosIcon, Skeleton, Button } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
 import { NftToken } from 'state/nftMarket/types'
@@ -79,7 +79,7 @@ const OwnerCard: React.FC<OwnerCardProps> = ({ nft, isOwnNft, nftIsProfilePic, o
               {nft.marketData?.isTradable ? (
                 <>
                   <Flex justifySelf="flex-start" alignItems="center" width="max-content">
-                    <VelasIcon width="24px" height="24px" mr="8px" />
+                    <TelosIcon width="24px" height="24px" mr="8px" />
                     <Text bold>{formatNumber(parseFloat(nft?.marketData?.currentAskPrice), 0, 5)}</Text>
                   </Flex>
                   {bnbBusdPrice ? (

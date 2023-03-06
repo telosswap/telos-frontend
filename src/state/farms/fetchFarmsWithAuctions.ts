@@ -3,7 +3,7 @@ import farmAuctionAbi from 'config/abi/farmAuction.json'
 import { getFarmAuctionContract } from 'utils/contractHelpers'
 import { multicallv2 } from 'utils/multicall'
 import { ethersToBigNumber } from 'utils/bigNumber'
-import { VELAS_BLOCK_TIME } from 'config'
+import { TELOS_BLOCK_TIME } from 'config'
 import { add, sub } from 'date-fns'
 import { sortAuctionBidders } from '../../views/FarmAuction/helpers'
 
@@ -30,7 +30,7 @@ const fetchFarmsWithAuctions = async (
   )
   const blocksSinceEnd = currentBlock - auctionData.endBlock.toNumber()
   if (blocksSinceEnd > 0) {
-    const secondsSinceEnd = blocksSinceEnd * VELAS_BLOCK_TIME
+    const secondsSinceEnd = blocksSinceEnd * TELOS_BLOCK_TIME
     if (secondsSinceEnd > FARM_AUCTION_HOSTING_IN_SECONDS) {
       return { winnerFarms: [], auctionHostingEndDate: null }
     }

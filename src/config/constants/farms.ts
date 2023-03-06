@@ -233,7 +233,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 0,
           lpSymbol: 'WAG',
           lpAddresses: {
-            41: '0x355108903c6BFee699C493CD5e13795C43EF81Bd',
+            41: '0x0CcD27B7581b2961c370A1Ed756c4d99eb755FCb',
             40: '',
           },
           token: serializedTokens.syrup,
@@ -244,7 +244,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 1,
           lpSymbol: 'TLOS_TE6 LP',
           lpAddresses: {
-            41: '0xa5c5df71E23cd11f79EA4ce3C74F1FE036DA9a29',
+            41: '0xebdd95e186EdB1129a536528f76B1988D01a496d',
             40: '',
           },
           token: serializedTokens.te6,
@@ -255,7 +255,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 2,
           lpSymbol: 'TLOS_TE9 LP',
           lpAddresses: {
-            41: '0xfb3EDBDf6Bc0E20346728761c525603da76bDf7C',
+            41: '0x030194Ba1d0Ea8483b0056bE87FAAC58d15e0A43',
             40: '',
           },
           token: serializedTokens.te9,
@@ -266,7 +266,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 3,
           lpSymbol: 'TLOS_TE12 LP',
           lpAddresses: {
-            41: '0xD07443d96B710A18603609678a2C8a4B37b731C1',
+            41: '0x0d049bA53CDa08576C16F37f8737150028F031fC',
             40: '',
           },
           token: serializedTokens.te12,
@@ -277,7 +277,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 4,
           lpSymbol: 'TLOS_TE18 LP',
           lpAddresses: {
-            41: '0x3470A1d994dADf4fB5e899922d2EC2584e3D995a',
+            41: '0x207527a13e5BabCc5e2444919c8c6Bb2DEf0209e',
             40: '',
           },
           token: serializedTokens.te18,
@@ -288,7 +288,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 5,
           lpSymbol: 'TLOS_WAG LP',
           lpAddresses: {
-            41: '0x7A3D4Df3F11F5BC54bA757e3FE01aDEe2B6c2e9B',
+            41: '0x655F17B5F4B50216F520a0eCA35273687628e9A2',
             40: '',
           },
           token: serializedTokens.cake,
@@ -299,7 +299,7 @@ const farms: SerializedFarmConfig[] =
           v1pid: 6,
           lpSymbol: 'TLOS_USDT LP',
           lpAddresses: {
-            41: '0x3108a4ec070fc51f74ce00cda009578d594e35b8',
+            41: '0xBE59f845B8DA50F830CFE67bde60889aea3f57db',
             40: '',
           },
           token: serializedTokens.usdt,

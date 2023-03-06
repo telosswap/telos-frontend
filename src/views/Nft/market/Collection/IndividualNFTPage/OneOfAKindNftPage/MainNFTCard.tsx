@@ -1,4 +1,4 @@
-import { VelasIcon, Box, Button, Card, CardBody, Flex, Skeleton, Text, useModal } from 'packages/uikit'
+import { TelosIcon, Box, Button, Card, CardBody, Flex, Skeleton, Text, useModal } from 'packages/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { useBNBBusdPrice } from 'hooks/useBUSDPrice'
 
@@ -75,7 +75,7 @@ const MainNFTCard: React.FC<MainNFTCardProps> = ({ nft, isOwnNft, nftIsProfilePi
               </Text>
               {currentAskPriceAsNumber > 0 ? (
                 <Flex alignItems="center" mt="8px">
-                  <VelasIcon width={18} height={18} mr="4px" />
+                  <TelosIcon width={18} height={18} mr="4px" />
                   <Text fontSize="24px" bold mr="4px">
                     {formatNumber(currentAskPriceAsNumber, 0, 5)}
                   </Text>

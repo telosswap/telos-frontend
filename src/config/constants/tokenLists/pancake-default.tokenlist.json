@@ -117,18 +117,18 @@
     {
       "name": "Wagyu",
       "symbol": "WAG",
-      "address": "0x355108903c6bfee699c493cd5e13795c43ef81bd",
+      "address": "0x0ccd27b7581b2961c370a1ed756c4d99eb755fcb",
       "chainId": 41,
       "decimals": 18,
-      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos-test/assets/0x355108903c6bfee699c493cd5e13795c43ef81bd/logo.png?raw=true"
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos-test/assets/0x0ccd27b7581b2961c370a1ed756c4d99eb755fcb/logo.png?raw=true"
     },
     {
       "name": "Wrapped TLOS",
       "symbol": "WTLOS",
-      "address": "0xfadbc0a9a30394055a90e9205dd470c6e794cd5a",
-      "chainId": 40,
+      "address": "0xb881218cc91304ced86c80dc4576184a52e02f62",
+      "chainId": 41,
       "decimals": 18,
-      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos/assets/0xfadbc0a9a30394055a90e9205dd470c6e794cd5a/logo.png?raw=true"
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos-test/assets/0xb881218cc91304ced86c80dc4576184a52e02f62/logo.png?raw=true"
     }
   ]
 }
