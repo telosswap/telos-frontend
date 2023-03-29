@@ -4826,9 +4826,9 @@
     truffle-flattener "^1.4.4"
     truffle-hdwallet-provider "^1.0.17"
 
-"@wagyu-swap/sdk@https://github.com/telosswap/wagyu-swap-sdk.git#107dc78cfd2857b69afaa0846cbe4e2f4b7e6e4c":
+"@wagyu-swap/sdk@https://github.com/telosswap/wagyu-swap-sdk.git#1c91d4d9d64aca03e5b14b3eb4177d63803affe4":
   version "2.4.0"
-  resolved "https://github.com/telosswap/wagyu-swap-sdk.git#107dc78cfd2857b69afaa0846cbe4e2f4b7e6e4c"
+  resolved "https://github.com/telosswap/wagyu-swap-sdk.git#1c91d4d9d64aca03e5b14b3eb4177d63803affe4"
   dependencies:
     "@wagyu-swap-libs/wagyu-swap-core" "git://github.com/wagyuswapapp/wagyu-swap-core.git"
     big.js "^5.2.2"
