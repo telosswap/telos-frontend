@@ -4820,7 +4820,7 @@
 
 "@wagyu-swap-libs/wagyu-swap-core@https://github.com/wagyuswapapp/wagyu-swap-core.git":
   version "0.1.0"
-  resolved "git://github.com/wagyuswapapp/wagyu-swap-core.git#5d789603a704fcd748f7d278adcb417a50c5021e"
+  resolved "https://github.com/wagyuswapapp/wagyu-swap-core.git#5d789603a704fcd748f7d278adcb417a50c5021e"
   dependencies:
     truffle "^5.1.41"
     truffle-flattener "^1.4.4"
