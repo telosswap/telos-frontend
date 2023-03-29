@@ -8,12 +8,12 @@ const Container = styled(Flex)`
   height: 100%;
   padding: 12px;
   align-items: center;
-  background-color: #de2549;
+  background-color: #0e052f;
   /* background: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)),
     linear-gradient(180deg, #8051d6 0%, #492286 100%); */
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 0px;
-    background-color: #de2549;
+    background-color: #0e052f;
 
     /* background: linear-gradient(180deg, #8051d6 0%, #492286 100%); */
   }
@@ -27,7 +27,7 @@ const InnerContainer = styled(Flex)`
 `
 
 const SpeechBubble = styled.div`
-  background: rgba(39, 38, 44, 0.4);
+  background: #8b8bc944;
   border-radius: 16px;
   padding: 8px;
   width: 55%;

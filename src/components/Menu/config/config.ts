@@ -17,6 +17,9 @@ import { ContextApi } from 'contexts/Localization/types'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
 import { perpLangMap } from 'utils/getPerpetualLanguageCode'
 import { DropdownMenuItems } from 'packages/uikit/src/components/DropdownMenu/types'
+import { CHAIN_ID } from 'config/constants/networks'
+
+const chainId = parseInt(CHAIN_ID, 10)
 
 export type ConfigMenuDropDownItemsType = DropdownMenuItems & { hideSubNav?: boolean }
 export type ConfigMenuItemsType = Omit<MenuItemsType, 'items'> & { hideSubNav?: boolean } & {
@@ -118,10 +121,10 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         label: t('Info'),
         href: '/info',
       },
-      {
-        label: t('WAG Burn'),
-        href: '/burn',
-      },
+      // {
+      //   label: t('WAG Burn'),
+      //   href: '/burn',
+      // },
       // {
       //   label: t('IFO'),
       //   href: '/ifo',
@@ -176,8 +179,8 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Velascan'),
-        href: 'https://velascan.org/',
+        label: t('Teloscan'),
+        href: chainId === 40 ? 'https://www.teloscan.io/' : 'https://testnet.teloscan.io/',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],

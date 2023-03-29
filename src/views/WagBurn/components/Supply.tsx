@@ -20,7 +20,7 @@ const TabWrapper = styled.div`
 
 const TabItem = styled.div<{ active: boolean }>`
   border-radius: 12px;
-  background-color: ${({ active }) => (active ? '#de2549' : '#ffe0e4')};
+  background-color: ${({ active }) => (active ? '#0e052f' : '#ffe0e4')};
   color: ${({ active }) => (active ? 'white' : '#732828')};
   cursor: pointer;
   height: 70px;
@@ -33,7 +33,7 @@ const TabItem = styled.div<{ active: boolean }>`
   font-weight: 500;
   text-align: center;
   &:hover {
-    background-color: #de2549;
+    background-color: #0e052f;
     color: white;
   }
 

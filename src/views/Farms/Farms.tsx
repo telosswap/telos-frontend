@@ -96,6 +96,23 @@ const ViewControls = styled.div`
   }
 `
 
+const PageWrapper = styled.div<{ bgUrl: string }>`
+  position: relative;
+  &:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(${(props) => props.bgUrl});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+`
+
 const StyledImage = styled(Image)`
   margin-left: auto;
   margin-right: auto;
@@ -357,14 +374,15 @@ const Farms: React.FC = ({ children }) => {
     <FarmsContext.Provider value={{ chosenFarmsMemoized }}>
       <MigrationNoticeModal />
 
-      <PageHeader>
-        <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
-          {t('Farms')}
-        </Heading>
-        <Heading scale="lg" color="text">
-          {t('Stake LP tokens to earn.')}
-        </Heading>
-        {/* <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
+      <PageWrapper bgUrl="/images/farm/bg.png">
+        <PageHeader background="#0000">
+          <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
+            {t('Farms')}
+          </Heading>
+          <Heading scale="lg" color="text">
+            {t('Stake LP tokens to earn.')}
+          </Heading>
+          {/* <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
           <Button p="0" variant="text">
             <Text color="primary" bold fontSize="16px" mr="4px">
               {t('Community Auctions')}
@@ -372,71 +390,71 @@ const Farms: React.FC = ({ children }) => {
             <ArrowForwardIcon color="primary" />
           </Button>
         </NextLinkFromReactRouter> */}
-      </PageHeader>
-      <Page bgUrl="/images/farm/bg.svg">
-        <ControlContainer>
-          <ViewControls>
-            <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
-            <ToggleWrapper>
-              <Toggle
-                id="staked-only-farms"
-                checked={stakedOnly}
-                onChange={() => setStakedOnly(!stakedOnly)}
-                scale="sm"
-              />
-              <Text> {t('Staked only')}</Text>
-            </ToggleWrapper>
-            <FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
-          </ViewControls>
-          <FilterContainer>
-            <LabelWrapper>
-              <Text textTransform="uppercase">{t('Sort by')}</Text>
-              <Select
-                options={[
-                  {
-                    label: t('Hot'),
-                    value: 'hot',
-                  },
-                  {
-                    label: t('APR'),
-                    value: 'apr',
-                  },
-                  {
-                    label: t('Multiplier'),
-                    value: 'multiplier',
-                  },
-                  {
-                    label: t('Earned'),
-                    value: 'earned',
-                  },
-                  {
-                    label: t('Liquidity'),
-                    value: 'liquidity',
-                  },
-                  {
-                    label: t('Latest'),
-                    value: 'latest',
-                  },
-                ]}
-                onOptionChange={handleSortOptionChange}
-              />
-            </LabelWrapper>
-            <LabelWrapper style={{ marginLeft: 16 }}>
-              <Text textTransform="uppercase">{t('Search')}</Text>
-              <SearchInput onChange={handleChangeQuery} placeholder="Search Farms" />
-            </LabelWrapper>
-          </FilterContainer>
-        </ControlContainer>
-        {isInactive && (
-          <FinishedTextContainer>
-            <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-              {t("Don't see the farm you are staking?")}
-            </Text>
-            <Flex>
-              <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
-                {t('Go to migration page')}
-              </FinishedTextLink>
-              {/* <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
+        </PageHeader>
+        <Page>
+          <ControlContainer>
+            <ViewControls>
+              <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
+              <ToggleWrapper>
+                <Toggle
+                  id="staked-only-farms"
+                  checked={stakedOnly}
+                  onChange={() => setStakedOnly(!stakedOnly)}
+                  scale="sm"
+                />
+                <Text> {t('Staked only')}</Text>
+              </ToggleWrapper>
+              <FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
+            </ViewControls>
+            <FilterContainer>
+              <LabelWrapper>
+                <Text textTransform="uppercase">{t('Sort by')}</Text>
+                <Select
+                  options={[
+                    {
+                      label: t('Hot'),
+                      value: 'hot',
+                    },
+                    {
+                      label: t('APR'),
+                      value: 'apr',
+                    },
+                    {
+                      label: t('Multiplier'),
+                      value: 'multiplier',
+                    },
+                    {
+                      label: t('Earned'),
+                      value: 'earned',
+                    },
+                    {
+                      label: t('Liquidity'),
+                      value: 'liquidity',
+                    },
+                    {
+                      label: t('Latest'),
+                      value: 'latest',
+                    },
+                  ]}
+                  onOptionChange={handleSortOptionChange}
+                />
+              </LabelWrapper>
+              <LabelWrapper style={{ marginLeft: 16 }}>
+                <Text textTransform="uppercase">{t('Search')}</Text>
+                <SearchInput onChange={handleChangeQuery} placeholder="Search Farms" />
+              </LabelWrapper>
+            </FilterContainer>
+          </ControlContainer>
+          {isInactive && (
+            <FinishedTextContainer>
+              <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+                {t("Don't see the farm you are staking?")}
+              </Text>
+              <Flex>
+                <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
+                  {t('Go to migration page')}
+                </FinishedTextLink>
+                {/* <Text fontSize={['16px', null, '20px']} color="failure" padding="0px 4px">
                 or
               </Text>
               <FinishedTextLink
@@ -447,18 +465,19 @@ const Farms: React.FC = ({ children }) => {
               >
                 {t('check out v1 farms')}.
               </FinishedTextLink> */}
+              </Flex>
+            </FinishedTextContainer>
+          )}
+          {renderContent()}
+          {account && !userDataLoaded && stakedOnly && (
+            <Flex justifyContent="center">
+              <Loading />
             </Flex>
-          </FinishedTextContainer>
-        )}
-        {renderContent()}
-        {account && !userDataLoaded && stakedOnly && (
-          <Flex justifyContent="center">
-            <Loading />
-          </Flex>
-        )}
-        <div ref={observerRef} />
-        {/* <StyledImage src="/images/decorations/3dpan.png" alt="Wagyuswap illustration" width={120} height={103} /> */}
-      </Page>
+          )}
+          <div ref={observerRef} />
+          {/* <StyledImage src="/images/decorations/3dpan.png" alt="Wagyuswap illustration" width={120} height={103} /> */}
+        </Page>
+      </PageWrapper>
     </FarmsContext.Provider>
   )
 }

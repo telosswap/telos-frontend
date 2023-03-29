@@ -107,7 +107,7 @@ export default function WagBurn() {
   }, [])
 
   return (
-    <Page bgUrl="/images/swap/bg.svg">
+    <Page bgUrl="/images/swap/bg.png">
       <Body>
         <SupplyContainer>
           <Supply burn={burn} />

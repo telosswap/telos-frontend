@@ -24,7 +24,7 @@ const Content = styled.div`
 `
 
 const Title = styled.div`
-  background-color: #de2549;
+  background-color: #0e052f;
   border-radius: 37px;
   padding: 12px 24px;
   font-size: 36px;

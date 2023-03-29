@@ -19,12 +19,12 @@ const StyledPage = styled.div<{ $bg?: string; $removePadding: boolean; $noMinHei
   &:after {
     position: absolute;
     content: ' ';
-    left: 20px;
-    right: 20px;
-    top: 20px;
-    bottom: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-image: url(${(props) => props.$bg});
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }

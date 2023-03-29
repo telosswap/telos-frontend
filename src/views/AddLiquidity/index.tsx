@@ -280,7 +280,7 @@ export default function AddLiquidity() {
   )
 
   return (
-    <Page bgUrl="/images/swap/bg.svg">
+    <Page bgUrl="/images/swap/bg.png">
       <AppBody>
         <AppHeader
           title={t('Add Liquidity')}

@@ -75,6 +75,22 @@ const ControlStretch = styled(Flex)`
     flex: 1;
   }
 `
+const PageWrapper = styled.div<{ bgUrl: string }>`
+  position: relative;
+  &:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(${(props) => props.bgUrl});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+`
 
 const FinishedTextContainer = styled(Flex)`
   padding-bottom: 32px;
@@ -250,89 +266,90 @@ const Pools: React.FC = () => {
   return (
     <>
       <MigrationNoticeModal />
-      <PageHeader>
-        <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
-          <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
-            <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
-              {t('Sizzle Pools')}
-            </Heading>
-            <Heading scale="md" color="text">
-              {t('Stake tokens to get')}
-            </Heading>
-            <Heading scale="md" color="text">
-              {t('mouthwatering APR')}
-            </Heading>
+      <PageWrapper bgUrl="/images/farm/bg.png">
+        <PageHeader background="#0000">
+          <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
+            <Flex flex="1" flexDirection="column" mr={['8px', 0]}>
+              <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
+                {t('Sizzle Pools')}
+              </Heading>
+              <Heading scale="md" color="text">
+                {t('Stake tokens to get')}
+              </Heading>
+              <Heading scale="md" color="text">
+                {t('mouthwatering APR')}
+              </Heading>
+            </Flex>
           </Flex>
-        </Flex>
-      </PageHeader>
-      <Page bgUrl="/images/farm/bg.svg">
-        <PoolControls>
-          <PoolTabButtons
-            stakedOnly={stakedOnly}
-            setStakedOnly={setStakedOnly}
-            hasStakeInFinishedPools={hasStakeInFinishedPools}
-            viewMode={viewMode}
-            setViewMode={setViewMode}
-          />
-          <FilterContainer>
-            <LabelWrapper>
-              <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
-                {t('Sort by')}
+        </PageHeader>
+        <Page>
+          <PoolControls>
+            <PoolTabButtons
+              stakedOnly={stakedOnly}
+              setStakedOnly={setStakedOnly}
+              hasStakeInFinishedPools={hasStakeInFinishedPools}
+              viewMode={viewMode}
+              setViewMode={setViewMode}
+            />
+            <FilterContainer>
+              <LabelWrapper>
+                <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
+                  {t('Sort by')}
+                </Text>
+                <ControlStretch>
+                  <Select
+                    options={[
+                      {
+                        label: t('Hot'),
+                        value: 'hot',
+                      },
+                      {
+                        label: t('APR'),
+                        value: 'apr',
+                      },
+                      {
+                        label: t('Earned'),
+                        value: 'earned',
+                      },
+                      {
+                        label: t('Total staked'),
+                        value: 'totalStaked',
+                      },
+                      {
+                        label: t('Latest'),
+                        value: 'latest',
+                      },
+                    ]}
+                    onOptionChange={handleSortOptionChange}
+                  />
+                </ControlStretch>
+              </LabelWrapper>
+              <LabelWrapper style={{ marginLeft: 16 }}>
+                <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
+                  {t('Search')}
+                </Text>
+                <SearchInput onChange={handleChangeSearchQuery} placeholder="Search Pools" />
+              </LabelWrapper>
+            </FilterContainer>
+          </PoolControls>
+          {showFinishedPools && (
+            <FinishedTextContainer>
+              <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+                {t('Looking for v1 WAG sizzle pools?')}
               </Text>
-              <ControlStretch>
-                <Select
-                  options={[
-                    {
-                      label: t('Hot'),
-                      value: 'hot',
-                    },
-                    {
-                      label: t('APR'),
-                      value: 'apr',
-                    },
-                    {
-                      label: t('Earned'),
-                      value: 'earned',
-                    },
-                    {
-                      label: t('Total staked'),
-                      value: 'totalStaked',
-                    },
-                    {
-                      label: t('Latest'),
-                      value: 'latest',
-                    },
-                  ]}
-                  onOptionChange={handleSortOptionChange}
-                />
-              </ControlStretch>
-            </LabelWrapper>
-            <LabelWrapper style={{ marginLeft: 16 }}>
-              <Text fontSize="12px" bold color="textSubtle" textTransform="uppercase">
-                {t('Search')}
-              </Text>
-              <SearchInput onChange={handleChangeSearchQuery} placeholder="Search Pools" />
-            </LabelWrapper>
-          </FilterContainer>
-        </PoolControls>
-        {showFinishedPools && (
-          <FinishedTextContainer>
-            <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-              {t('Looking for v1 WAG sizzle pools?')}
-            </Text>
-            <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
-              {t('Go to migration page')}.
-            </FinishedTextLink>
-          </FinishedTextContainer>
-        )}
-        {account && !userDataLoaded && stakedOnly && (
-          <Flex justifyContent="center" mb="4px">
-            <Loading />
-          </Flex>
-        )}
-        {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
-        <div ref={observerRef} />
-        {/* <Image
+              <FinishedTextLink href="/migration" fontSize={['16px', null, '20px']} color="failure">
+                {t('Go to migration page')}.
+              </FinishedTextLink>
+            </FinishedTextContainer>
+          )}
+          {account && !userDataLoaded && stakedOnly && (
+            <Flex justifyContent="center" mb="4px">
+              <Loading />
+            </Flex>
+          )}
+          {viewMode === ViewMode.CARD ? cardLayout : tableLayout}
+          <div ref={observerRef} />
+          {/* <Image
           mx="auto"
           mt="12px"
           src="/images/decorations/3d-syrup-bunnies.png"
@@ -340,7 +357,8 @@ const Pools: React.FC = () => {
           width={192}
           height={184.5}
         /> */}
-      </Page>
+        </Page>
+      </PageWrapper>
     </>
   )
 }
