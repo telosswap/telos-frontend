@@ -266,7 +266,7 @@ const Pools: React.FC = () => {
   return (
     <>
       <MigrationNoticeModal />
-      <PageWrapper bgUrl="/images/farm/bg.png">
+      <PageWrapper bgUrl="/images/pool/bg.png">
         <PageHeader background="#0000">
           <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
             <Flex flex="1" flexDirection="column" mr={['8px', 0]}>

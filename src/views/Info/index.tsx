@@ -21,7 +21,7 @@ const PageWrapper = styled.div<{ bgUrl: string }>`
 
 export const InfoPageLayout = ({ children }) => {
   return (
-    <PageWrapper bgUrl="/images/info/bg.png">
+    <PageWrapper bgUrl="/images/info/bg.svg">
       <ProtocolUpdater />
       <PoolUpdater />
       <TokenUpdater />
