@@ -13,10 +13,10 @@
     {
       "name": "Wagyu",
       "symbol": "WAG",
-      "address": "0xabf26902fd7b624e0db40d31171ea9dddf078351",
+      "address": "0xe35b6d08050fef8e2ba2b1ed9c8f966a2346a500",
       "chainId": 40,
       "decimals": 18,
-      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos/assets/0xabf26902fd7b624e0db40d31171ea9dddf078351/logo.png?raw=true"
+      "logoURI": "https://github.com/wagyuswapapp/assets/blob/master/blockchains/telos/assets/0xe35b6d08050fef8e2ba2b1ed9c8f966a2346a500/logo.png?raw=true"
     },
     {
       "name": "Wrapped TLOS",

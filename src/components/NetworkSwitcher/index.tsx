@@ -5,7 +5,7 @@ import Wrapper from './Wrapper'
 
 const chains = [
   { url: 'https://exchange.wagyuswap.app', label: 'Velas', Icon: VelasIcon },
-  { url: 'https://telos-testnet.wagyuswap.app', label: 'Telos Testnet', Icon: TelosIcon },
+  { url: 'https://telos.wagyuswap.app', label: 'Telos', Icon: TelosIcon },
 ]
 
 const NetworkSelect = ({}) => {

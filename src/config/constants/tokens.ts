@@ -75,10 +75,10 @@ export const mainnetTokens = {
     'https://wbtc.network/',
   ),
   syrup: new Token(TESTNET, addresses[40].WAGStake, 18, 'WAGStake', 'WAGStake Token', 'https://wagyuswap.app/'),
-  te6: new Token(TESTNET, addresses[41].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te9: new Token(TESTNET, addresses[41].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te12: new Token(TESTNET, addresses[41].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
-  te18: new Token(TESTNET, addresses[41].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te6: new Token(TESTNET, addresses[41].TE6, 6, 'TE6', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te9: new Token(TESTNET, addresses[41].TE9, 9, 'TE9', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te12: new Token(TESTNET, addresses[41].TE12, 12, 'TE12', 'ERC20 Token', 'https://wagyuswap.app/'),
+  // te18: new Token(TESTNET, addresses[41].TE18, 18, 'TE18', 'ERC20 Token', 'https://wagyuswap.app/'),
 }
 
 export const testnetTokens = {

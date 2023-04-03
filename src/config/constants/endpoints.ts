@@ -16,25 +16,25 @@ export const SNAPSHOT_HUB_API = `${SNAPSHOT_BASE_URL}/api/message`
  */
 export const GRAPH_API_PREDICTION_V1 = 'https://api.thegraph.com/subgraphs/name/pancakeswap/prediction'
 
-// export const INFO_CLIENT = {
-//   [ChainId.TESTNET]: 'https://thegraph-testnet-telos.wagyuswap.app/subgraphs/name/telos',
-//   [ChainId.MAINNET]: 'https://thegraph-telos.wagyuswap.app/subgraphs/name/telos',
-// }[chainId]
-
-// export const BLOCKS_CLIENT = {
-//   [ChainId.TESTNET]: 'https://thegraph-testnet-telos.wagyuswap.app/subgraphs/name/telos',
-//   [ChainId.MAINNET]: 'https://thegraph-telos.wagyuswap.app/subgraphs/name/telos',
-// }[chainId]
-
 export const INFO_CLIENT = {
-  [ChainId.TESTNET]: 'http://64.190.113.177:8000/subgraphs/name/telos',
+  [ChainId.TESTNET]: 'https://thegraph-testnet-telos.wagyuswap.app/subgraphs/name/telos',
   [ChainId.MAINNET]: 'https://thegraph-telos.wagyuswap.app/subgraphs/name/telos',
 }[chainId]
 
 export const BLOCKS_CLIENT = {
-  [ChainId.TESTNET]: 'http://64.190.113.177:8000/subgraphs/name/telos',
+  [ChainId.TESTNET]: 'https://thegraph-testnet-telos.wagyuswap.app/subgraphs/name/telos',
   [ChainId.MAINNET]: 'https://thegraph-telos.wagyuswap.app/subgraphs/name/telos',
 }[chainId]
+
+// export const INFO_CLIENT = {
+//   [ChainId.TESTNET]: 'http://64.190.113.177:8000/subgraphs/name/telos',
+//   [ChainId.MAINNET]: 'http://143.198.186.232:8000/subgraphs/name/telos',
+// }[chainId]
+
+// export const BLOCKS_CLIENT = {
+//   [ChainId.TESTNET]: 'http://64.190.113.177:8000/subgraphs/name/telos',
+//   [ChainId.MAINNET]: 'http://143.198.186.232:8000/subgraphs/name/telos',
+// }[chainId]
 
 export const GRAPH_API_LOTTERY = {
   [ChainId.TESTNET]: 'https://thegraph.testnet.wagyuswap.app/subgraphs/name/lottery',
