@@ -21,11 +21,11 @@ export const BASE_VELAS_SCAN_URLS = {
 // 9 WAG per block goes to Yield farms and lottery
 // WAG_PER_SECOND in config/index.ts = 40 as we only change the amount sent to the burn pool which is effectively a farm.
 // WAG/Block in src/views/Home/components/CakeDataRow.tsx = 15 (40 - Amount sent to burn pool)
-export const WAG_PER_SECOND = 13
+export const WAG_PER_SECOND = 3
 // export const WAG_PER_BLOCK = WAG_PER_SECOND * TELOS_BLOCK_TIME
-export const BLOCKS_PER_YEAR = 60 * 60 * 24 * 365
-// export const BLOCKS_PER_YEAR = (60 / TELOS_BLOCK_TIME) * 60 * 24 * 365 // 10512000
-export const WAG_PER_YEAR = WAG_PER_SECOND * BLOCKS_PER_YEAR
+export const SECONDS_PER_YEAR = 60 * 60 * 24 * 365
+// export const SECONDS_PER_YEAR = (60 / TELOS_BLOCK_TIME) * 60 * 24 * 365 // 10512000
+export const WAG_PER_YEAR = WAG_PER_SECOND * SECONDS_PER_YEAR
 export const BASE_URL = `https://telos.wagyuswap.app`
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_URL}/add`
 export const BASE_VELAS_SCAN_URL = BASE_VELAS_SCAN_URLS[ChainId.MAINNET]
