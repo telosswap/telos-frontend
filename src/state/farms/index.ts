@@ -105,26 +105,13 @@ export const fetchFarmUserDataAsync = createAsyncThunk<
     const poolLength = await fetchMasterChefFarmPoolLength()
     const farmsToFetch = farmsConfig.filter((farmConfig) => pids.includes(farmConfig.pid))
     const farmsCanFetch = farmsToFetch.filter((f) => poolLength.gt(f.pid))
-    console.log('fetchFarmUserDataAsync')
-    try {
-      console.log('farmsCanFetch', farmsCanFetch)
-      const [] = await Promise.all([
-        fetchFarmUserAllowances(account, farmsCanFetch),
-        fetchFarmUserTokenBalances(account, farmsCanFetch),
-        fetchFarmUserStakedBalances(account, farmsCanFetch),
-        fetchFarmUserEarnings(account, farmsCanFetch),
-      ])
-      console.log('ok===')
-    } catch (error) {
-      console.error(error)
-    }
+
     const [userFarmAllowances, userFarmTokenBalances, userStakedBalances, userFarmEarnings] = await Promise.all([
       fetchFarmUserAllowances(account, farmsCanFetch),
       fetchFarmUserTokenBalances(account, farmsCanFetch),
       fetchFarmUserStakedBalances(account, farmsCanFetch),
       fetchFarmUserEarnings(account, farmsCanFetch),
     ])
-    console.log('fetchFarmUserDataAsync=done')
 
     return userFarmAllowances.map((farmAllowance, index) => {
       return {

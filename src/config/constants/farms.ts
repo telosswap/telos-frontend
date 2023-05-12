@@ -19,7 +19,7 @@ const farms: SerializedFarmConfig[] =
           lpSymbol: 'WAG',
           lpAddresses: {
             41: '',
-            40: '0x0CcD27B7581b2961c370A1Ed756c4d99eb755FCb',
+            40: '0xE35b6D08050fef8E2bA2b1ED9C8f966a2346A500',
           },
           token: serializedTokens.syrup,
           quoteToken: serializedTokens.wtlos,
