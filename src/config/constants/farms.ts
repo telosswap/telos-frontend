@@ -20,7 +20,7 @@ const farms: SerializedFarmConfig[] =
           lpSymbol: 'WAG',
           lpAddresses: {
             41: '',
-            40: '0xaBf26902Fd7B624e0db40D31171eA9ddDf078351',
+            40: '0x0CcD27B7581b2961c370A1Ed756c4d99eb755FCb',
           },
           token: serializedTokens.syrup,
           quoteToken: serializedTokens.wtlos,
@@ -31,7 +31,7 @@ const farms: SerializedFarmConfig[] =
           lpSymbol: 'TLOS_USDT LP',
           lpAddresses: {
             41: '',
-            40: '0x33f879690C165cC320B0BA04cEb1F9CeaC80F376',
+            40: '0xc63720522207b0f39956Ee035038a1A17c9Fe9bf',
           },
           token: serializedTokens.usdt,
           quoteToken: serializedTokens.wtlos,
@@ -42,7 +42,7 @@ const farms: SerializedFarmConfig[] =
           lpSymbol: 'TLOS_WAG LP',
           lpAddresses: {
             41: '',
-            40: '0x7c3F1eA99770aa23Fe1b19097c93BB0cF34C8351',
+            40: '0xB45378A655683955Cc3235727619F5736698eD4B',
           },
           token: serializedTokens.cake,
           quoteToken: serializedTokens.wtlos,
