@@ -52,7 +52,7 @@ export const usePollFarmsWithUserData = () => {
  * 2 = WAG-TLOS LP
  * 3 = BUSD-TLOS LP
  */
-const coreFarmPIDs = CHAIN_ID === String(ChainId.MAINNET) ? [2, 3] : [1, 2]
+const coreFarmPIDs = CHAIN_ID === String(ChainId.MAINNET) ? [1, 2] : [5, 6]
 export const usePollCoreFarmData = () => {
   const dispatch = useAppDispatch()
 

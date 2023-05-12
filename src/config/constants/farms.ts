@@ -16,7 +16,6 @@ const farms: SerializedFarmConfig[] =
     ? [
         {
           pid: 0,
-          v1pid: 0,
           lpSymbol: 'WAG',
           lpAddresses: {
             41: '',
@@ -27,7 +26,6 @@ const farms: SerializedFarmConfig[] =
         },
         {
           pid: 1,
-          v1pid: 1,
           lpSymbol: 'TLOS_USDT LP',
           lpAddresses: {
             41: '',
@@ -38,7 +36,6 @@ const farms: SerializedFarmConfig[] =
         },
         {
           pid: 2,
-          v1pid: 2,
           lpSymbol: 'TLOS_WAG LP',
           lpAddresses: {
             41: '',

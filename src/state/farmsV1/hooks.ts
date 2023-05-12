@@ -51,10 +51,10 @@ export const usePollFarmsV1WithUserData = () => {
   useSlowRefreshEffect(() => {
     const pids = farmsConfig.filter((farmToFetch) => farmToFetch.v1pid).map((farmToFetch) => farmToFetch.v1pid)
 
-    dispatch(fetchFarmsPublicDataAsync(pids))
+    // dispatch(fetchFarmsPublicDataAsync(pids))
 
     if (account) {
-      dispatch(fetchFarmUserDataAsync({ account, pids }))
+      // dispatch(fetchFarmUserDataAsync({ account, pids }))
     }
   }, [dispatch, account])
 }

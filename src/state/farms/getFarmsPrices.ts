@@ -17,16 +17,16 @@ const getFarmFromTokenSymbol = (
 const getFarmBaseTokenPrice = (
   farm: SerializedFarm,
   quoteTokenFarm: SerializedFarm,
-  bnbPriceBusd: BigNumber,
+  tlosPriceUsdt: BigNumber,
 ): BigNumber => {
   const hasTokenPriceVsQuote = Boolean(farm.tokenPriceVsQuote)
 
-  if (farm.quoteToken.symbol === tokens.busd.symbol) {
+  if (farm.quoteToken.symbol === tokens.usdt.symbol) {
     return hasTokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
   if (farm.quoteToken.symbol === tokens.wtlos.symbol) {
-    return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
+    return hasTokenPriceVsQuote ? tlosPriceUsdt.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
   // We can only calculate profits without a quoteTokenFarm for BUSD/TLOS farms
@@ -40,16 +40,16 @@ const getFarmBaseTokenPrice = (
   // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - TLOS, (pBTC - TLOS)
   // from the TLOS - pBTC price, we can calculate the PNT - BUSD price
   if (quoteTokenFarm.quoteToken.symbol === tokens.wtlos.symbol) {
-    const quoteTokenInBusd = bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote)
-    return hasTokenPriceVsQuote && quoteTokenInBusd
-      ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)
+    const quoteTokenInUsdt = tlosPriceUsdt.times(quoteTokenFarm.tokenPriceVsQuote)
+    return hasTokenPriceVsQuote && quoteTokenInUsdt
+      ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInUsdt)
       : BIG_ZERO
   }
 
-  if (quoteTokenFarm.quoteToken.symbol === tokens.busd.symbol) {
-    const quoteTokenInBusd = quoteTokenFarm.tokenPriceVsQuote
-    return hasTokenPriceVsQuote && quoteTokenInBusd
-      ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInBusd)
+  if (quoteTokenFarm.quoteToken.symbol === tokens.usdt.symbol) {
+    const quoteTokenInUsdt = quoteTokenFarm.tokenPriceVsQuote
+    return hasTokenPriceVsQuote && quoteTokenInUsdt
+      ? new BigNumber(farm.tokenPriceVsQuote).times(quoteTokenInUsdt)
       : BIG_ZERO
   }
 
@@ -60,25 +60,25 @@ const getFarmBaseTokenPrice = (
 const getFarmQuoteTokenPrice = (
   farm: SerializedFarm,
   quoteTokenFarm: SerializedFarm,
-  bnbPriceBusd: BigNumber,
+  tlosPriceUsdt: BigNumber,
 ): BigNumber => {
-  if (farm.quoteToken.symbol === 'BUSD') {
+  if (farm.quoteToken.symbol === 'USDT') {
     return BIG_ONE
   }
 
-  if (farm.quoteToken.symbol === 'WVLX') {
-    return bnbPriceBusd
+  if (farm.quoteToken.symbol === 'WTLOS') {
+    return tlosPriceUsdt
   }
 
   if (!quoteTokenFarm) {
     return BIG_ZERO
   }
 
-  if (quoteTokenFarm.quoteToken.symbol === 'WVLX') {
-    return quoteTokenFarm.tokenPriceVsQuote ? bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
+  if (quoteTokenFarm.quoteToken.symbol === 'WTLOS') {
+    return quoteTokenFarm.tokenPriceVsQuote ? tlosPriceUsdt.times(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  if (quoteTokenFarm.quoteToken.symbol === 'BUSD') {
+  if (quoteTokenFarm.quoteToken.symbol === 'USDT') {
     return quoteTokenFarm.tokenPriceVsQuote ? new BigNumber(quoteTokenFarm.tokenPriceVsQuote) : BIG_ZERO
   }
 
@@ -86,12 +86,12 @@ const getFarmQuoteTokenPrice = (
 }
 
 const getFarmsPrices = (farms: SerializedFarm[]) => {
-  const bnbBusdFarm = farms.find((farm) => farm.token.symbol === 'BUSD' && farm.quoteToken.symbol === 'WVLX')
-  const bnbPriceBusd = bnbBusdFarm.tokenPriceVsQuote ? BIG_ONE.div(bnbBusdFarm.tokenPriceVsQuote) : BIG_ZERO
+  const tlosUsdtFarm = farms.find((farm) => farm.token.symbol === 'USDT' && farm.quoteToken.symbol === 'WTLOS')
+  const tlosPriceUsdt = tlosUsdtFarm.tokenPriceVsQuote ? BIG_ONE.div(tlosUsdtFarm.tokenPriceVsQuote) : BIG_ZERO
   const farmsWithPrices = farms.map((farm) => {
     const quoteTokenFarm = getFarmFromTokenSymbol(farms, farm.quoteToken.symbol)
-    const tokenPriceBusd = getFarmBaseTokenPrice(farm, quoteTokenFarm, bnbPriceBusd)
-    const quoteTokenPriceBusd = getFarmQuoteTokenPrice(farm, quoteTokenFarm, bnbPriceBusd)
+    const tokenPriceBusd = getFarmBaseTokenPrice(farm, quoteTokenFarm, tlosPriceUsdt)
+    const quoteTokenPriceBusd = getFarmQuoteTokenPrice(farm, quoteTokenFarm, tlosPriceUsdt)
 
     return {
       ...farm,
