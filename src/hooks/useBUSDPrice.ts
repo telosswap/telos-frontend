@@ -44,8 +44,8 @@ export default function useBUSDPrice(currency?: Currency): Price | undefined {
 
     const bnbPairBNBAmount = bnbPair?.reserveOf(WTLOS)
     // TODO: CHANGE
-    const bnbPairBNBBUSDValue: JSBI = JSBI.BigInt(0)
-    // bnbPairBNBAmount && busdBnbPair ? busdBnbPair.priceOf(WTLOS).quote(bnbPairBNBAmount).raw : JSBI.BigInt(0)
+    const bnbPairBNBBUSDValue: JSBI =
+      bnbPairBNBAmount && busdBnbPair ? busdBnbPair.priceOf(WTLOS).quote(bnbPairBNBAmount).raw : JSBI.BigInt(0)
 
     // all other tokens
     // first try the usdt pair

@@ -372,8 +372,6 @@ const Farms: React.FC = ({ children }) => {
 
   return (
     <FarmsContext.Provider value={{ chosenFarmsMemoized }}>
-      <MigrationNoticeModal />
-
       <PageWrapper bgUrl="/images/farm/bg.png">
         <PageHeader background="#0000">
           <Heading as="h1" scale="xxl" mb="24px" color="#ec9091">
