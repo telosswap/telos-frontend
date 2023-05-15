@@ -31,9 +31,9 @@ const getFlexibleApy = (
 
 const _getBoostFactor = (boostWeight: BigNumber, duration: number, durationFactor: BigNumber) => {
   return FixedNumber.from(boostWeight)
-  // .mulUnsafe(FixedNumber.from(Math.max(duration, 0)))
-  // .divUnsafe(FixedNumber.from(durationFactor))
-  // .divUnsafe(FixedNumber.from(PRECISION_FACTOR))
+    .mulUnsafe(FixedNumber.from(Math.max(duration, 0)))
+    .divUnsafe(FixedNumber.from(durationFactor))
+    .divUnsafe(FixedNumber.from(PRECISION_FACTOR))
 }
 
 const getLockedApy = (flexibleApy: string, boostFactor: FixedNumber) =>
