@@ -61,8 +61,8 @@ const pools: SerializedPoolConfig[] =
           stakingToken: serializedTokens.cake,
           earningToken: serializedTokens.wtlos,
           contractAddress: {
-            41: '0x9Eff7E88Efe625EeD4c99352b46020F6e204BADC',
-            40: '',
+            41: '',
+            40: '0x9Eff7E88Efe625EeD4c99352b46020F6e204BADC',
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
