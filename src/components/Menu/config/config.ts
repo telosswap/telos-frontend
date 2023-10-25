@@ -113,14 +113,14 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
 
   {
     label: '',
-    href: '/info',
+    href: '/swap',
     icon: MoreIcon,
     hideSubNav: true,
     items: [
-      {
-        label: t('Info'),
-        href: '/info',
-      },
+      // {
+      //   label: t('Info'),
+      //   href: '/info',
+      // },
       // {
       //   label: t('WAG Burn'),
       //   href: '/burn',
