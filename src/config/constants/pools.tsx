@@ -52,9 +52,9 @@ const pools: SerializedPoolConfig[] =
           },
           poolCategory: PoolCategory.CORE,
           harvest: true,
-          tokenPerBlock: '0.75',
+          tokenPerBlock: '0',
           sortOrder: 1,
-          isFinished: true,
+          isFinished: false,
         },
         {
           sousId: 1,
